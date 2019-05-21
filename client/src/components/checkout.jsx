@@ -1,0 +1,76 @@
+import React from 'react';
+import styles from '../assets/css/styles.css';
+
+class Checkout extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      productId: '',
+      produceName: '',
+      productType: '',
+      imageUrl: '',
+      price: '',
+      color: '',
+      reviews: ''
+    };
+  }
+  render() {
+    return (
+      <div>
+        <div>
+          <div className={styles.stars}>
+            <div className={styles.emptyStars} />
+            <div className={styles.fullStars} />
+          </div>
+          &nbsp;
+          <span className={styles.textHover}>
+            <span className={styles.reviews}> Read all 43 reviews </span>
+          </span>
+        </div>
+        <br />
+        <span className={styles.productType}> WOMEN'S ORIGINALS</span>
+        <br />
+        <span className={styles.productName}> NMD_R1 SHOES</span>
+        <br />
+        <span className={styles.productPrice}> $130 </span>
+        <br />
+        <br />
+        <div className={styles.formatting}>
+          <h5 className={styles.colorsInfo}> AVAILABLE COLORS </h5>
+          <span className={styles.colors}>
+            CORE BLACK / CORE BLACK / ORCHID TINT
+          </span>
+          <br />
+          <br />
+          <div>
+            <img
+              className={styles.circleImg}
+              src="https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Blue/NMD_R1_Shoes_Blue_BD8030_01_standard.jpg"
+            />
+            &nbsp; &nbsp;
+            <img
+              className={styles.circleImg}
+              src="https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Pink/pinkShoe.jpg"
+            />
+          </div>
+        </div>
+
+        <div>
+          <svg width="20px" height="15px">
+            <g fill="none" stroke="currentColor">
+              <path d="M.5 6.5h18v6H.5z" />
+              <path
+                strokeLinecap="square"
+                d="M3.5 12.5v-3m3 3v-2m3 2v-3m6 3v-3m-3 3v-2"
+              />
+            </g>
+          </svg>
+          &nbsp;
+          <span className={styles.size}> Size Chart</span>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default Checkout;
