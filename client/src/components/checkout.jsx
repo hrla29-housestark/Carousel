@@ -1,7 +1,5 @@
 import React from 'react';
 import styles from '../assets/css/styles.css';
-import SizeChart from './SizeChart.jsx';
-import ReactDOM from 'react-dom';
 
 class Checkout extends React.Component {
   constructor(props) {
