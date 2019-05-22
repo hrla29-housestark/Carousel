@@ -7,29 +7,25 @@
 
 .sizeChartBody {
   border-style: solid;
-  border-width: 0px;
+  border-width: 5px;
 }
 
-/* .butn {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0px;
-  font-family: Arial;
-  color: #000000;
-  font-size: 20px;
-  background: #ffffff;
-  padding: 10px 15px 10px 15px;
-  border: solid #0a0a0a 2px;
-  text-decoration: none;
-} */
-
-.columnsTable {
-  /* border-left: none;
-  border-right: 2px solid #000;
-  width: 100%; */
-  /* border-style: solid; */
+.content {
+  border: 0;
+  border-radius: 4px;
+  bottom: 'auto';
+  height: 10px;
+  left: 50%;
+  padding: 2rem;
+  position: fixed;
+  right: auto;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  max-width: 40rem;
 }
 
+/* CSS For Measurement Table  */
 .table {
   white-space: normal;
   line-height: normal;
@@ -41,17 +37,49 @@
 }
 
 .td {
-  /* background-clip: padding-box; */
+  background-clip: padding-box;
   letter-spacing: 2px;
-  padding: 0 20px;
+  padding: 0 25px;
   position: relative;
   text-align: center;
   text-transform: uppercase;
   height: 40px;
+  min-width: 80px;
+  border: 1px solid #ebedee;
 }
 
 .tdBorder {
-  display: table-cell;
-  border: 1px solid black;
+  /* display: table-cell; */
+  color: black;
+  border-color: #767677;
   background-color: #ebedee;
+}
+.tableHorizontal {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.tableContainer {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.tableColumns {
+  background-color: #fff;
+  flex: 0 1 auto;
+  white-space: nowrap;
+  width: auto;
+}
+
+/* CSS for Measurements*/
+.tableContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+  text-align: center;
 }
