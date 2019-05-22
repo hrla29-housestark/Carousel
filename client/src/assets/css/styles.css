@@ -101,10 +101,19 @@
   height: auto;
 }
 .homeResize {
-  display: flex;
-  width: 50px;
-  height: 25px;
+  text-decoration: underline;
+  height: auto;
+  padding-left: 0px;
+  padding-top: 5px;
 }
+
+.resizeText {
+  height: auto;
+  padding-left: 0px;
+  padding-top: 5px;
+  font-family: 'adihausDINRegular';
+}
+
 .navContainer {
   display: flex;
   flex-direction: row;
@@ -119,17 +128,22 @@
 }
 .navText {
   text-decoration: underline;
-  margin: 0px;
+  font-family: 'adihausDINRegular';
 }
 
-.svgLine {
-  /* display: inline-flex;
-  align-items: center; */
-  display: inline-block;
-  vertical-align: middle;
+.navSpacing {
+  padding-right: 10px;
 }
 
+.underlineText {
+  text-decoration: underline;
+}
 
+.separator {
+  padding: 0 5px;
+  color: #000;
+  line-height: 8px;
+}
 /* Size Chart Component*/
 .ruler {
   height: auto;

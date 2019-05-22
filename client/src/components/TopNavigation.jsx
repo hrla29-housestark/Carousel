@@ -5,60 +5,44 @@ const TopNavigation = props => (
   <div>
     <div>
       <ol className={[styles.listStyle, styles.navContainer].join(' ')}>
-        <span>
-          <svg className={styles.svgLine} width="19px" height="17px">
-            <g
-              fill="none"
-              stroke="currentColor"
-              strokeMiterlimit="10"
-              strokeWidth="2"
-            >
-              <path d="M15 18v-6H2" />
-              <path d="M6.5 7l-5 5 5 5" />
-            </g>
-          </svg>
+        <span className={styles.nav}>
+          <li className={styles.resizeText}>
+            <svg width="20px" height="18px">
+              <g
+                fill="none"
+                stroke="currentColor"
+                strokeMiterlimit="10"
+                strokeWidth="2"
+              >
+                <path d="M15 18v-6H2" />
+                <path d="M6.5 7l-5 5 5 5" />
+              </g>
+            </svg>
+            <span className={styles.navText}> Back </span>
+          </li>
         </span>
-        <li> Back</li>
+        &nbsp; &nbsp; &nbsp;
+        <li className={[styles.homeResize, styles.nav].join(' ')}>
+          <span className={styles.resizeText}> Home </span>
+        </li>
+        <li className={styles.resizeText}>
+          <span className={styles.separator}>/</span>{' '}
+          <span className={[styles.underlineText, styles.nav].join(' ')}>
+            Women
+          </span>
+        </li>
+        <li className={styles.resizeText}>
+          <span className={styles.separator}>/</span>{' '}
+          <span className={[styles.underlineText, styles.nav].join(' ')}>
+            Shoes
+          </span>
+        </li>
+        <li className={styles.resizeText}>
+          <span className={styles.separator}>/</span> <span> NMD_R1 Shoes</span>
+        </li>
       </ol>
     </div>
   </div>
 );
 
 export default TopNavigation;
-
-{
-  /* <li className={styles.nav}>
-<span className={[styles.navText, styles.homeResize].join(' ')}>
-  Home
-</span>
-</li> */
-}
-
-{
-  /* <div>
-<ol className={[styles.listStyle, styles.navContainer].join(' ')}>
-  <li
-    className={[
-      styles.listStyle,
-      styles.nav,
-      styles.spanResize,
-      styles.navContainer
-    ].join(' ')}
-  >
-    <svg className={styles.svgLine} width="19px" height="17px">
-      <g
-        fill="none"
-        stroke="currentColor"
-        strokeMiterlimit="10"
-        strokeWidth="2"
-      >
-        <path d="M15 18v-6H2" />
-        <path d="M6.5 7l-5 5 5 5" />
-      </g>
-    </svg>
-
-    <span className={styles.navText}>Back</span>
-  </li>
-</ol>
-</div> */
-}
