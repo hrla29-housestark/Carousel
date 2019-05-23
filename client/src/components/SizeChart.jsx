@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import styles from '../assets/css/sizeChart.css';
+import Measure from '../components/Measure.jsx';
 
 // const app = document.getElementById('app');
 // const modal = document.getElementById('modal');
@@ -24,13 +25,19 @@ import styles from '../assets/css/sizeChart.css';
 
 const SizeChart = props => (
   <div className={styles.sizeChartBody}>
-    <h5> Size Chart</h5>
+    <h2 className={styles.sizeChartText}> SIZE CHART</h2>
     <div>
       <section>
         <header>
-          <h4>Men's and women's adidas footwear sizing</h4>
-          <h5>FIND YOUR SIZE</h5>
-          <a>Do you know how to measure?</a>
+          <h2 className={styles.sizeChartText}>
+            MEN'S AND WOMEN'S ADIDAS FOOTWEAR SIZING
+          </h2>
+          <h4 className={styles.sizeChartText}>FIND YOUR SIZE</h4>
+          <span
+            className={[styles.smallPrint, styles.smallPrintHover].join(' ')}
+          >
+            <a>Do you know how to measure?</a>
+          </span>
         </header>
         <div className={styles.tableHorizontal}>
           <div className={styles.tableContainer}>
@@ -39,34 +46,36 @@ const SizeChart = props => (
                 <tbody>
                   <tr>
                     <td className={[styles.td, styles.tdBorder].join(' ')}>
-                      <span>Heel-toe measurement</span>
+                      <span className={styles.columnText}>
+                        Heel-toe measurement
+                      </span>
                     </td>
                   </tr>
                   <tr>
                     <td className={[styles.td, styles.tdBorder].join(' ')}>
-                      <span>US - Men's</span>
+                      <span className={styles.columnText}>US - Men's</span>
                     </td>
                   </tr>
                   <tr>
                     <td className={[styles.td, styles.tdBorder].join(' ')}>
-                      <span>US - Women's</span>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td className={[styles.td, styles.tdBorder].join(' ')}>
-                      <span>UK</span>
+                      <span className={styles.columnText}>US - Women's</span>
                     </td>
                   </tr>
 
                   <tr>
                     <td className={[styles.td, styles.tdBorder].join(' ')}>
-                      <span>EU</span>
+                      <span className={styles.columnText}>UK</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td className={[styles.td, styles.tdBorder].join(' ')}>
+                      <span className={styles.columnText}>EU</span>
                     </td>
                   </tr>
                   <tr>
                     <td className={[styles.td, styles.tdBorder].join(' ')}>
-                      <span>JP</span>
+                      <span className={styles.columnText}>JP</span>
                     </td>
                   </tr>
                 </tbody>
@@ -558,6 +567,12 @@ const SizeChart = props => (
             </table>
           </div>
         </div>
+        <span className={styles.scrollHorizontalText}>
+          Scroll horizontally to see more
+        </span>
+      </section>
+      <section>
+        <Measure />
       </section>
     </div>
   </div>
