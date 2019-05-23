@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../assets/css/styles.css';
+import Selection from './Selection.jsx';
 
 class Checkout extends React.Component {
   constructor(props) {
@@ -72,6 +73,10 @@ class Checkout extends React.Component {
               {' '}
               Size Chart
             </span>
+          </div>
+          <br />
+          <div>
+            <Selection />
           </div>
         </div>
       </div>
