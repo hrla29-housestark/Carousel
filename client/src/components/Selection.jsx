@@ -84,6 +84,23 @@ const Selection = props => (
               />
             </svg>
           </button>
+          <div className={styles.quantityDropdownOptions}>
+            <ul className={styles.ul}>
+              {/* <li>
+                <button
+                  type="button"
+                  title="1"
+                  className={styles.dropdownOptions}
+                >
+                  1
+                </button>
+              </li> */}
+              <li>
+                {' '}
+                <button>1</button>{' '}
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
