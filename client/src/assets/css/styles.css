@@ -1,7 +1,3 @@
-.title {
-  font-family: 'adihausDINRegular';
-}
-
 /* Product Details */
 .productName {
   font-family: 'adineuePROKZ-Black';
@@ -19,7 +15,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .colorsInfo {
@@ -158,27 +154,192 @@
 }
 
 /* Select Size/Quantity CSS*/
+/* .size_quantity_container {
+  position: relative;
+}
+
+.sizeDropdown {
+  position: static;
+} */
+
+/* .spacing {
+  margin-bottom: 10px;
+} */
+
+/* button {
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  touch-action: manipulation;
+}
+
+.selectSize {
+  /* overflow: hidden; */
+/* text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+} */
+
+/* .dropdownIcon {
+  display: inline-block;
+  height: 24px;
+  vertical-align: text-top;
+  width: 24px;
+} */
+/* .dropdownIcon2 {
+  flex-shrink: 0;
+  margin-left: 10px;
+  transition: transform 0.1s cubic-bezier(0.3, 0, 0.45, 1);
+} */
+
+/* Dropdown option for size and quantity*/
+.sizeDropdownOptions {
+  left: 0;
+  opacity: 0;
+  overflow: auto;
+  position: absolute;
+  right: 0;
+  transform: translateY(-1px);
+  transition: opacity 0.1s cubic-bezier(0.3, 0, 0.45, 1) 0.1s;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #767677;
+  padding: 20px 10px;
+}
+
+.squareList {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px -5px 0;
+  max-height: none;
+  overflow-y: auto;
+  padding: 0;
+  width: 100%;
+}
+
+.listItem {
+  list-style: none;
+  position: relative;
+  text-align: -webkit-match-parent;
+}
+
+.selectOption {
+  bottom: 0px;
+  display: block;
+  font-size: 16px;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+/* Quantity Selector*/
+.quantitySelector {
+  padding-left: 10px;
+  z-index: 33;
+  width: 25%;
+}
+
+.spacingPositioning {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+/* .quantityDropdownOpen {
+  font-family: 'adihausDINRegular';
+  font-style: 'normal';
+  font-weight: 400;
+  color: black; */
+/* transform: scaleY(-1); */
+/* } */
+
+/* .dropdownIconOpen {
+  transform: scaleY(-1);
+}
+
+.dropdownStyling {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  line-height: 22px;
+  font-family: 'adihausDINRegular';
+  font-size: 16px;
+  background-color: #ebedee;
+  overflow-y: scroll;
+}
+
+.dropdownStylingHover:hover {
+  background-color: white;
+  color: black;
+} */
+
+/* DROP DOWN MENU FOR SIZES*/
 .row {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  padding-left: 0;
-  padding-right: 0;
-}
-.size_quantity_container {
-  position: relative;
 }
 
-.box {
-  width: 75%;
+.rowQuantitySize {
   position: static;
+}
+
+.rowPadding {
+  padding-left: 0;
+  padding-right: 0;
+  /* float: left;
+  padding: 0 15px; */
 }
 
 .dropdown {
   cursor: pointer;
   display: block;
 }
-.dropdownSelect {
+
+div {
+  display: block;
+}
+
+.boxCol {
+  width: 75%;
+}
+
+/* .productSizeDropdown {
+  position: static;
+} */
+
+.productSizeSpacing {
+  margin-bottom: 10px;
+}
+.dropdownSize {
+  cursor: pointer;
+  display: block;
+}
+
+.dropDownSizeOpen {
+  border-color: black;
+}
+
+/* Icon SVG*/
+.arrowIcon {
+  display: inline-block;
+  height: 24px;
+  vertical-align: text-top;
+  width: 24px;
+}
+
+.arrowIcon2 {
+  flex-shrink: 0;
+  margin-left: 10px;
+  transition: transform 0.1s cubic-bezier(0.3, 0, 0.45, 1);
+}
+
+/* Button */
+.sizeDropdownButton {
   align-items: center;
   cursor: pointer;
   display: flex;
@@ -191,8 +352,174 @@
   letter-spacing: 2px;
   font-family: 'adihausDINRegular';
   font-weight: 700;
+  line-height: 22px;
+  margin: 0;
+  padding: 0 18px;
+  width: 100%;
+  border: 1.01565px solid #767677;
+  color: black;
 }
 
+.dropdownSelectLabel {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+button {
+  background: none;
+  font: inherit;
+  text-align: inherit;
+  border-radius: 0;
+  box-shadow: none;
+  -webkit-writing-mode: horizontal-tb !important;
+}
+
+/* Dropdown Size Menu */
+.dropdownOptions {
+  left: 25px;
+  opacity: 0;
+  overflow: auto;
+  position: absolute;
+  right: 0;
+  transform: translateY(-1px);
+  transition: opacity 0.1s cubic-bezier(0.3, 0, 0.45, 1),
+    visibility 0.1s cubic-bezier(0.3, 0, 0.45, 1) 0.1s;
+  visibility: hidden;
+  width: 100%;
+  background-color: white;
+  border: 1.015px solid#767677;
+}
+
+.dropdownOptions2 {
+  padding: 20px 10px;
+  border: 1px solid black;
+}
+
+.dropdownOptions3 {
+  z-index: 33;
+  border-top-color: black;
+  top: 100px;
+  padding-bottom: 16px;
+  border: 1px solid black;
+}
+
+.divWrap {
+  border: 1px solid black;
+}
+
+.square {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px -5px 0;
+  max-height: none;
+  overflow-y: auto;
+  padding: 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  font-family: 'adihausDINRegular';
+  font-weight: 400;
+  padding: 0 5px;
+}
+
+.sizeItem {
+  list-style: none;
+  position: relative;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+.sizeMenuElement {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  font-family: 'adihausDINRegular';
+  font-weight: 400;
+  padding: 5px 5px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Quantity Dropdown Selector*/
+.boxCol2 {
+  width: 25%;
+}
+
+.quantitySpacing {
+  margin-bottom: 10px;
+}
+.quantityItem {
+  position: relative;
+}
+
+.quantityDropdown {
+  cursor: pointer;
+  display: block;
+  position: relative;
+}
+
+.quantityDropdownSmall {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.quantityDropdownOpen {
+  border-color: black;
+}
+
+.quantityDropdownSelect {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  position: relative;
+  transition: border 0.1s cubic-bezier(0.3, 0, 0.45, 1);
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-family: 'adihausDINRegular';
+  font-weight: 700;
+  line-height: 22px;
+  margin: 0;
+  /* padding: 0 18px; */
+  width: 75px;
+  border: 1.01565px solid #767677;
+  color: black;
+}
+
+.spanSelect {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-left: 10px;
+}
+
+.arrowIcon3 {
+  flex-shrink: 0;
+  transition: transform 0.1s cubic-bezier(0.3, 0, 0.45, 1);
+}
+
+/* Turns icon upside down*/
+.arrowIconTransform {
+  transform: scaleY(-1);
+}
+
+.quantityDropdownOptions {
+  border-color: black;
+  opacity: 1;
+  transition: opacity 0.1s cubic-bezier(0.3, 0, 0.45, 1),
+    visibility 0.1s cubic-bezier(0.3, 0, 0.45, 1) 0s;
+  visibility: visible;
+  border-top-color: #ebedee;
+}
 @font-face {
   font-family: 'adihausDINRegular';
   src: url('../Fonts/AdihausDIN-Regular.woff2') format('truetype');

@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../assets/css/styles.css';
 import Selection from './Selection.jsx';
+import axios from 'axios';
 
 class Checkout extends React.Component {
   constructor(props) {
@@ -12,10 +13,50 @@ class Checkout extends React.Component {
       imageUrl: '',
       price: '',
       color: '',
-      reviews: ''
+      reviews: '',
+      clicked: false,
+      products: [],
+      activeClass: false
     };
+    this.quantityDropdown = this.quantityDropdown.bind(this);
+    this.closeDropdown = this.closeDropdown.bind(this);
+    this.getAdidas = this.getAdidas.bind(this);
+    this.changeClass = this.changeClass.bind(this);
   }
 
+  componentDidMount() {
+    this.getAdidas();
+  }
+  getAdidas() {
+    axios.get('/api/products').then(data =>
+      this.setState(
+        {
+          products: data.data
+        },
+        () => console.log(data.data)
+      )
+    );
+  }
+  quantityDropdown() {
+    this.setState(
+      {
+        clicked: true
+      },
+      () => document.addEventListener('click', this.closeDropdown)
+    );
+  }
+
+  closeDropdown() {
+    this.setState({ clicked: false }, () => {
+      document.removeEventListener('click', this.closeDropdown);
+    });
+  }
+
+  changeClass() {
+    this.setState({
+      activeClass: !this.state.activeClass
+    });
+  }
   render() {
     return (
       <div>
@@ -48,12 +89,12 @@ class Checkout extends React.Component {
             <div>
               <img
                 className={styles.circleImg}
-                src="https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Blue/NMD_R1_Shoes_Blue_BD8030_01_standard.jpg"
+                // src="https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Blue/NMD_R1_Shoes_Blue_BD8030_01_standard.jpg"
               />
               &nbsp; &nbsp;
               <img
                 className={styles.circleImg}
-                src="https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Pink/pinkShoe.jpg"
+                // src="https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Pink/pinkShoe.jpg"
               />
             </div>
           </div>
@@ -76,7 +117,12 @@ class Checkout extends React.Component {
           </div>
           <br />
           <div>
-            <Selection />
+            <Selection
+              dropdown={this.quantityDropdown}
+              clicked={this.state.clicked}
+              changeClass={this.changeClass}
+              activeClass={this.state.activeClass}
+            />
           </div>
         </div>
       </div>
