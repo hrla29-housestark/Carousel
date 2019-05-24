@@ -10,13 +10,15 @@ class Checkout extends React.Component {
       clicked: false,
       products: [],
       activeClass: false,
-      quantity: 1
+      quantity: 1,
+      updateArrow: false
     };
     this.quantityDropdown = this.quantityDropdown.bind(this);
     this.closeDropdown = this.closeDropdown.bind(this);
     this.getAdidas = this.getAdidas.bind(this);
     this.changeClass = this.changeClass.bind(this);
     this.updateQuantity = this.updateQuantity.bind(this);
+    this.updateArrow = this.updateArrow.bind(this);
   }
 
   componentDidMount() {
@@ -45,6 +47,9 @@ class Checkout extends React.Component {
     this.setState({ clicked: false }, () => {
       document.removeEventListener('click', this.closeDropdown);
     });
+    this.setState({
+      updateArrow: false
+    });
   }
 
   changeClass() {
@@ -56,6 +61,12 @@ class Checkout extends React.Component {
   updateQuantity(e) {
     this.setState({
       quantity: e.target.name
+    });
+  }
+
+  updateArrow() {
+    this.setState({
+      updateArrow: !this.state.updateArrow
     });
   }
   render() {
@@ -99,24 +110,24 @@ class Checkout extends React.Component {
               />
             </div>
           </div>
-
-          <div className={styles.sizeChart}>
-            <svg width="20px" height="15px">
-              <g fill="none" stroke="currentColor">
-                <path d="M.5 6.5h18v6H.5z" />
-                <path
-                  strokeLinecap="square"
-                  d="M3.5 12.5v-3m3 3v-2m3 2v-3m6 3v-3m-3 3v-2"
-                />
-              </g>
-            </svg>
-            &nbsp;
-            <span className={styles.size} onClick={() => this.props.isOpen()}>
-              {' '}
-              Size Chart
+          <div className={styles.sizeChartPadding}>
+            <span className={styles.sizeChart}>
+              <svg width="20px" height="15px">
+                <g fill="none" stroke="currentColor">
+                  <path d="M.5 6.5h18v6H.5z" />
+                  <path
+                    strokeLinecap="square"
+                    d="M3.5 12.5v-3m3 3v-2m3 2v-3m6 3v-3m-3 3v-2"
+                  />
+                </g>
+              </svg>
+              &nbsp;
+              <span className={styles.size} onClick={() => this.props.isOpen()}>
+                {' '}
+                Size Chart
+              </span>
             </span>
           </div>
-          <br />
           <div>
             <Selection
               dropdown={this.quantityDropdown}
@@ -125,6 +136,8 @@ class Checkout extends React.Component {
               activeClass={this.state.activeClass}
               updateQuantity={this.updateQuantity}
               quantity={this.state.quantity}
+              updateArrow={this.updateArrow}
+              arrowState={this.state.updateArrow}
             />
           </div>
         </div>
