@@ -67,10 +67,22 @@ const Selection = props => (
             type="button"
             title="Quantity"
             className={styles.quantityDropdownSelect}
+            onClick={() => {
+              props.dropdown();
+              props.updateArrow();
+            }}
           >
             <span className={styles.spanSelect}> {props.quantity} </span>
             <svg
-              className={[styles.arrowIcon, styles.arrowIcon3].join(' ')}
+              className={
+                props.arrowState
+                  ? [
+                      styles.arrowIcon,
+                      styles.arrowIcon3,
+                      styles.arrowIconTransform
+                    ].join(' ')
+                  : [styles.arrowIcon, styles.arrowIcon3].join(' ')
+              }
               viewBox="0 0 16 24"
               width="50%"
               height="50%"
@@ -84,130 +96,156 @@ const Selection = props => (
               />
             </svg>
           </button>
-          <div>
-            <ul className={styles.ulScroll}>
-              <li>
-                <button
-                  type="button"
-                  className={[styles.dropdownSelect, styles.quantity].join(' ')}
-                  name="1"
-                  onClick={props.updateQuantity}
-                >
-                  1
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  className={[styles.dropdownSelect, styles.quantity].join(' ')}
-                  name="2"
-                  onClick={props.updateQuantity}
-                >
-                  2
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  className={[styles.dropdownSelect, styles.quantity].join(' ')}
-                  name="3"
-                  onClick={props.updateQuantity}
-                >
-                  3
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  className={[styles.dropdownSelect, styles.quantity].join(' ')}
-                  name="4"
-                  onClick={props.updateQuantity}
-                >
-                  4
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  className={[styles.dropdownSelect, styles.quantity].join(' ')}
-                  name="5"
-                  onClick={props.updateQuantity}
-                >
-                  5
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  className={[styles.dropdownSelect, styles.quantity].join(' ')}
-                  name="6"
-                  onClick={props.updateQuantity}
-                >
-                  6
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  className={[styles.dropdownSelect, styles.quantity].join(' ')}
-                  name="7"
-                  onClick={props.updateQuantity}
-                >
-                  7
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  className={[styles.dropdownSelect, styles.quantity].join(' ')}
-                  name="8"
-                  onClick={props.updateQuantity}
-                >
-                  8
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  className={[styles.dropdownSelect, styles.quantity].join(' ')}
-                  name="9"
-                  onClick={props.updateQuantity}
-                >
-                  9
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  className={[styles.dropdownSelect, styles.quantity].join(' ')}
-                  name="10"
-                  onClick={props.updateQuantity}
-                >
-                  10
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  className={[styles.dropdownSelect, styles.quantity].join(' ')}
-                  name="11"
-                  onClick={props.updateQuantity}
-                >
-                  11
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  className={[styles.dropdownSelect, styles.quantity].join(' ')}
-                  name="12"
-                  onClick={props.updateQuantity}
-                >
-                  12
-                </button>
-              </li>
-            </ul>
-          </div>
+          {props.clicked ? (
+            <div>
+              <ul className={styles.ulScroll}>
+                <li>
+                  <button
+                    type="button"
+                    className={[styles.dropdownSelect, styles.quantity].join(
+                      ' '
+                    )}
+                    name="1"
+                    onClick={props.updateQuantity}
+                  >
+                    1
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    className={[styles.dropdownSelect, styles.quantity].join(
+                      ' '
+                    )}
+                    name="2"
+                    onClick={props.updateQuantity}
+                  >
+                    2
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    className={[styles.dropdownSelect, styles.quantity].join(
+                      ' '
+                    )}
+                    name="3"
+                    onClick={props.updateQuantity}
+                  >
+                    3
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    className={[styles.dropdownSelect, styles.quantity].join(
+                      ' '
+                    )}
+                    name="4"
+                    onClick={props.updateQuantity}
+                  >
+                    4
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    className={[styles.dropdownSelect, styles.quantity].join(
+                      ' '
+                    )}
+                    name="5"
+                    onClick={props.updateQuantity}
+                  >
+                    5
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    className={[styles.dropdownSelect, styles.quantity].join(
+                      ' '
+                    )}
+                    name="6"
+                    onClick={props.updateQuantity}
+                  >
+                    6
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    className={[styles.dropdownSelect, styles.quantity].join(
+                      ' '
+                    )}
+                    name="7"
+                    onClick={props.updateQuantity}
+                  >
+                    7
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    className={[styles.dropdownSelect, styles.quantity].join(
+                      ' '
+                    )}
+                    name="8"
+                    onClick={props.updateQuantity}
+                  >
+                    8
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    className={[styles.dropdownSelect, styles.quantity].join(
+                      ' '
+                    )}
+                    name="9"
+                    onClick={props.updateQuantity}
+                  >
+                    9
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    className={[styles.dropdownSelect, styles.quantity].join(
+                      ' '
+                    )}
+                    name="10"
+                    onClick={props.updateQuantity}
+                  >
+                    10
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    className={[styles.dropdownSelect, styles.quantity].join(
+                      ' '
+                    )}
+                    name="11"
+                    onClick={props.updateQuantity}
+                  >
+                    11
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    className={[styles.dropdownSelect, styles.quantity].join(
+                      ' '
+                    )}
+                    name="12"
+                    onClick={props.updateQuantity}
+                  >
+                    12
+                  </button>
+                </li>
+              </ul>
+            </div>
+          ) : null}
         </div>
       </div>
     </div>
@@ -352,35 +390,6 @@ export default Selection;
 // </div>
 // </div>
 
-//////// SECOND TRY
-{
-  /* <div>
-    <div className={styles.row}>
-      <div className={[styles.div, styles.boxCol].join(' ')}>
-        <div className={[styles.productSizeDropdown, styles.div].join(' ')}>
-          <div className={styles.dropdownSize}>
-            <button
-              className={[styles.sizeDropdownButton, styles.button].join(' ')}
-              title="Select size"
-            >
-              <span className={styles.spanSelect}> Select Size</span>
-              <svg
-                className={[styles.arrowIcon, styles.arrowIcon2].join(' ')}
-                viewBox="0 0 16 24"
-                width="50%"
-                height="50%"
-              >
-                <path
-                  fill="none"
-                  stroke="currentColor"
-                  strokeMiterlimit="10"
-                  strokeWidth="2"
-                  d="M1.5 9L8 15.5 14.5 9"
-                />
-              </svg>
-            </button>
-            {/* Size down drop */
-}
 //     <div className={styles.divWrap}>
 //       <div
 //         className={[
@@ -500,12 +509,130 @@ export default Selection;
 //     </div>
 //   </div>
 // </div>
+
 {
-  /* This is for second dropdown*/
+  /* <div>
+<ul className={styles.ulScroll}>
+  <li>
+    <button
+      type="button"
+      className={[styles.dropdownSelect, styles.quantity].join(' ')}
+      name="1"
+      onClick={props.updateQuantity}
+    >
+      1
+    </button>
+  </li>
+  <li>
+    <button
+      type="button"
+      className={[styles.dropdownSelect, styles.quantity].join(' ')}
+      name="2"
+      onClick={props.updateQuantity}
+    >
+      2
+    </button>
+  </li>
+  <li>
+    <button
+      type="button"
+      className={[styles.dropdownSelect, styles.quantity].join(' ')}
+      name="3"
+      onClick={props.updateQuantity}
+    >
+      3
+    </button>
+  </li>
+  <li>
+    <button
+      type="button"
+      className={[styles.dropdownSelect, styles.quantity].join(' ')}
+      name="4"
+      onClick={props.updateQuantity}
+    >
+      4
+    </button>
+  </li>
+  <li>
+    <button
+      type="button"
+      className={[styles.dropdownSelect, styles.quantity].join(' ')}
+      name="5"
+      onClick={props.updateQuantity}
+    >
+      5
+    </button>
+  </li>
+  <li>
+    <button
+      type="button"
+      className={[styles.dropdownSelect, styles.quantity].join(' ')}
+      name="6"
+      onClick={props.updateQuantity}
+    >
+      6
+    </button>
+  </li>
+  <li>
+    <button
+      type="button"
+      className={[styles.dropdownSelect, styles.quantity].join(' ')}
+      name="7"
+      onClick={props.updateQuantity}
+    >
+      7
+    </button>
+  </li>
+  <li>
+    <button
+      type="button"
+      className={[styles.dropdownSelect, styles.quantity].join(' ')}
+      name="8"
+      onClick={props.updateQuantity}
+    >
+      8
+    </button>
+  </li>
+  <li>
+    <button
+      type="button"
+      className={[styles.dropdownSelect, styles.quantity].join(' ')}
+      name="9"
+      onClick={props.updateQuantity}
+    >
+      9
+    </button>
+  </li>
+  <li>
+    <button
+      type="button"
+      className={[styles.dropdownSelect, styles.quantity].join(' ')}
+      name="10"
+      onClick={props.updateQuantity}
+    >
+      10
+    </button>
+  </li>
+  <li>
+    <button
+      type="button"
+      className={[styles.dropdownSelect, styles.quantity].join(' ')}
+      name="11"
+      onClick={props.updateQuantity}
+    >
+      11
+    </button>
+  </li>
+  <li>
+    <button
+      type="button"
+      className={[styles.dropdownSelect, styles.quantity].join(' ')}
+      name="12"
+      onClick={props.updateQuantity}
+    >
+      12
+    </button>
+  </li>
+</ul>
+</div> */
 }
-//     </div>
-//     <div className={[styles.div, styles.boxCol2, styles.quantity].join(' ')}>
-//       test
-//     </div>
-//   </div>
-// </div>
