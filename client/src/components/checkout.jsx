@@ -7,21 +7,16 @@ class Checkout extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      productId: '',
-      produceName: '',
-      productType: '',
-      imageUrl: '',
-      price: '',
-      color: '',
-      reviews: '',
       clicked: false,
       products: [],
-      activeClass: false
+      activeClass: false,
+      quantity: 1
     };
     this.quantityDropdown = this.quantityDropdown.bind(this);
     this.closeDropdown = this.closeDropdown.bind(this);
     this.getAdidas = this.getAdidas.bind(this);
     this.changeClass = this.changeClass.bind(this);
+    this.updateQuantity = this.updateQuantity.bind(this);
   }
 
   componentDidMount() {
@@ -55,6 +50,12 @@ class Checkout extends React.Component {
   changeClass() {
     this.setState({
       activeClass: !this.state.activeClass
+    });
+  }
+
+  updateQuantity(e) {
+    this.setState({
+      quantity: e.target.name
     });
   }
   render() {
@@ -122,6 +123,8 @@ class Checkout extends React.Component {
               clicked={this.state.clicked}
               changeClass={this.changeClass}
               activeClass={this.state.activeClass}
+              updateQuantity={this.updateQuantity}
+              quantity={this.state.quantity}
             />
           </div>
         </div>
