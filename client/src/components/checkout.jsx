@@ -128,18 +128,17 @@ class Checkout extends React.Component {
               </span>
             </span>
           </div>
-          <div>
-            <Selection
-              dropdown={this.quantityDropdown}
-              clicked={this.state.clicked}
-              changeClass={this.changeClass}
-              activeClass={this.state.activeClass}
-              updateQuantity={this.updateQuantity}
-              quantity={this.state.quantity}
-              updateArrow={this.updateArrow}
-              arrowState={this.state.updateArrow}
-            />
-          </div>
+
+          <Selection
+            dropdown={this.quantityDropdown}
+            clicked={this.state.clicked}
+            changeClass={this.changeClass}
+            activeClass={this.state.activeClass}
+            updateQuantity={this.updateQuantity}
+            quantity={this.state.quantity}
+            updateArrow={this.updateArrow}
+            arrowState={this.state.updateArrow}
+          />
         </div>
       </div>
     );
