@@ -191,19 +191,34 @@ class Checkout extends React.Component {
                       d="M2.5 10.5l4 4 10-10"
                     />
                   </svg>
-                  {/* <div className={styles.imgHolder} /> */}
                 </div>
                 <img
                   className={[styles.circleImg, styles.child].join(' ')}
                   src="https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Blue/NMD_R1_Shoes_Blue_BD8030_01_standard.jpg"
                 />
-                &ensp;
-                <div>
-                  <img
-                    className={[styles.circleImg, styles.child].join(' ')}
-                    src="https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Pink/pinkShoe.jpg"
-                  />
+              </div>
+
+              <div className={[styles.outerDiv2, styles.parent].join(' ')}>
+                <div className={styles.checkmarkIcon}>
+                  <svg
+                    viewBox="0 0 19 19"
+                    width="50%"
+                    height="50%"
+                    className={styles.checkmark}
+                  >
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="square"
+                      strokeMiterlimit="10"
+                      d="M2.5 10.5l4 4 10-10"
+                    />
+                  </svg>
                 </div>
+                <img
+                  className={[styles.circleImg, styles.child].join(' ')}
+                  src="https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Blue/NMD_R1_Shoes_Blue_BD8030_01_standard.jpg"
+                />
               </div>
             </div>
           </div>

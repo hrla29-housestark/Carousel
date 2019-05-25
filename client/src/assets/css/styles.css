@@ -837,6 +837,8 @@ button {
 /* Product Image*/
 .outerDiv1 {
   width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 .outerDiv2 {
   display: flex;
