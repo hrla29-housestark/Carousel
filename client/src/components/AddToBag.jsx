@@ -10,16 +10,6 @@ const AddToBag = props => (
     {!props.hideBtnState ? (
       <button
         onClick={props.addToBagFunction}
-        // className={
-        //   props.addToBagState
-        //     ? [
-        //         styles.btnText,
-        //         styles.btnWidth,
-        //         styles.btnDesign,
-        //         styles.shadowPopBr
-        //       ].join(' ')
-        //     : [styles.btnText, styles.btnWidth, styles.btnDesign].join(' ')
-        // }
         className={[styles.btnText, styles.btnWidth, styles.btnDesign].join(
           ' '
         )}

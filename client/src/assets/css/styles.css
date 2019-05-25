@@ -19,7 +19,8 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-end;
+  margin: 20px;
 }
 
 .colorsInfo {
@@ -85,7 +86,7 @@ body {
 
 .circleImg {
   border-radius: 50%;
-  width: 80px;
+  width: 25px;
   height: auto;
 }
 
@@ -585,12 +586,9 @@ button {
 .ulScroll {
   max-height: 150px;
   overflow: auto;
-  border: 1px solid;
+  border: 1px solid black;
   width: 73px;
   background-color: white;
-}
-li {
-  display: list-item;
 }
 
 .dropdownSelect {
@@ -834,6 +832,63 @@ li {
   flex: 1;
   height: 100%;
   cursor: pointer;
+}
+
+/* Product Image*/
+.outerDiv1 {
+  width: 100%;
+}
+.outerDiv2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1 0 auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(25% - 5px);
+  max-width: 70px;
+  cursor: pointer;
+  margin: 0 10px 10px 0;
+  display: block;
+  position: relative;
+  height: 70px;
+}
+.parentContainer {
+  flex: 0 1 25%;
+}
+
+.child {
+  width: 70px;
+  height: 70px;
+}
+
+/* CheckMark Icon*/
+.checkmarkIcon {
+  border-radius: 50%;
+  background-color: #000;
+  position: absolute;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkmark {
+  height: 19px;
+  width: 19px;
+  color: #fff;
+  display: inline-block;
+  vertical-align: text-top;
+  justify-content: flex-start;
+}
+
+.imgHolder {
+  border-radius: 50%;
+  padding-bottom: 100%;
+  background-size: cover;
+  background-image: url('https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Blue/NMD_R1_Shoes_Blue_BD8030_01_standard.jpg');
 }
 
 @font-face {
