@@ -19,7 +19,9 @@ class Checkout extends React.Component {
       heart: false,
       addToBagBtn: false,
       showButtons: false,
-      hideHeartBtn: false
+      hideHeartBtn: false,
+      productClicked: true,
+      render: false
     };
     this.quantityDropdown = this.quantityDropdown.bind(this);
     this.closeDropdown = this.closeDropdown.bind(this);
@@ -35,6 +37,8 @@ class Checkout extends React.Component {
     this.btnAddToBag = this.btnAddToBag.bind(this);
     this.hideButtons = this.hideButtons.bind(this);
     this.hideHeartBtnFunc = this.hideHeartBtnFunc.bind(this);
+    this.productClicked = this.productClicked.bind(this);
+    this.switchProduct = this.switchProduct.bind(this);
   }
 
   // componentDidMount() {
@@ -145,6 +149,21 @@ class Checkout extends React.Component {
     // });
   }
 
+  productClicked() {
+    this.setState({
+      productClicked: !this.state.productClicked
+    });
+  }
+
+  switchProduct() {
+    // this.setState({
+    //   productClicked: !this.state.productClicked
+    // });
+    this.productClicked();
+    this.setState({
+      render: !this.state.render
+    });
+  }
   render() {
     return (
       <div>
@@ -176,48 +195,54 @@ class Checkout extends React.Component {
             <br />
             <div className={styles.outerDiv1}>
               <div className={[styles.outerDiv2, styles.parent].join(' ')}>
-                <div className={styles.checkmarkIcon}>
-                  <svg
-                    viewBox="0 0 19 19"
-                    width="50%"
-                    height="50%"
-                    className={styles.checkmark}
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      strokeLinecap="square"
-                      strokeMiterlimit="10"
-                      d="M2.5 10.5l4 4 10-10"
-                    />
-                  </svg>
-                </div>
+                {this.state.productClicked ? (
+                  <div className={styles.checkmarkIcon}>
+                    <svg
+                      viewBox="0 0 19 19"
+                      width="50%"
+                      height="50%"
+                      className={styles.checkmark}
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="square"
+                        strokeMiterlimit="10"
+                        d="M2.5 10.5l4 4 10-10"
+                      />
+                    </svg>
+                  </div>
+                ) : null}
                 <img
                   className={[styles.circleImg, styles.child].join(' ')}
                   src="https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Blue/NMD_R1_Shoes_Blue_BD8030_01_standard.jpg"
+                  onClick={this.switchProduct}
                 />
               </div>
 
               <div className={[styles.outerDiv2, styles.parent].join(' ')}>
-                <div className={styles.checkmarkIcon}>
-                  <svg
-                    viewBox="0 0 19 19"
-                    width="50%"
-                    height="50%"
-                    className={styles.checkmark}
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      strokeLinecap="square"
-                      strokeMiterlimit="10"
-                      d="M2.5 10.5l4 4 10-10"
-                    />
-                  </svg>
-                </div>
+                {this.state.render ? (
+                  <div className={styles.checkmarkIcon}>
+                    <svg
+                      viewBox="0 0 19 19"
+                      width="50%"
+                      height="50%"
+                      className={styles.checkmark}
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="square"
+                        strokeMiterlimit="10"
+                        d="M2.5 10.5l4 4 10-10"
+                      />
+                    </svg>
+                  </div>
+                ) : null}
                 <img
                   className={[styles.circleImg, styles.child].join(' ')}
                   src="https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Blue/NMD_R1_Shoes_Blue_BD8030_01_standard.jpg"
+                  onClick={this.switchProduct}
                 />
               </div>
             </div>
