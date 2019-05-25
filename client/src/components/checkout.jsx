@@ -2,6 +2,7 @@ import React from 'react';
 import styles from '../assets/css/styles.css';
 import Selection from './Selection.jsx';
 import axios from 'axios';
+import AddToBag from '../components/AddToBag.jsx';
 
 class Checkout extends React.Component {
   constructor(props) {
@@ -183,6 +184,8 @@ class Checkout extends React.Component {
             sizeUpdateArrow={this.sizeUpdateArrow}
           />
         </div>
+
+        <AddToBag />
       </div>
     );
   }
