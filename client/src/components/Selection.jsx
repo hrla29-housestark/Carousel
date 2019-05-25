@@ -24,6 +24,7 @@ const Selection = props => (
             onClick={() => {
               props.sizeDropdown();
               props.sizeUpdateArrow();
+              // props.hideButton();
             }}
           >
             <span className={styles.dropdownSelectLabel}> {props.size} </span>
@@ -268,6 +269,7 @@ const Selection = props => (
             onClick={() => {
               props.dropdown();
               props.updateArrow();
+              // props.hideHeartButton();
             }}
           >
             <span className={styles.spanSelect}> {props.quantity} </span>

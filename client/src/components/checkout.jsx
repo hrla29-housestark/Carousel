@@ -16,7 +16,10 @@ class Checkout extends React.Component {
       size: 'Select Size',
       sizeClicked: false,
       sizeArrowUpdate: false,
-      heart: false
+      heart: false,
+      addToBagBtn: false,
+      showButtons: false,
+      hideHeartBtn: false
     };
     this.quantityDropdown = this.quantityDropdown.bind(this);
     this.closeDropdown = this.closeDropdown.bind(this);
@@ -29,6 +32,9 @@ class Checkout extends React.Component {
     this.sizeDropdown = this.sizeDropdown.bind(this);
     this.closeSizeDropdown = this.closeSizeDropdown.bind(this);
     this.changeHeart = this.changeHeart.bind(this);
+    this.btnAddToBag = this.btnAddToBag.bind(this);
+    this.hideButtons = this.hideButtons.bind(this);
+    this.hideHeartBtnFunc = this.hideHeartBtnFunc.bind(this);
   }
 
   // componentDidMount() {
@@ -116,6 +122,29 @@ class Checkout extends React.Component {
     });
   }
 
+  btnAddToBag() {
+    this.setState({
+      addToBagBtn: !this.state.addToBagBtn
+    });
+  }
+
+  hideButtons() {
+    this.setState({
+      showButtons: !this.state.showButtons
+    });
+    // this.setState({
+    //   hideHeartBtn: !this.state.hideHeartBtn
+    // });
+  }
+  hideHeartBtnFunc() {
+    this.setState({
+      hideHeartBtn: !this.state.hideHeartBtn
+    });
+    // this.setState({
+    //   showButtons: !this.state.showButtons
+    // });
+  }
+
   render() {
     return (
       <div>
@@ -191,10 +220,19 @@ class Checkout extends React.Component {
             sizeArrowState={this.state.sizeArrowUpdate}
             sizeDropdown={this.sizeDropdown}
             sizeUpdateArrow={this.sizeUpdateArrow}
+            hideButton={this.hideButtons}
+            hideHeartButton={this.hideHeartBtnFunc}
           />
         </div>
 
-        <AddToBag heart={this.state.heart} changeHeart={this.changeHeart} />
+        <AddToBag
+          heart={this.state.heart}
+          changeHeart={this.changeHeart}
+          addToBagState={this.state.addToBagBtn}
+          addToBagFunction={this.btnAddToBag}
+          hideBtnState={this.state.showButtons}
+          hideHeartBtnState={this.state.hideHeartBtn}
+        />
       </div>
     );
   }
