@@ -13,7 +13,8 @@ class Checkout extends React.Component {
       quantity: 1,
       updateArrow: false,
       size: 'Select Size',
-      sizeClicked: false
+      sizeClicked: false,
+      sizeArrowUpdate: false
     };
     this.quantityDropdown = this.quantityDropdown.bind(this);
     this.closeDropdown = this.closeDropdown.bind(this);
@@ -22,11 +23,14 @@ class Checkout extends React.Component {
     this.updateQuantity = this.updateQuantity.bind(this);
     this.updateArrow = this.updateArrow.bind(this);
     this.updateSize = this.updateSize.bind(this);
+    this.sizeUpdateArrow = this.sizeUpdateArrow.bind(this);
+    this.sizeDropdown = this.sizeDropdown.bind(this);
+    this.closeSizeDropdown = this.closeSizeDropdown.bind(this);
   }
 
-  componentDidMount() {
-    this.getAdidas();
-  }
+  // componentDidMount() {
+  //   this.getAdidas();
+  // }
   getAdidas() {
     axios.get('/api/products').then(data =>
       this.setState(
@@ -76,6 +80,30 @@ class Checkout extends React.Component {
   updateSize(e) {
     this.setState({
       size: e.target.name
+    });
+  }
+
+  sizeUpdateArrow() {
+    this.setState({
+      sizeArrowUpdate: !this.state.sizeArrowUpdate
+    });
+  }
+
+  sizeDropdown() {
+    this.setState(
+      {
+        sizeClicked: true
+      },
+      () => document.addEventListener('click', this.closeSizeDropdown)
+    );
+  }
+
+  closeSizeDropdown() {
+    this.setState({ sizeClicked: false }, () => {
+      document.removeEventListener('click', this.closeSizeDropdown);
+    });
+    this.setState({
+      sizeArrowUpdate: false
     });
   }
   render() {
@@ -149,6 +177,10 @@ class Checkout extends React.Component {
             size={this.state.size}
             updateSize={this.updateSize}
             sizeClicked={this.state.sizeClicked}
+            sizeUpdateArrow={this.sizeUpdateArrow}
+            sizeArrowState={this.state.sizeArrowUpdate}
+            sizeDropdown={this.sizeDropdown}
+            sizeUpdateArrow={this.sizeUpdateArrow}
           />
         </div>
       </div>

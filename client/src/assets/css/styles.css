@@ -255,6 +255,38 @@
   margin-left: 10px;
   transition: transform 0.1s cubic-bezier(0.3, 0, 0.45, 1);
 }
+.arrowIcon3 {
+  flex-shrink: 0;
+  transition: transform 0.1s cubic-bezier(0.3, 0, 0.45, 1);
+}
+
+/* Turns icon upside down*/
+.arrowIconTransform {
+  transform: scaleY(-1);
+}
+
+/* Size Dropdown Arrow  */
+.arrow {
+  display: inline-block;
+  height: 24px;
+  vertical-align: text-top;
+  width: 24px;
+}
+
+.arrow2 {
+  flex-shrink: 0;
+  margin-left: 10px;
+  transition: transform 0.1s cubic-bezier(0.3, 0, 0.45, 1);
+}
+.arrow3 {
+  flex-shrink: 0;
+  transition: transform 0.1s cubic-bezier(0.3, 0, 0.45, 1);
+}
+
+/* Turns icon upside down*/
+.arrowIconChange {
+  transform: scaleY(-1);
+}
 
 /* Button */
 .sizeDropdownButton {
@@ -541,15 +573,6 @@ li {
   padding-left: 10px;
 }
 
-.arrowIcon3 {
-  flex-shrink: 0;
-  transition: transform 0.1s cubic-bezier(0.3, 0, 0.45, 1);
-}
-
-/* Turns icon upside down*/
-.arrowIconTransform {
-  transform: scaleY(-1);
-}
 *:focus {
   outline: none !important;
 }
