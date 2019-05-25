@@ -635,7 +635,7 @@ li {
 .btnWidth {
   display: flex;
   justify-content: space-between;
-  width: 75%;
+  width: 90%;
 }
 
 .btnDesign {
@@ -661,7 +661,7 @@ li {
     background 0.1s cubic-bezier(0.3, 0, 0.45, 1); */
 }
 
-/* .btnPrimary:before {
+.btnPrimary::before {
   content: '';
   display: block;
   position: absolute;
@@ -674,17 +674,65 @@ li {
   width: 100%;
 }
 .btnPrimary1::after {
-  content: '';
+  /* content: ''; */
   display: block;
   position: absolute;
   transition: 0.1s cubic-bezier(0.3, 0, 0.45, 1);
-  border-right: 1px solid #000;
+  border-right: px solid #000;
   border-top: 1px solid #000;
   height: 100%;
   right: -3px;
   top: 3px;
   width: 3px;
+}
+
+.addBagTransition {
+  transform: translateY(80px);
+}
+
+.addBagTransition2 {
+  position: fixed;
+  bottom: 0;
+  z-index: 56;
+  left: 0;
+  right: 0;
+  transition: transform 0.4s;
+  will-change: transition;
+}
+/* @media (min-width: 480px) {
+  .addBagTransition {
+    display: none;
+  }
 } */
+
+.bagWrap {
+  background: #fff;
+  padding: 10px 15px;
+}
+
+.floatBag {
+  transform: translate(-3px, -3px);
+}
+
+.floatBag2 {
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  cursor: pointer;
+  display: inline-flex;
+  line-height: 50px;
+  min-height: 50px;
+  padding: 0 21px;
+  position: relative;
+  text-decoration: none;
+}
+
+.floatBagColor {
+  background-color: #000;
+  border-color: #fff;
+  height: 50px;
+  color: #fff;
+}
 
 /* Add To Bag: Arrow Icon*/
 .arrowWhite {
@@ -699,7 +747,7 @@ li {
 }
 
 /*  Heart Icon Button */
-/* .heartIcon {
+.heartIcon {
   align-items: center;
   background-color: #fff;
   border: 1.01565px solid #000;
@@ -717,7 +765,27 @@ li {
 .heartSet {
   margin-left: 10px;
   flex: none;
-} */
+}
+
+.heartFeature {
+  position: relative;
+  transition: transform 0.1s cubic-bezier(0.3, 0, 0.45, 1),
+    color 0.1s cubic-bezier(0.3, 0, 0.45, 1),
+    border 0.1s cubic-bezier(0.3, 0, 0.45, 1),
+    background 0.1s cubic-bezier(0.3, 0, 0.45, 1);
+  white-space: nowrap;
+}
+
+.toggleHeart {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: 100%;
+  cursor: pointer;
+}
+
 @font-face {
   font-family: 'adihausDINRegular';
   src: url('../Fonts/AdihausDIN-Regular.woff2') format('truetype');

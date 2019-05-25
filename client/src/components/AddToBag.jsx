@@ -8,13 +8,7 @@ const AddToBag = props => (
     )}
   >
     <button
-      className={[
-        styles.btnText,
-        styles.btnWidth,
-        styles.btnDesign,
-        styles.btnPrimary,
-        styles.btnPrimary1
-      ].join(' ')}
+      className={[styles.btnText, styles.btnWidth, styles.btnDesign].join(' ')}
     >
       Add To Bag{' '}
       <svg
@@ -35,7 +29,39 @@ const AddToBag = props => (
     <div
       className={[styles.btnText, styles.heartIcon, styles.heartSet].join(' ')}
     >
-      Test
+      <div className={styles.toggleHeart} onClick={props.changeHeart}>
+        <svg
+          viewBox="0 0 20 24"
+          width="50%"
+          height="50%"
+          className={styles.arrowWhite}
+        >
+          <path
+            fill={props.heart ? 'black' : 'none'}
+            stroke="currentColor"
+            strokeMiterlimit="10"
+            strokeWidth="2"
+            d="M7.38 6H4.42L2 10l8 8 8-8-2.41-4h-2.98L10 9 7.38 6z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className={[styles.addBagTransition, styles.addBagTransition2].join(' ')}
+    >
+      <div className={styles.bagWrap}>
+        <button
+          className={[
+            styles.btnText,
+            styles.floatBag,
+            styles.floatBag2,
+            styles.floatBagColor
+          ].join(' ')}
+        >
+          {' '}
+          Add To Bag{' '}
+        </button>
+      </div>
     </div>
   </div>
 );

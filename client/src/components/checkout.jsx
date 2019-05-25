@@ -15,7 +15,8 @@ class Checkout extends React.Component {
       updateArrow: false,
       size: 'Select Size',
       sizeClicked: false,
-      sizeArrowUpdate: false
+      sizeArrowUpdate: false,
+      heart: false
     };
     this.quantityDropdown = this.quantityDropdown.bind(this);
     this.closeDropdown = this.closeDropdown.bind(this);
@@ -27,6 +28,7 @@ class Checkout extends React.Component {
     this.sizeUpdateArrow = this.sizeUpdateArrow.bind(this);
     this.sizeDropdown = this.sizeDropdown.bind(this);
     this.closeSizeDropdown = this.closeSizeDropdown.bind(this);
+    this.changeHeart = this.changeHeart.bind(this);
   }
 
   // componentDidMount() {
@@ -107,6 +109,13 @@ class Checkout extends React.Component {
       sizeArrowUpdate: false
     });
   }
+
+  changeHeart() {
+    this.setState({
+      heart: !this.state.heart
+    });
+  }
+
   render() {
     return (
       <div>
@@ -185,7 +194,7 @@ class Checkout extends React.Component {
           />
         </div>
 
-        <AddToBag />
+        <AddToBag heart={this.state.heart} changeHeart={this.changeHeart} />
       </div>
     );
   }
