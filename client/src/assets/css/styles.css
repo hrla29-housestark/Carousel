@@ -150,6 +150,7 @@
 .size {
   font-family: 'adihausDINRegular';
   text-decoration: underline;
+  cursor: pointer;
 }
 .body {
   display: flex;
@@ -402,10 +403,10 @@ button {
 /*------------ Size Dropdown  -------------*/
 .squareList {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   margin: 0 -5px -5px 0;
   max-height: none;
-  overflow-y: auto;
+  /* overflow-y: auto; */
   padding: 0;
   width: 100%;
 }
@@ -427,6 +428,24 @@ button {
   font-weight: 400;
   padding: 0 5px;
 }
+
+.divHeight {
+  display: flex;
+  padding-top: 20px;
+  width: 200px;
+}
+
+.divHeight2 {
+  width: 220px;
+  height: 220px;
+  /* margin: auto; */
+}
+
+/* Size Hover State*/
+.btn:hover {
+  border-bottom: 2px solid black;
+}
+
 .menuElement {
   align-items: center;
   cursor: pointer;

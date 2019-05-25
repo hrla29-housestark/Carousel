@@ -16,6 +16,7 @@ class App extends React.Component {
     };
     this.renderModal = this.renderModal.bind(this);
   }
+
   renderModal() {
     this.setState({
       isOpen: !this.state.isOpen

@@ -22,7 +22,7 @@ const Selection = props => (
               styles.sizeDropdownButton
             ].join(' ')}
           >
-            <span className={styles.dropdownSelectLabel}> Select Size </span>
+            <span className={styles.dropdownSelectLabel}> {props.size} </span>
             <svg
               className={[styles.arrowIcon, styles.arrowIcon2].join(' ')}
               viewBox="0 0 16 24"
@@ -38,142 +38,203 @@ const Selection = props => (
               />
             </svg>
           </button>
-          {/* <div
-            className={[
-              // styles.sizeDropdown,
-              // styles.sizeDropdown2,
-              // styles.sizeDropdown3,
-              // styles.sizeDropdown4
-              styles.squareList,
-              styles.squarePadding
-            ].join(' ')}
-          >
-            <ul
-              className={[
-                styles.squareList,
-                styles.squarePadding,
-                styles.ulText
-              ].join(' ')}
-            >
-              <li className={styles.menuItem}>
-                <button
-                  type="button"
-                  className={[styles.menuElement, styles.ulText].join(' ')}
-                >
-                  {' '}
-                  5{' '}
-                </button>
-              </li>
-              <li className={styles.menuItem}>
-                <button
-                  type="button"
-                  className={[styles.menuElement, styles.ulText].join(' ')}
-                >
-                  {' '}
-                  5.5{' '}
-                </button>
-              </li>
-              <li className={styles.menuItem}>
-                <button
-                  type="button"
-                  className={[styles.menuElement, styles.ulText].join(' ')}
-                >
-                  {' '}
-                  6{' '}
-                </button>
-              </li>
-              <li className={styles.menuItem}>
-                <button
-                  type="button"
-                  className={[styles.menuElement, styles.ulText].join(' ')}
-                >
-                  {' '}
-                  6.5{' '}
-                </button>
-              </li>
-              <li className={styles.menuItem}>
-                <button
-                  type="button"
-                  className={[styles.menuElement, styles.ulText].join(' ')}
-                >
-                  {' '}
-                  7{' '}
-                </button>
-              </li>
-              <li className={styles.menuItem}>
-                <button
-                  type="button"
-                  className={[styles.menuElement, styles.ulText].join(' ')}
-                >
-                  {' '}
-                  7.5{' '}
-                </button>
-              </li>
-              <li className={styles.menuItem}>
-                <button
-                  type="button"
-                  className={[styles.menuElement, styles.ulText].join(' ')}
-                >
-                  {' '}
-                  8{' '}
-                </button>
-              </li>
-              <li className={styles.menuItem}>
-                <button
-                  type="button"
-                  className={[styles.menuElement, styles.ulText].join(' ')}
-                >
-                  {' '}
-                  8.5{' '}
-                </button>
-              </li>
-              <li className={styles.menuItem}>
-                <button
-                  type="button"
-                  className={[styles.menuElement, styles.ulText].join(' ')}
-                >
-                  {' '}
-                  9{' '}
-                </button>
-              </li>
-              <li className={styles.menuItem}>
-                <button
-                  type="button"
-                  className={[styles.menuElement, styles.ulText].join(' ')}
-                >
-                  {' '}
-                  9.5{' '}
-                </button>
-              </li>
-              <li className={styles.menuItem}>
-                <button
-                  type="button"
-                  className={[styles.menuElement, styles.ulText].join(' ')}
-                >
-                  {' '}
-                  10{' '}
-                </button>
-              </li>
-              <li className={styles.menuItem}>
-                <button
-                  type="button"
-                  className={[styles.menuElement, styles.ulText].join(' ')}
-                >
-                  {' '}
-                  10.5{' '}
-                </button>
-              </li>
-              <li className={styles.menuItem}>
-                <button
-                  type="button"
-                  className={[styles.menuElement, styles.ulText].join(' ')}
-                >
-                  {' '}
-                  11{' '}
-                </button>
-              </li>
-            </ul>
-          </div> */}
+
+          <div className={[styles.squareList, styles.squarePadding].join(' ')}>
+            <div className={styles.divHeight}>
+              <ul
+                className={[
+                  styles.squareList,
+                  styles.squarePadding,
+                  styles.ulText,
+                  styles.divHeight2
+                ].join(' ')}
+              >
+                <li className={styles.menuItem}>
+                  <button
+                    type="button"
+                    className={[
+                      styles.menuElement,
+                      styles.ulText,
+                      styles.btn
+                    ].join(' ')}
+                    name="5"
+                    onClick={props.updateSize}
+                  >
+                    5
+                  </button>
+                </li>
+                <li className={styles.menuItem}>
+                  <button
+                    type="button"
+                    name="5.5"
+                    onClick={props.updateSize}
+                    className={[
+                      styles.menuElement,
+                      styles.ulText,
+                      styles.btn
+                    ].join(' ')}
+                  >
+                    5.5{' '}
+                  </button>
+                </li>
+                <li className={styles.menuItem}>
+                  <button
+                    type="button"
+                    name="6"
+                    onClick={props.updateSize}
+                    className={[
+                      styles.menuElement,
+                      styles.ulText,
+                      styles.btn
+                    ].join(' ')}
+                  >
+                    6{' '}
+                  </button>
+                </li>
+                <li className={styles.menuItem}>
+                  <button
+                    type="button"
+                    name="6.5"
+                    onClick={props.updateSize}
+                    className={[
+                      styles.menuElement,
+                      styles.ulText,
+                      styles.btn
+                    ].join(' ')}
+                  >
+                    6.5{' '}
+                  </button>
+                </li>
+                <li className={styles.menuItem}>
+                  <button
+                    type="button"
+                    name="7"
+                    onClick={props.updateSize}
+                    className={[
+                      styles.menuElement,
+                      styles.ulText,
+                      styles.btn
+                    ].join(' ')}
+                  >
+                    {' '}
+                    7{' '}
+                  </button>
+                </li>
+                <li className={styles.menuItem}>
+                  <button
+                    type="button"
+                    name="7.5"
+                    onClick={props.updateSize}
+                    className={[
+                      styles.menuElement,
+                      styles.ulText,
+                      styles.btn
+                    ].join(' ')}
+                  >
+                    7.5{' '}
+                  </button>
+                </li>
+                <li className={styles.menuItem}>
+                  <button
+                    type="button"
+                    name="8"
+                    onClick={props.updateSize}
+                    className={[
+                      styles.menuElement,
+                      styles.ulText,
+                      styles.btn
+                    ].join(' ')}
+                  >
+                    8{' '}
+                  </button>
+                </li>
+                <li className={styles.menuItem}>
+                  <button
+                    type="button"
+                    name="8.5"
+                    onClick={props.updateSize}
+                    className={[
+                      styles.menuElement,
+                      styles.ulText,
+                      styles.btn
+                    ].join(' ')}
+                  >
+                    8.5{' '}
+                  </button>
+                </li>
+                <li className={styles.menuItem}>
+                  <button
+                    type="button"
+                    name="9"
+                    onClick={props.updateSize}
+                    className={[
+                      styles.menuElement,
+                      styles.ulText,
+                      styles.btn
+                    ].join(' ')}
+                  >
+                    9{' '}
+                  </button>
+                </li>
+                <li className={styles.menuItem}>
+                  <button
+                    type="button"
+                    name="9.5"
+                    onClick={props.updateSize}
+                    className={[
+                      styles.menuElement,
+                      styles.ulText,
+                      styles.btn
+                    ].join(' ')}
+                  >
+                    9.5{' '}
+                  </button>
+                </li>
+                <li className={styles.menuItem}>
+                  <button
+                    type="button"
+                    name="10"
+                    onClick={props.updateSize}
+                    className={[
+                      styles.menuElement,
+                      styles.ulText,
+                      styles.btn
+                    ].join(' ')}
+                  >
+                    10{' '}
+                  </button>
+                </li>
+                <li className={styles.menuItem}>
+                  <button
+                    type="button"
+                    name="10.5"
+                    onClick={props.updateSize}
+                    className={[
+                      styles.menuElement,
+                      styles.ulText,
+                      styles.btn
+                    ].join(' ')}
+                  >
+                    10.5{' '}
+                  </button>
+                </li>
+                <li className={styles.menuItem}>
+                  <button
+                    type="button"
+                    name="11"
+                    onClick={props.updateSize}
+                    className={[
+                      styles.menuElement,
+                      styles.ulText,
+                      styles.btn
+                    ].join(' ')}
+                  >
+                    11{' '}
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
       {/* Quantity Selector*/}

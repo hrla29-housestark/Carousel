@@ -11,7 +11,9 @@ class Checkout extends React.Component {
       products: [],
       activeClass: false,
       quantity: 1,
-      updateArrow: false
+      updateArrow: false,
+      size: 'Select Size',
+      sizeClicked: false
     };
     this.quantityDropdown = this.quantityDropdown.bind(this);
     this.closeDropdown = this.closeDropdown.bind(this);
@@ -19,6 +21,7 @@ class Checkout extends React.Component {
     this.changeClass = this.changeClass.bind(this);
     this.updateQuantity = this.updateQuantity.bind(this);
     this.updateArrow = this.updateArrow.bind(this);
+    this.updateSize = this.updateSize.bind(this);
   }
 
   componentDidMount() {
@@ -67,6 +70,12 @@ class Checkout extends React.Component {
   updateArrow() {
     this.setState({
       updateArrow: !this.state.updateArrow
+    });
+  }
+
+  updateSize(e) {
+    this.setState({
+      size: e.target.name
     });
   }
   render() {
@@ -123,7 +132,6 @@ class Checkout extends React.Component {
               </svg>
               &nbsp;
               <span className={styles.size} onClick={() => this.props.isOpen()}>
-                {' '}
                 Size Chart
               </span>
             </span>
@@ -138,6 +146,9 @@ class Checkout extends React.Component {
             quantity={this.state.quantity}
             updateArrow={this.updateArrow}
             arrowState={this.state.updateArrow}
+            size={this.state.size}
+            updateSize={this.updateSize}
+            sizeClicked={this.state.sizeClicked}
           />
         </div>
       </div>
