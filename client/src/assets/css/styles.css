@@ -409,32 +409,10 @@ button {
   padding: 0 5px;
 }
 
-/* .sizeItem {
-  list-style: none;
-  position: relative;
-}
-
-.sizeElement {
-  align-items: center;
-  cursor: pointer;
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
-  height: 40px;
-  justify-content: center;
-  line-height: 1.1;
-  margin: 0 5px 5px 0;
-  min-width: 40px;
-  position: relative;
-  text-align: center;
-  transition: border 0.1s cubic-bezier(0.3, 0, 0.45, 1);
-  width: auto;
-  border: 1px solid #767677;
-} */
-
 /*------------ Size Dropdown  -------------*/
 .squareList {
   display: flex;
+  flex: 1;
   /* flex-wrap: wrap; */
   margin: 0 -5px -5px 0;
   max-height: none;
@@ -463,8 +441,10 @@ button {
 
 .divHeight {
   display: flex;
+  flex: 2;
   padding-top: 20px;
   width: 200px;
+  border: 1px solid;
 }
 
 .divHeight2 {
