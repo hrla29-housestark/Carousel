@@ -1,0 +1,67 @@
+.container {
+  text-align: left;
+  width: auto;
+  position: relative;
+  /* padding: 12px; */
+  left: 0;
+
+  display: flex;
+}
+
+.carouselLeft {
+  background: #ebedee;
+  display: inline-block;
+  width: 75%;
+  text-align: left;
+}
+
+.containerWrap {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.containerCol {
+  width: 100%;
+  float: left;
+  padding: 0 15px;
+}
+
+.slider {
+  width: 700px;
+  height: 700px;
+  position: relative;
+}
+
+.slideImage {
+  height: 100%;
+  width: 100%;
+}
+
+/* Arrow Component Styling*/
+.next {
+}
+
+.nextSvg {
+  display: inline-block;
+  height: 24px;
+  vertical-align: text-top;
+  width: 24px;
+  cursor: pointer;
+  top: 14px;
+  position: absolute;
+}
+.backArrow {
+}
+
+.backArrowSvg {
+  display: inline-block;
+  height: 24px;
+  vertical-align: text-top;
+  width: 24px;
+  cursor: pointer;
+  top: 14px;
+  position: absolute;
+  transform: scale(-1, 1);
+}
