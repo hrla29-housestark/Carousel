@@ -27,7 +27,7 @@ import Measure from '../components/Measure.jsx';
 
 const SizeChart = props => (
   <div
-    className={[styles.modal, styles.modalActive, styles.modalActive1].join(
+    className={[styles.modal, styles.modalActive, styles.modalActive1, styles.slide].join(
       ' '
     )}
   >

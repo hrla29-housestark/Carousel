@@ -9,7 +9,7 @@
 .sizeChartBody {
   border-style: solid;
   border-width: 5px;
-  border-width: 5px;
+  border-width: 1px;
   width: 90%;
   background: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
@@ -85,20 +85,6 @@
   color: #000;
 }
 
-/*     align-items: center;
-    background-color: #fff;
-    border: 1px solid #000;
-    cursor: pointer;
-    display: flex;
-    height: 34px;
-    justify-content: center;
-    position: absolute;
-    right: 105px;
-    top: 100px;
-    transform: translate(50%, -50%);
-    /* transition: transform 0.1s cubic-bezier(0.3, 0, 0.45, 1); */
-/* width: 34px;
-color: #000; */
 .closeBtnIcon {
   display: inline-block;
   height: 24px;
