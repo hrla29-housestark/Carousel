@@ -29,11 +29,18 @@ class App extends React.Component {
         <TopNavigation />
         <div className={sizeChartStyles.content}>
           {this.state.isOpen
-            ? ReactDOM.createPortal(<SizeChart />, modal)
+            ? ReactDOM.createPortal(
+                <SizeChart isOpen={this.renderModal} />,
+                modal
+              )
             : null}
         </div>
         <div className={styles.checkoutPlacement}>
-          <Checkout isOpen={this.renderModal} render={this.state.isOpen} />
+          <Checkout
+            isOpen={this.renderModal}
+            render={this.state.isOpen}
+            closeModal={this.loseModal}
+          />
         </div>
       </div>
     );

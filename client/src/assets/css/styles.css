@@ -1,5 +1,5 @@
-body {
-  overflow: hidden;
+.body {
+  overflow: auto;
 }
 
 /* Product Details */
@@ -21,6 +21,7 @@ body {
   flex-wrap: wrap;
   align-items: flex-end;
   margin: 20px;
+  /* overflow: auto; */
 }
 
 .colorsInfo {

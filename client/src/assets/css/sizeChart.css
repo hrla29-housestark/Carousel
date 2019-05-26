@@ -27,6 +27,84 @@
     padding: 15px 15px;
   }
 }
+/* Main Modal */
+.modal {
+  bottom: 0;
+  display: flex;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transform: translateZ(0);
+  justify-content: center;
+  right: 0;
+}
+.modalActive {
+  opacity: 1;
+  transition: opacity 0s, visibility 0s;
+  visibility: visible;
+}
+
+.modalActive1 {
+  z-index: 75;
+}
+
+.btnOverlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  bottom: 0;
+  cursor: pointer;
+  display: block;
+  left: 0;
+  pointer-events: all;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.btnOverlay2 {
+  opacity: 1;
+  transition: opacity 0.2s cubic-bezier(0.3, 0, 0.45, 1), visibility 0s;
+  visibility: visible;
+}
+
+/* Modal Close Button */
+.closeBtn {
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #000;
+  cursor: pointer;
+  display: flex;
+  height: 34px;
+  justify-content: center;
+  position: absolute;
+  right: 105px;
+  top: 100px;
+  transform: translate(50%, -50%);
+  transition: transform 0.1s cubic-bezier(0.3, 0, 0.45, 1);
+  width: 34px;
+  color: #000;
+}
+
+/*     align-items: center;
+    background-color: #fff;
+    border: 1px solid #000;
+    cursor: pointer;
+    display: flex;
+    height: 34px;
+    justify-content: center;
+    position: absolute;
+    right: 105px;
+    top: 100px;
+    transform: translate(50%, -50%);
+    /* transition: transform 0.1s cubic-bezier(0.3, 0, 0.45, 1); */
+/* width: 34px;
+color: #000; */
+.closeBtnIcon {
+  display: inline-block;
+  height: 24px;
+  vertical-align: text-top;
+  width: 24px;
+}
 .content {
   border: 0;
   border-radius: 4px;

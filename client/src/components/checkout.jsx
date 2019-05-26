@@ -215,7 +215,7 @@ class Checkout extends React.Component {
                 ) : null}
                 <img
                   className={[styles.circleImg, styles.child].join(' ')}
-                  src="https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Blue/NMD_R1_Shoes_Blue_BD8030_01_standard.jpg"
+                  // src="https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Blue/NMD_R1_Shoes_Blue_BD8030_01_standard.jpg"
                   onClick={this.switchProduct}
                 />
               </div>
@@ -241,7 +241,7 @@ class Checkout extends React.Component {
                 ) : null}
                 <img
                   className={[styles.circleImg, styles.child].join(' ')}
-                  src="https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Blue/NMD_R1_Shoes_Blue_BD8030_01_standard.jpg"
+                  // src="https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Blue/NMD_R1_Shoes_Blue_BD8030_01_standard.jpg"
                   onClick={this.switchProduct}
                 />
               </div>
