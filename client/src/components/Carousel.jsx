@@ -12,14 +12,14 @@ class Carousel extends React.Component {
       products: [],
       product: '',
       images: [
-        'https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/aurora.jpg'
-        // 'https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/canyon.jpg',
-        // 'https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/city.jpg',
-        // 'https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/desert.jpg',
-        // 'https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/mountains.jpg',
-        // 'https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/redsky.jpg',
-        // 'https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/sandy-shores.jpg',
-        // 'https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/tree-of-life.jpg'
+        'https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/aurora.jpg',
+        'https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/canyon.jpg',
+        'https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/city.jpg',
+        'https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/desert.jpg',
+        'https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/mountains.jpg',
+        'https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/redsky.jpg',
+        'https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/sandy-shores.jpg',
+        'https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/tree-of-life.jpg'
       ]
     };
     this.prevSlide = this.prevSlide.bind(this);
@@ -37,8 +37,8 @@ class Carousel extends React.Component {
       .then(data =>
         this.setState({
           products: data.data,
-          product: data.data[0]
-          // images: data.data[0].imageUrl
+          product: data.data[0],
+          images: data.data[0].imageUrl
         })
       )
       .catch(err => console.log('failed to retrieve data'));
@@ -58,10 +58,12 @@ class Carousel extends React.Component {
   }
   render() {
     return (
-      <div >
-        {this.state.images.map((image, index) => (
-          <SlideImage key={index} image={image} />
-        ))}
+      <div>
+        <div className={styles.row}>
+          {this.state.images.map((image, index) => (
+            <SlideImage key={index} image={image} />
+          ))}
+        </div>
       </div>
     );
   }

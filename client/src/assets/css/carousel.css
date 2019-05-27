@@ -26,7 +26,29 @@
   overflow: hidden;
 }
 
-.img {
+.imgSlider {
+  position: relative;
+  min-width: 200px;
+  margin: 0 auto;
+}
+
+.imgSliderWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  overflow-y: hidden;
+  /* overflow-x: hidden; */
+  object-fit: cover;
+  height: 800px;
+}
+
+/* USE THIS FOR SIDE CAROUSEL*/
+/* .img {
   width: auto;
   height: auto;
   max-height: 100%;
@@ -34,35 +56,11 @@
   object-fit: cover;
 }
 
-/* .containerWrap {
-  display: flex;
-  flex-direction: column;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.containerCol {
-  width: 100%;
-  float: left;
-  padding: 0 15px;
-}
-
-.imageSliderWrapper {
-  display: flex;
+.imgSlider {
   position: relative;
-  justify-content: flex-start;
-}  */
-/* .imageSlider {
-  position: absolute;
-}
-
-.slideImage {
-  max-height: 100vw;
-  margin: auto;
-  display: block;
-  transition: transform 0.2s cubic-bezier(0.3, 0, 0.45, 1);
+  max-width: 100%; <- change this to make icon smaller
+  margin: 0 auto;
 } */
-
 /* Arrow Component Styling*/
 /* .next {
   display: flex;
