@@ -264,7 +264,7 @@ class Checkout extends React.Component {
               </span>
             </span>
           </div>
-          `
+
           <Selection
             dropdown={this.quantityDropdown}
             clicked={this.state.clicked}

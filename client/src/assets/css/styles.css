@@ -18,10 +18,11 @@
 .checkoutPlacement {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   align-items: flex-end;
-  margin: 20px;
+  width: 26%;
   position: relative;
+
   /* overflow: auto; */
 }
 

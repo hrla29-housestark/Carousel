@@ -29,33 +29,27 @@ class App extends React.Component {
     return (
       <div>
         <TopNavigation />
-        <div>
-          <div
-            className={[sizeChartStyles.content, sizeChartStyles.slide].join(
-              ' '
-            )}
-          >
-            {this.state.isOpen
-              ? ReactDOM.createPortal(
-                  <SizeChart isOpen={this.renderModal} />,
-                  modal
-                )
-              : null}
-          </div>
-          <div
-            className={[
-              CarouselStyle.container,
-              CarouselStyle.secondContainer
-            ].join(' ')}
-          >
+        <div
+          className={[sizeChartStyles.content, sizeChartStyles.slide].join(' ')}
+        >
+          {this.state.isOpen
+            ? ReactDOM.createPortal(
+                <SizeChart isOpen={this.renderModal} />,
+                modal
+              )
+            : null}
+        </div>
+
+        <div className={CarouselStyle.container}>
+          <div className={CarouselStyle.carouselLeft}>
             <Carousel />
-            <div className={styles.checkoutPlacement}>
-              <Checkout
-                isOpen={this.renderModal}
-                render={this.state.isOpen}
-                closeModal={this.loseModal}
-              />
-            </div>
+          </div>
+          <div className={styles.checkoutPlacement}>
+            <Checkout
+              isOpen={this.renderModal}
+              render={this.state.isOpen}
+              closeModal={this.loseModal}
+            />
           </div>
         </div>
       </div>

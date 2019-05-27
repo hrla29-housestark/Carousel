@@ -1,21 +1,40 @@
-.container {
-  text-align: left;
-  width: auto;
+/* .container {
   position: relative;
-  /* padding: 12px; */
-  left: 0;
+  height: 100%;
+  overflow: auto;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+} */
 
+.container {
+  width: 100vw;
+  padding: 0;
   display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+  margin-top: 0;
+  float: none;
+  position: relative;
 }
 
 .carouselLeft {
-  background: #ebedee;
-  display: inline-block;
-  width: 75%;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  background-color: #ebedee;
+  overflow: hidden;
 }
 
-.containerWrap {
+.img {
+  width: auto;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/* .containerWrap {
   display: flex;
   flex-direction: column;
   padding-left: 0;
@@ -28,30 +47,46 @@
   padding: 0 15px;
 }
 
-.slider {
-  width: 700px;
-  height: 700px;
+.imageSliderWrapper {
+  display: flex;
   position: relative;
+  justify-content: flex-start;
+}  */
+/* .imageSlider {
+  position: absolute;
 }
 
 .slideImage {
-  height: 100%;
-  width: 100%;
-}
+  max-height: 100vw;
+  margin: auto;
+  display: block;
+  transition: transform 0.2s cubic-bezier(0.3, 0, 0.45, 1);
+} */
 
 /* Arrow Component Styling*/
-.next {
-}
+/* .next {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+} */
 
-.nextSvg {
+/* .nextSvg {
   display: inline-block;
   height: 24px;
   vertical-align: text-top;
   width: 24px;
   cursor: pointer;
   top: 14px;
-  position: absolute;
+
+  position: absolute; */
+/* z-index: 999; */
+/* } */
+/* 
+.faArrowRight:before, .faArrowLeft:before {
+  color: #222
 }
+
+
 .backArrow {
 }
 
@@ -64,4 +99,4 @@
   top: 14px;
   position: absolute;
   transform: scale(-1, 1);
-}
+} */
