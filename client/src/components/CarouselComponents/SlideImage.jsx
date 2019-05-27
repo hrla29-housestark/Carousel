@@ -4,8 +4,6 @@ import styles from '../../assets/css/carousel.css';
 const SlideImage = props => {
   const styling = {
     backgroundImage: `url(${props.url})`
-    // backgroundSize: 'cover',
-    // backgroundPosition: 'center'
   };
   return (
     <div>
@@ -21,6 +19,3 @@ const SlideImage = props => {
 };
 
 export default SlideImage;
-
-//className={styles.imgSlider}
-//className={styles.imgSliderWrapper}

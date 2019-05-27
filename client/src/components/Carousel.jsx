@@ -5,6 +5,8 @@ import RightArrow from '../components/CarouselComponents/RightArrow.jsx';
 import LeftArrow from '../components/CarouselComponents/LeftArrow.jsx';
 import SlideImage from '../components/CarouselComponents/SlideImage.jsx';
 import axios from 'axios';
+import NavThumbnail from '../components/CarouselComponents/NavThumbnail.jsx';
+
 class Carousel extends React.Component {
   constructor(props) {
     super(props);
@@ -48,12 +50,9 @@ class Carousel extends React.Component {
 
   nextSlide() {
     const lastIndex = this.state.images.length - 1;
-    console.log(`this is the last index`, lastIndex);
     const { currentIndex } = this.state;
     const resetIndex = currentIndex === lastIndex;
     const index = resetIndex ? 0 : currentIndex + 1;
-    console.log(`this is the index condition`, index);
-    console.log(`this is reset index`, resetIndex);
 
     this.setState(
       {
@@ -78,10 +77,14 @@ class Carousel extends React.Component {
   render() {
     return (
       <div>
+        <div
+          className={styles.thumbnailContainer}
+          width="50px"
+          max-height="350px"
+        >
+          <NavThumbnail url={this.state.images[this.state.currentIndex]} />
+        </div>
         <div className={styles.row}>
-          {/* {this.state.images.map((image, index) => (
-            <SlideImage key={index} image={image} />
-          ))} */}
           <SlideImage url={this.state.images[this.state.currentIndex]} />
         </div>
         <div>

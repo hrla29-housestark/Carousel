@@ -7,6 +7,7 @@ import SizeChart from './SizeChart.jsx';
 import sizeChartStyles from '../assets/css/sizeChart.css';
 import CarouselStyle from '../assets/css/carousel.css';
 import Carousel from '../components/Carousel.jsx';
+// import NavThumbnail from '../components/CarouselComponents/NavThumbnail.jsx';
 
 const modal = document.getElementById('modal');
 
@@ -43,6 +44,14 @@ class App extends React.Component {
         <div className={CarouselStyle.container}>
           <div className={CarouselStyle.carouselLeft}>
             <Carousel />
+            {/* Thumbnail Navigation? */}
+            {/* <div
+              className={CarouselStyle.thumbnailContainer}
+              width="50px"
+              max-height="350px"
+            >
+              <NavThumbnail />
+            </div> */}
           </div>
           <div className={styles.checkoutPlacement}>
             <Checkout
