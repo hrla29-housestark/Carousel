@@ -97,7 +97,7 @@
   width: 24px;
   cursor: pointer;
   top: 50%;
-  padding-right: 150px;
+  padding-right: 100px;
   position: absolute;
 }
 
@@ -125,20 +125,14 @@
 } */
 
 .backArrowSvg {
-  /* display: inline-block;
-  height: 24px;
-  vertical-align: text-top;
-  width: 24px;
-  cursor: pointer;
-  top: 14px;
-  position: absolute; */
   display: inline-block;
   height: 25px;
   vertical-align: text-top;
   width: 24px;
   cursor: pointer;
   top: 50%;
-  padding-right: 145px;
+  padding-right: 100px;
   position: absolute;
   transform: scale(-1, 1);
 }
+

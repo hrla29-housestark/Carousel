@@ -21,7 +21,7 @@ class Carousel extends React.Component {
         'https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/sandy-shores.jpg',
         'https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/tree-of-life.jpg'
       ],
-      index: 0,
+      currentIndex: 0,
       currentVal: 0
     };
     this.prevSlide = this.prevSlide.bind(this);
@@ -47,37 +47,49 @@ class Carousel extends React.Component {
   }
 
   nextSlide() {
-    const newIndex = this.state.index + 1;
-    this.setState({
-      images: this.state.images[newIndex]
-    });
+    const lastIndex = this.state.images.length - 1;
+    console.log(`this is the last index`, lastIndex);
+    const { currentIndex } = this.state;
+    const resetIndex = currentIndex === lastIndex;
+    const index = resetIndex ? 0 : currentIndex + 1;
+    console.log(`this is the index condition`, index);
+    console.log(`this is reset index`, resetIndex);
+
+    this.setState(
+      {
+        currentIndex: index
+      },
+      () => console.log(this.state.currentIndex)
+    );
   }
   prevSlide() {
-    const newIndex = this.state.index - 1;
-    this.setState({
-      images: this.state.images[newIndex]
-    });
+    const lastIndex = this.state.images.length - 1;
+    const { currentIndex } = this.state;
+    const resetIndex = currentIndex === 0;
+    const index = resetIndex ? lastIndex : currentIndex - 1;
+
+    this.setState(
+      {
+        currentIndex: index
+      },
+      () => console.log(this.state.currentIndex)
+    );
   }
   render() {
     return (
       <div>
         <div className={styles.row}>
-          {this.state.images.map((image, index) => (
+          {/* {this.state.images.map((image, index) => (
             <SlideImage key={index} image={image} />
-          ))}
+          ))} */}
+          <SlideImage url={this.state.images[this.state.currentIndex]} />
         </div>
-        <div
-        // className={[
-        //   styles.nextArrowPosition,
-        //   styles.nextArrowPosition1,
-        //   styles.nextArrowPosition2
-        // ].join(' ')}
-        >
-          <LeftArrow />
+        <div>
+          <LeftArrow left={this.prevSlide} direction="left" />
         </div>
 
         <div>
-          <RightArrow />
+          <RightArrow right={this.nextSlide} direction="right" />
         </div>
       </div>
     );
