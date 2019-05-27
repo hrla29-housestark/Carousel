@@ -20,7 +20,9 @@ class Carousel extends React.Component {
         'https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/redsky.jpg',
         'https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/sandy-shores.jpg',
         'https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/tree-of-life.jpg'
-      ]
+      ],
+      index: 0,
+      currentVal: 0
     };
     this.prevSlide = this.prevSlide.bind(this);
     this.nextSlide = this.nextSlide.bind(this);
@@ -47,13 +49,13 @@ class Carousel extends React.Component {
   nextSlide() {
     const newIndex = this.state.index + 1;
     this.setState({
-      index: newIndex
+      images: this.state.images[newIndex]
     });
   }
   prevSlide() {
     const newIndex = this.state.index - 1;
     this.setState({
-      index: newIndex
+      images: this.state.images[newIndex]
     });
   }
   render() {
@@ -64,26 +66,25 @@ class Carousel extends React.Component {
             <SlideImage key={index} image={image} />
           ))}
         </div>
+        <div
+        // className={[
+        //   styles.nextArrowPosition,
+        //   styles.nextArrowPosition1,
+        //   styles.nextArrowPosition2
+        // ].join(' ')}
+        >
+          <LeftArrow />
+        </div>
+
+        <div>
+          <RightArrow />
+        </div>
       </div>
     );
   }
 }
 
 export default Carousel;
-
-{
-  /* <div className={styles.carouselLeft}>
-<div className={[styles.containerWrap, styles.containerCol].join(' ')}>
-  <div className={styles.imageSlider}>
-    <div className={styles.imageSliderWrapper}>
-      {this.state.images.map((image, index) => (
-        <SlideImage key={index} image={image} />
-      ))}
-    </div>
-  </div>
-</div>
-</div> */
-}
 
 // class Carousel extends React.Component {
 //   constructor(props) {

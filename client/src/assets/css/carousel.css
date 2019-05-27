@@ -61,40 +61,84 @@
   max-width: 100%; <- change this to make icon smaller
   margin: 0 auto;
 } */
+
 /* Arrow Component Styling*/
-/* .next {
+.next {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+}
+
+.nextArrowPosition {
+  right: 20px;
+}
+
+/* .nextArrowPosition1 {
+  position: absolute;
 } */
 
-/* .nextSvg {
+.nextArrowPosition2 {
+  height: 24px;
+  width: 24px;
+  /* padding: 90%; */
+  /* top: calc(50% - 13.5px); */
+  /* z-index: 31;
+  transition: all 0.2s cubic-bezier(0.3, 0, 0.45, 1); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+.nextSvg {
   display: inline-block;
   height: 24px;
   vertical-align: text-top;
   width: 24px;
   cursor: pointer;
-  top: 14px;
-
-  position: absolute; */
-/* z-index: 999; */
-/* } */
-/* 
-.faArrowRight:before, .faArrowLeft:before {
-  color: #222
+  top: 50%;
+  padding-right: 150px;
+  position: absolute;
 }
 
-
-.backArrow {
+/* .backArrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
+
+.backArrow1 {
+  right: 20px;
+} */
+
+/* .backArrow2 {
+  height: 24px;
+  width: 24px;
+  padding: 90%;
+  top: calc(50% - 13.5px);
+  z-index: 31;
+  transition: all 0.2s cubic-bezier(0.3, 0, 0.45, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+} */
 
 .backArrowSvg {
-  display: inline-block;
+  /* display: inline-block;
   height: 24px;
   vertical-align: text-top;
   width: 24px;
   cursor: pointer;
   top: 14px;
+  position: absolute; */
+  display: inline-block;
+  height: 25px;
+  vertical-align: text-top;
+  width: 24px;
+  cursor: pointer;
+  top: 50%;
+  padding-right: 145px;
   position: absolute;
   transform: scale(-1, 1);
-} */
+}
