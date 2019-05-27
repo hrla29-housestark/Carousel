@@ -117,6 +117,7 @@
   font-style: normal;
   text-align: start;
   font-variant: normal;
+  font-family: 'adihausDINRegular';
 }
 
 .td {
@@ -126,7 +127,7 @@
   position: relative;
   text-align: center;
   text-transform: uppercase;
-  height: 38px;
+  height: 36px;
   min-width: 80px;
   border: 1px solid #ebedee;
 }
