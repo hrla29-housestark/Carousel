@@ -295,6 +295,52 @@ ul {
   list-style-type: none;
   text-align: center;
 }
+
+/* Modal : Measure Images */
+.imgWrap {
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.imgWrap2 {
+  background-color: #fff;
+  border: 1px solid #767677;
+  transition: transform 0.2s cubic-bezier(0.3, 0, 0.45, 1);
+  transform-origin: top right;
+  margin: 0 10px 0 0;
+}
+
+.header {
+  width: 100%;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 0;
+}
+.textUppercase {
+  text-transform: uppercase;
+  color: white;
+  font-size: 14px;
+  font-family: 'adihausDINRegular';
+}
+
+.numberStyle {
+  white-space: nowrap;
+  color: white;
+  font-family: 'adihausDINRegular';
+}
+
+.img1 {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
 @media (max-width: 991px) {
   .carousel__slide {
     padding-right: 60px;

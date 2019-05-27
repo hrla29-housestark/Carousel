@@ -33,8 +33,25 @@ const Measure = props => (
             <div
               className={[styles.chartCarousel, styles.chartOverflow].join(' ')}
             >
-              {' '}
-              Carousel
+              <div className={styles.imgWrap} width="100%">
+                <div className={styles.imgWrap2}>
+                  <header className={styles.header}>
+                    {' '}
+                    <span className={styles.textUppercase}>
+                      {' '}
+                      Heel-Toe Measurement
+                    </span>
+                    <span className={styles.numberStyle}> 1 / 3</span>
+                  </header>
+                  <div className={styles.img1}>
+                    <img
+                      src="https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/FEC+Images/Measurement1.jpg"
+                      width="100%"
+                      height="100%"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

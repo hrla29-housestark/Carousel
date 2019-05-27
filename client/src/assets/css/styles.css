@@ -159,6 +159,7 @@
   font-family: 'adihausDINRegular';
   text-decoration: underline;
   cursor: pointer;
+  overflow: visible;
 }
 .body {
   display: flex;
