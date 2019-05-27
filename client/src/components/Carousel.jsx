@@ -29,6 +29,7 @@ class Carousel extends React.Component {
     this.prevSlide = this.prevSlide.bind(this);
     this.nextSlide = this.nextSlide.bind(this);
     this.getAdidas = this.getAdidas.bind(this);
+    this.changeImage = this.changeImage.bind(this);
   }
 
   componentDidMount() {
@@ -74,6 +75,12 @@ class Carousel extends React.Component {
       () => console.log(this.state.currentIndex)
     );
   }
+
+  changeImage(idx) {
+    this.setState({
+      currentIndex: idx
+    });
+  }
   render() {
     return (
       <div>
@@ -82,8 +89,14 @@ class Carousel extends React.Component {
           width="50px"
           max-height="350px"
         >
-          <NavThumbnail url={this.state.images[this.state.currentIndex]} />
+          <NavThumbnail
+            images={this.state.images}
+            changeImage={this.changeImage}
+            nextSlide={this.nextSlide}
+            prevSlide={this.prevSlide}
+          />
         </div>
+
         <div className={styles.row}>
           <SlideImage url={this.state.images[this.state.currentIndex]} />
         </div>
@@ -100,79 +113,3 @@ class Carousel extends React.Component {
 }
 
 export default Carousel;
-
-// class Carousel extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       images: [
-//         'https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/aurora.jpg',
-//         'https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/canyon.jpg',
-//         'https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/city.jpg',
-//         'https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/desert.jpg',
-//         'https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/mountains.jpg',
-//         'https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/redsky.jpg',
-//         'https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/sandy-shores.jpg',
-//         'https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/tree-of-life.jpg'
-//       ],
-//       index: 0,
-//       translateVal: 0
-//     };
-//     this.nextSlide = this.nextSlide.bind(this);
-//     // this.prevSlide = this.prevSlide.bind(this);
-//     this.slideWidth = this.slideWidth.bind(this);
-//   }
-
-//   // prevSlide() {}
-
-//   nextSlide() {
-//     if (this.state.index === this.state.images.length - 1) {
-//       return this.setState({
-//         index: 0,
-//         translateVal: 0
-//       });
-//     }
-
-//     this.setState(
-//       {
-//         index: this.state.index + 1,
-//         translateVal: this.state.translateVal + -this.slideWidth()
-//       },
-//       () =>
-//         console.log(
-//           `CCLICKEDD, ${this.state.index}, ${this.state.translateVal}`
-//         )
-//     );
-//   }
-
-//   slideWidth = () => {
-//     return document.querySelector('.slideImage');
-//   };
-
-//   render() {
-//     return (
-//       <div className={styles.carouselLeft}>
-//         <div className={[styles.containerWrap, styles.containerCol].join(' ')}>
-//           <div className={styles.slider}>
-//             <div
-//               className={styles.sliderWrapper}
-//               style={{
-//                 transform: `translateX(${this.state.translateVal}px)`,
-//                 transition: 'transform ease-out 0.45s'
-//               }}
-//             >
-//               {this.state.images.map((image, index) => (
-//                 <SlideImage key={index} image={image} />
-//               ))}
-//             </div>
-//             <LeftArrow />
-
-//             <RightArrow nextSlide={this.nextSlide} />
-//           </div>
-//         </div>
-//       </div>
-//     );
-//   }
-// }
-
-// export default Carousel;

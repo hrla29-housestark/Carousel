@@ -9,13 +9,13 @@ class NavThumbnail extends React.Component {
 
   render() {
     const styling = {
-      backgroundImage: `url(${this.props.url})`
+      backgroundImage: `url(${this.props.image})`
       // transform: `translate(0px, -60px)`
     };
     return (
       <div>
         <div className={styles.navContainer}>
-          <button className={styles.upArrowBtn}>
+          <button className={styles.upArrowBtn} onClick={this.props.prevSlide}>
             <svg
               className={styles.upArrowSvg}
               viewBox="0 0 16 24"
@@ -33,56 +33,26 @@ class NavThumbnail extends React.Component {
           </button>
         </div>
 
-        <div className={styles.thumbnail}>
-          <img
-            style={styling}
-            src={this.props.url}
-            height="55px"
-            width="58px"
-          />
-        </div>
-        <div className={styles.thumbnail}>
-          <img
-            style={styling}
-            src={this.props.url}
-            height="55px"
-            width="58px"
-          />
-        </div>
-        <div className={styles.thumbnail}>
-          <img
-            style={styling}
-            src={this.props.url}
-            height="55px"
-            width="58px"
-          />
-        </div>
-        <div className={styles.thumbnail}>
-          <img
-            style={styling}
-            src={this.props.url}
-            height="55px"
-            width="58px"
-          />
-        </div>
-        <div className={styles.thumbnail}>
-          <img
-            style={styling}
-            src={this.props.url}
-            height="55px"
-            width="58px"
-          />
-        </div>
-        <div className={styles.thumbnail}>
-          <img
-            style={styling}
-            src={this.props.url}
-            height="55px"
-            width="58px"
-          />
-        </div>
+        {this.props.images.map((image, index) => (
+          <div
+            className={[styles.thumbnail, styles.thumbnail].join(' ')}
+            key={index}
+          >
+            <img
+              style={styling}
+              src={image}
+              height="58px"
+              width="58px"
+              onClick={() => this.props.changeImage(index)}
+            />
+          </div>
+        ))}
+
         <div className={styles.bottomArrow}>
-          <button className={styles.bottomArrowBtn}>
+          <button
+            className={styles.bottomArrowBtn}
+            onClick={this.props.nextSlide}
+          >
             <svg
               className={styles.bottomArrowSvg}
               viewBox="0 0 16 24"

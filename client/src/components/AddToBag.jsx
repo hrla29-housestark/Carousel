@@ -57,7 +57,7 @@ const AddToBag = props => (
     ) : null}
 
     {/* */}
-    <div
+    {/* <div
       className={[styles.addBagTransition, styles.addBagTransition2].join(' ')}
     >
       <div className={styles.bagWrap}>
@@ -72,7 +72,7 @@ const AddToBag = props => (
           Add To Bag
         </button>
       </div>
-    </div>
+    </div> */}
   </div>
 );
 
