@@ -37,6 +37,8 @@
   transform: translateZ(0);
   justify-content: center;
   right: 0;
+
+  position: absolute;
 }
 .modalActive {
   opacity: 1;
@@ -104,6 +106,7 @@
   transform: translate(-50%, -50%);
   width: 40%;
   max-width: 40rem;
+  overflow: visible;
 }
 
 /* CSS For Measurement Table  */
@@ -247,19 +250,27 @@
   width: 100%;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  /* flex-wrap: wrap;
+  flex-direction: row;  */
+  /* align-items: center; */
+  /* justify-content: center; */
   padding-bottom: 30px;
   overflow: hidden;
 }
 
 @media (min-width: 600px) {
   .divContainer {
-    width: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
   }
 }
 
 .chartCarousel {
   position: relative;
-  display: flex;
+  /* display: flex; */
   max-width: 1360px;
   width: 100%;
   margin-left: auto;
@@ -300,8 +311,9 @@ ul {
 .imgWrap {
   flex-grow: 0;
   flex-shrink: 0;
-  padding: 0;
+  padding: 10px;
   margin: 0;
+  flex: 1 1 0px;
 }
 
 .imgWrap2 {
@@ -309,11 +321,12 @@ ul {
   border: 1px solid #767677;
   transition: transform 0.2s cubic-bezier(0.3, 0, 0.45, 1);
   transform-origin: top right;
-  margin: 0 10px 0 0;
+  /* margin: 0 10px 0 0; */
+  height: 100%;
 }
 
 .header {
-  width: 100%;
+  /* width: 100%; */
   padding: 10px;
   background-color: #000;
   color: #fff;
@@ -338,8 +351,35 @@ ul {
 
 .img1 {
   width: 100%;
+  height: 50%;
   overflow: hidden;
   position: relative;
+}
+
+.imgDescription {
+  color: #000;
+  padding: 15px;
+  height: auto;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  font-family: 'adihausDINRegular';
+}
+
+.fitSection {
+  margin-bottom: 40px;
+  text-decoration: uppercase;
+  font-family: 'adineuePRO-Bold';
+  margin-block-start: 1.67em;
+  margin-block-end: 1.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-size: 0.83em;
+}
+
+.font {
+  font-family: 'adihausDINRegular';
+  font-size: 13px;
 }
 @media (max-width: 991px) {
   .carousel__slide {
