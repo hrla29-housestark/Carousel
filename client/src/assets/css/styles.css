@@ -248,7 +248,6 @@
 .dropdownSize {
   cursor: pointer;
   height: 50px;
-  /* display: block; */
 }
 
 /* Icon SVG*/
@@ -689,16 +688,6 @@ button {
 }
 
 .btnDesign::after {
-  /* content: '';
-  display: block;
-  position: absolute;
-  border-right: 1px solid #000;
-  border-top: 1px solid #000;
-  height: 100%;
-  right: -5px;
-  top: 4px;
-  width: 3px; */
-
   content: '';
   display: block;
   position: absolute;

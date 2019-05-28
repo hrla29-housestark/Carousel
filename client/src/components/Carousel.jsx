@@ -83,8 +83,8 @@ class Carousel extends React.Component {
           <NavThumbnail
             images={this.state.images}
             changeImage={this.changeImage}
-            nextSlide={this.nextSlide}
-            prevSlide={this.prevSlide}
+            // nextSlide={this.nextSlide}
+            // prevSlide={this.prevSlide}
           />
         </div>
 
