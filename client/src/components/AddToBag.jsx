@@ -8,12 +8,7 @@ const AddToBag = props => (
     )}
   >
     {!props.hideBtnState ? (
-      <button
-        onClick={props.addToBagFunction}
-        className={[styles.btnText, styles.btnWidth, styles.btnDesign].join(
-          ' '
-        )}
-      >
+      <button onClick={props.addToBagFunction} className={styles.btnDesign}>
         Add To Bag
         <svg
           className={[styles.arrowWhite, styles.arrowWhite2].join(' ')}
