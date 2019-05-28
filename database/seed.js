@@ -16,12 +16,19 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Nite+Jogger+Shoes+-+Men/Black/Nite_Jogger_Shoes_Black_BD7954_06_standard.jpg'
     ],
     price: 120,
-    color: 'black'
+    gender: 'Men',
+    type: 'Shoes',
+    defaultColor: 'CORE BLACK / CARBON / CARBON',
+    otherColor: 'CLOUD WHITE / CRYSTAL WHITE / CRYSTAL WHITE',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Nite+Jogger+Shoes+-+Men/Black/Nite_Jogger_Shoes_Black_BD7954_01_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Nite+Jogger+Shoes+-+Men/White/Nite_Jogger_Shoes_White_BD7676_01_standard.jpg'
+    ]
   },
   {
     productID: 2,
     productName: 'TIRO 19 TRAINING PANTS',
-    productType: `MEN'S ORIGINALS`,
+    productType: `WOMEN'S ORIGINALS`,
     imageUrl: [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Women+Tiro+19+Training+Pants/Black/Tiro_19_Training_Pants_Black_D95957_01_laydown.jpg',
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Women+Tiro+19+Training+Pants/Black/Tiro_19_Training_Pants_Black_D95957_02_laydown.jpg',
@@ -32,7 +39,13 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Women+Tiro+19+Training+Pants/Black/Tiro_19_Training_Pants_Black_D95957_25_outfit.jpg'
     ],
     price: 120,
-    color: 'black'
+    color: 'black',
+    gender: 'Women',
+    type: 'Apparel',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Women+Tiro+19+Training+Pants/Black/Tiro_19_Training_Pants_Black_D95957_21_model.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Women+Tiro+19+Training+Pants/Blue/Tiro_19_Training_Pants_Blue_DT5984_21_model.jpg'
+    ]
   },
   {
     productID: 3,
@@ -48,7 +61,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/Black/Ultraboost_Shoes_Black_F36123_06_standard.jpg'
     ],
     price: 100,
-    color: 'black'
+    gender: 'Women',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/Black/Ultraboost_Shoes_Black_F36123_01_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/White/Ultraboost_Shoes_White_BB6308_01_standard.jpg'
+    ]
   },
   {
     productID: 4,
@@ -64,7 +82,13 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black/Sobakov_Shoes_Black_B41968_07_standard.jpg'
     ],
     price: 100,
-    color: 'black'
+    color: 'black',
+    gender: 'Men',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black/Sobakov_Shoes_Black_B41968_07_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black%3AWhite/Sobakov_Shoes_Black_BD7549_01_standard.jpg'
+    ]
   },
   {
     productID: 5,
@@ -81,7 +105,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Pureboost/Black/Pureboost_Go_Shoes_Black_B37803_07_standard.jpg'
     ],
     price: 80,
-    color: 'black'
+    gender: 'Men',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Pureboost/Black/Pureboost_Go_Shoes_Black_B37803_010_hover_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Pureboost/Blue/Pureboost_Go_Shoes_Blue_B37804_01_standard.jpg.png'
+    ]
   },
   {
     productID: 6,
@@ -98,7 +127,13 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black%3AWhite/Sobakov_Shoes_Black_BD7549_07_standard.jpg'
     ],
     price: 90,
-    color: 'black/white'
+    color: 'black/white',
+    gender: 'Men',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black%3AWhite/Sobakov_Shoes_Black_BD7549_01_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black/Sobakov_Shoes_Black_B41968_07_standard.jpg'
+    ]
   },
   {
     productID: 7,
@@ -115,7 +150,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Women+Hoodie/Pink/Cropped_Hoodie_Pink_DX2161_41_detail.jpg'
     ],
     price: 90,
-    color: 'pink'
+    gender: 'Women',
+    type: 'Apparel',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Women+Hoodie/Pink/Cropped_Hoodie_Pink_DX2161_21_model.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Women+Hoodie/White/Cropped_Hoodie_White_DX2321_21_model.jpg'
+    ]
   },
   {
     productID: 8,
@@ -132,7 +172,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black%3AWhite/Sobakov_Shoes_Black_BD7549_07_standard.jpg'
     ],
     price: 140,
-    color: 'black/white'
+    gender: 'Men',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black%3AWhite/Sobakov_Shoes_Black_BD7549_01_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black/Sobakov_Shoes_Black_B41968_07_standard.jpg'
+    ]
   },
   {
     productID: 9,
@@ -147,7 +192,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/POD-S3.1_Women_Shoes/Grey/POD_S3.1_Shoes_Grey_B37458_05_standard.jpg'
     ],
     price: 130,
-    color: 'grey'
+    gender: 'Women',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/POD-S3.1_Women_Shoes/Grey/POD_S3.1_Shoes_Grey_B37458_01_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/POD-S3.1_Women_Shoes/Mint/POD_S3.1_Shoes_Green_B37465_01_standard.jpg'
+    ]
   },
   {
     productID: 10,
@@ -163,7 +213,13 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Women+Tiro+19+Training+Pants/Blue/Tiro_19_Training_Pants_Blue_DT5984_41_detail.jpg'
     ],
     price: 100,
-    color: 'blue'
+    color: 'blue',
+    gender: 'Women',
+    type: 'Apparel',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Women+Tiro+19+Training+Pants/Blue/Tiro_19_Training_Pants_Blue_DT5984_21_model.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Women+Tiro+19+Training+Pants/Black/Tiro_19_Training_Pants_Black_D95957_21_model.jpg'
+    ]
   },
   {
     productID: 11,
@@ -179,7 +235,13 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Women+Tiro+19+Training+Pants/Blue/Tiro_19_Training_Pants_Blue_DT5984_41_detail.jpg'
     ],
     price: 140,
-    color: 'blue'
+    color: 'blue',
+    gender: 'Women',
+    type: 'Apparel',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Women+Tiro+19+Training+Pants/Blue/Tiro_19_Training_Pants_Blue_DT5984_21_model.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Women+Tiro+19+Training+Pants/Black/Tiro_19_Training_Pants_Black_D95957_21_model.jpg'
+    ]
   },
   {
     productID: 12,
@@ -196,7 +258,9 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Superstar_Originals_Men/Superstar_Shoes_White_C77124_07_standard.jpg'
     ],
     price: 80,
-    color: 'white'
+    color: 'white',
+    gender: 'Men',
+    type: 'Shoes'
   },
   {
     productID: 13,
@@ -213,7 +277,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black%3AWhite/Sobakov_Shoes_Black_BD7549_07_standard.jpg'
     ],
     price: 90,
-    color: 'black/white'
+    gender: 'Men',
+    type: 'Apparel',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black%3AWhite/Sobakov_Shoes_Black_BD7549_01_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black/Sobakov_Shoes_Black_B41968_07_standard.jpg'
+    ]
   },
   {
     productID: 14,
@@ -230,7 +299,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Blue/Trefoil_Hoodie_Blue_DV1504_41_detail.jpg'
     ],
     price: 110,
-    color: 'blue'
+    gender: 'Men',
+    type: 'Apparel',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Blue/Trefoil_Hoodie_Blue_DV1504_21_model.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Black/Trefoil_Hoodie_Black_DT7964_21_model.jpg'
+    ]
   },
   {
     productID: 15,
@@ -247,7 +321,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/White/Ultraboost_Shoes_White_BB6308_05_standard.jpg'
     ],
     price: 100,
-    color: 'white'
+    gender: 'Women',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/White/Ultraboost_Shoes_White_BB6308_01_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/Black/Ultraboost_Shoes_Black_F36123_01_standard.jpg'
+    ]
   },
   {
     productID: 16,
@@ -262,7 +341,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Black/Trefoil_Hoodie_Black_DT7964_25_model.jpg'
     ],
     price: 120,
-    color: 'black'
+    gender: 'Men',
+    type: 'Apparel',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Black/Trefoil_Hoodie_Black_DT7964_21_model.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Blue/Trefoil_Hoodie_Blue_DV1504_21_model.jpg'
+    ]
   },
   {
     productID: 17,
@@ -277,7 +361,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Women+Hoodie/White/Cropped_Hoodie_White_DX2321_25_model.jpg'
     ],
     price: 130,
-    color: 'white'
+    gender: 'Women',
+    type: 'Apparel',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Women+Hoodie/White/Cropped_Hoodie_White_DX2321_21_model.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Women+Hoodie/Pink/Cropped_Hoodie_Pink_DX2161_21_model.jpg'
+    ]
   },
   {
     productID: 18,
@@ -293,7 +382,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Pureboost/Blue/Pureboost_Go_Shoes_Blue_B37804_06_standard.jpg.png'
     ],
     price: 120,
-    color: 'blue'
+    gender: 'Men',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Pureboost/Blue/Pureboost_Go_Shoes_Blue_B37804_01_standard.jpg.png',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Pureboost/Black/Pureboost_Go_Shoes_Black_B37803_010_hover_standard.jpg'
+    ]
   },
   {
     productID: 19,
@@ -311,7 +405,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/White/Ultraboost_Shoes_White_BB6308_07_standard.jpg'
     ],
     price: 80,
-    color: 'white'
+    gender: 'Women',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/White/Ultraboost_Shoes_White_BB6308_01_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/Black/Ultraboost_Shoes_Black_F36123_01_standard.jpg'
+    ]
   },
   {
     productID: 20,
@@ -327,7 +426,13 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Women+Tiro+19+Training+Pants/Blue/Tiro_19_Training_Pants_Blue_DT5984_41_detail.jpg'
     ],
     price: 80,
-    color: 'blue'
+    color: 'blue',
+    gender: 'Women',
+    type: 'Apparel',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Women+Tiro+19+Training+Pants/Blue/Tiro_19_Training_Pants_Blue_DT5984_21_model.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Women+Tiro+19+Training+Pants/Black/Tiro_19_Training_Pants_Black_D95957_21_model.jpg'
+    ]
   },
   {
     productID: 21,
@@ -344,7 +449,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black%3AWhite/Sobakov_Shoes_Black_BD7549_07_standard.jpg'
     ],
     price: 120,
-    color: 'black/white'
+    gender: 'Men',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black%3AWhite/Sobakov_Shoes_Black_BD7549_01_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black/Sobakov_Shoes_Black_B41968_07_standard.jpg'
+    ]
   },
   {
     productID: 22,
@@ -360,7 +470,13 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Women+Tiro+19+Training+Pants/Black/Tiro_19_Training_Pants_Black_D95957_25_outfit.jpg'
     ],
     price: 80,
-    color: 'black'
+    color: 'black',
+    gender: 'Women',
+    type: 'Apparel',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Women+Tiro+19+Training+Pants/Black/Tiro_19_Training_Pants_Black_D95957_21_model.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Women+Tiro+19+Training+Pants/Blue/Tiro_19_Training_Pants_Blue_DT5984_21_model.jpg'
+    ]
   },
   {
     productID: 23,
@@ -377,7 +493,9 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Swift+Run+ShoesMen/Black/Swift_Run_Shoes_Black_AQ0863_06_standard.jpg'
     ],
     price: 120,
-    color: 'black'
+    color: 'black',
+    gender: 'Men',
+    type: 'Shoes'
   },
   {
     productID: 24,
@@ -393,7 +511,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black/Sobakov_Shoes_Black_B41968_07_standard.jpg'
     ],
     price: 120,
-    color: 'black'
+    gender: 'Men',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black/Sobakov_Shoes_Black_B41968_07_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black%3AWhite/Sobakov_Shoes_Black_BD7549_01_standard.jpg'
+    ]
   },
   {
     productID: 25,
@@ -409,7 +532,9 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/CloudFoam+/Black/Cloudfoam_Ultimate_Shoes_Black_BC0018_06_standard.jpg'
     ],
     price: 130,
-    color: 'black'
+    color: 'black',
+    gender: 'Men',
+    type: 'Shoes'
   },
   {
     productID: 26,
@@ -424,7 +549,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Black/Trefoil_Hoodie_Black_DT7964_25_model.jpg'
     ],
     price: 90,
-    color: 'black'
+    gender: 'Men',
+    type: 'Apparel',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Black/Trefoil_Hoodie_Black_DT7964_21_model.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Blue/Trefoil_Hoodie_Blue_DV1504_21_model.jpg'
+    ]
   },
   {
     productID: 27,
@@ -441,7 +571,9 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Superstar_Originals_Men/Superstar_Shoes_White_C77124_07_standard.jpg'
     ],
     price: 110,
-    color: 'white'
+    color: 'white',
+    gender: 'Men',
+    type: 'Shoes'
   },
   {
     productID: 28,
@@ -459,7 +591,13 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/White/Ultraboost_Shoes_White_BB6308_07_standard.jpg'
     ],
     price: 130,
-    color: 'white'
+    color: 'white',
+    gender: 'Women',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/White/Ultraboost_Shoes_White_BB6308_01_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/Black/Ultraboost_Shoes_Black_F36123_01_standard.jpg'
+    ]
   },
   {
     productID: 29,
@@ -475,7 +613,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/Black/Ultraboost_Shoes_Black_F36123_06_standard.jpg'
     ],
     price: 120,
-    color: 'black'
+    gender: 'Women',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/Black/Ultraboost_Shoes_Black_F36123_01_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/White/Ultraboost_Shoes_White_BB6308_01_standard.jpg'
+    ]
   },
   {
     productID: 30,
@@ -491,7 +634,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/Black/Ultraboost_Shoes_Black_F36123_06_standard.jpg'
     ],
     price: 80,
-    color: 'black'
+    type: 'Shoes',
+    gender: 'Women',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/Black/Ultraboost_Shoes_Black_F36123_01_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/White/Ultraboost_Shoes_White_BB6308_01_standard.jpg'
+    ]
   },
   {
     productID: 31,
@@ -508,7 +656,9 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Superstar_Originals_Men/Superstar_Shoes_White_C77124_07_standard.jpg'
     ],
     price: 110,
-    color: 'black'
+    color: 'black',
+    gender: 'Men',
+    type: 'Shoes'
   },
   {
     productID: 32,
@@ -524,7 +674,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Pureboost/Blue/Pureboost_Go_Shoes_Blue_B37804_06_standard.jpg.png'
     ],
     price: 80,
-    color: 'blue'
+    gender: 'Men',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Pureboost/Blue/Pureboost_Go_Shoes_Blue_B37804_01_standard.jpg.png',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Pureboost/Black/Pureboost_Go_Shoes_Black_B37803_010_hover_standard.jpg'
+    ]
   },
   {
     productID: 33,
@@ -541,7 +696,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Blue/Trefoil_Hoodie_Blue_DV1504_41_detail.jpg'
     ],
     price: 90,
-    color: 'blue'
+    gender: 'Men',
+    type: 'Apparel',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Blue/Trefoil_Hoodie_Blue_DV1504_21_model.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Black/Trefoil_Hoodie_Black_DT7964_21_model.jpg'
+    ]
   },
   {
     productID: 34,
@@ -557,7 +717,9 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/CloudFoam+/Black/Cloudfoam_Ultimate_Shoes_Black_BC0018_06_standard.jpg'
     ],
     price: 80,
-    color: 'black'
+    color: 'black',
+    gender: 'Men',
+    type: 'Shoes'
   },
   {
     productID: 35,
@@ -572,7 +734,9 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/CloudFoam+/White/Cloudfoam_Ultimate_Shoes_White_BC0121_06_standard.jpg'
     ],
     price: 120,
-    color: 'white'
+    color: 'white',
+    gender: 'Men',
+    type: 'Shoes'
   },
   {
     productID: 36,
@@ -590,7 +754,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/White/Ultraboost_Shoes_White_BB6308_07_standard.jpg'
     ],
     price: 100,
-    color: 'white'
+    gender: 'Women',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/White/Ultraboost_Shoes_White_BB6308_01_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/Black/Ultraboost_Shoes_Black_F36123_01_standard.jpg'
+    ]
   },
   {
     productID: 37,
@@ -607,12 +776,17 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/White/Ultraboost_Shoes_White_BB6308_05_standard.jpg'
     ],
     price: 110,
-    color: 'white'
+    gender: 'Women',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/White/Ultraboost_Shoes_White_BB6308_01_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/Black/Ultraboost_Shoes_Black_F36123_01_standard.jpg'
+    ]
   },
   {
     productID: 38,
     productName: 'POD S3 SHOES',
-    productType: `MEN'S ORIGINALS`,
+    productType: `WOMEN'S ORIGINALS`,
     imageUrl: [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/POD-S3.1_Women_Shoes/Mint/POD_S3.1_Shoes_Green_B37465_010_hover_standard.jpg',
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/POD-S3.1_Women_Shoes/Mint/POD_S3.1_Shoes_Green_B37465_01_standard.jpg',
@@ -623,7 +797,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/POD-S3.1_Women_Shoes/Mint/POD_S3.1_Shoes_Green_B37465_06_standard.jpg'
     ],
     price: 80,
-    color: 'Mint'
+    gender: 'Women',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/POD-S3.1_Women_Shoes/Mint/POD_S3.1_Shoes_Green_B37465_01_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/POD-S3.1_Women_Shoes/Grey/POD_S3.1_Shoes_Grey_B37458_01_standard.jpg'
+    ]
   },
   {
     productID: 39,
@@ -638,7 +817,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Black/Trefoil_Hoodie_Black_DT7964_25_model.jpg'
     ],
     price: 130,
-    color: 'black'
+    gender: 'Men',
+    type: 'Apparel',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Black/Trefoil_Hoodie_Black_DT7964_21_model.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Blue/Trefoil_Hoodie_Blue_DV1504_21_model.jpg'
+    ]
   },
   {
     productID: 40,
@@ -655,7 +839,14 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Nite+Jogger+Shoes+-+Men/White/Nite_Jogger_Shoes_White_BD7676_07_standard.jpg'
     ],
     price: 130,
-    color: 'white'
+    gender: 'Men',
+    type: 'Shoes',
+    defaultColor: 'CLOUD WHITE / CRYSTAL WHITE / CRYSTAL WHITE',
+    otherColor: 'CORE BLACK / CARBON / CARBON',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Nite+Jogger+Shoes+-+Men/White/Nite_Jogger_Shoes_White_BD7676_01_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Nite+Jogger+Shoes+-+Men/Black/Nite_Jogger_Shoes_Black_BD7954_01_standard.jpg'
+    ]
   },
   {
     productID: 41,
@@ -672,7 +863,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/White/Ultraboost_Shoes_White_BB6308_05_standard.jpg'
     ],
     price: 90,
-    color: 'white'
+    gender: 'Women',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/White/Ultraboost_Shoes_White_BB6308_01_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/Black/Ultraboost_Shoes_Black_F36123_01_standard.jpg'
+    ]
   },
   {
     productID: 42,
@@ -688,7 +884,9 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/CloudFoam+/Black/Cloudfoam_Ultimate_Shoes_Black_BC0018_06_standard.jpg'
     ],
     price: 80,
-    color: 'black'
+    color: 'black',
+    gender: 'Men',
+    type: 'Shoes'
   },
   {
     productID: 43,
@@ -704,7 +902,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/POD-S3.1_Women_Shoes/Mint/POD_S3.1_Shoes_Green_B37465_06_standard.jpg'
     ],
     price: 80,
-    color: 'Mint'
+    gender: 'Women',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/POD-S3.1_Women_Shoes/Mint/POD_S3.1_Shoes_Green_B37465_01_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/POD-S3.1_Women_Shoes/Grey/POD_S3.1_Shoes_Grey_B37458_01_standard.jpg'
+    ]
   },
   {
     productID: 44,
@@ -721,7 +924,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Women+Hoodie/Pink/Cropped_Hoodie_Pink_DX2161_41_detail.jpg'
     ],
     price: 80,
-    color: 'pink'
+    gender: 'Women',
+    type: 'Apparel',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Women+Hoodie/Pink/Cropped_Hoodie_Pink_DX2161_21_model.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Women+Hoodie/White/Cropped_Hoodie_White_DX2321_21_model.jpg'
+    ]
   },
   {
     productID: 45,
@@ -736,7 +944,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Women+Hoodie/White/Cropped_Hoodie_White_DX2321_25_model.jpg'
     ],
     price: 120,
-    color: 'white'
+    gender: 'Women',
+    type: 'Apparel',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Women+Hoodie/White/Cropped_Hoodie_White_DX2321_21_model.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Women+Hoodie/Pink/Cropped_Hoodie_Pink_DX2161_21_model.jpg'
+    ]
   },
   {
     productID: 46,
@@ -751,7 +964,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/POD-S3.1_Women_Shoes/Grey/POD_S3.1_Shoes_Grey_B37458_05_standard.jpg'
     ],
     price: 90,
-    color: 'grey'
+    gender: 'Women',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/POD-S3.1_Women_Shoes/Grey/POD_S3.1_Shoes_Grey_B37458_01_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/POD-S3.1_Women_Shoes/Mint/POD_S3.1_Shoes_Green_B37465_01_standard.jpg'
+    ]
   },
   {
     productID: 47,
@@ -766,7 +984,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Black/Trefoil_Hoodie_Black_DT7964_25_model.jpg'
     ],
     price: 100,
-    color: 'black'
+    gender: 'Men',
+    type: 'Apparel',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Black/Trefoil_Hoodie_Black_DT7964_21_model.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Blue/Trefoil_Hoodie_Blue_DV1504_21_model.jpg'
+    ]
   },
   {
     productID: 48,
@@ -782,7 +1005,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black/Sobakov_Shoes_Black_B41968_07_standard.jpg'
     ],
     price: 130,
-    color: 'black'
+    gender: 'Men',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black/Sobakov_Shoes_Black_B41968_07_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black%3AWhite/Sobakov_Shoes_Black_BD7549_01_standard.jpg'
+    ]
   },
   {
     productID: 49,
@@ -798,7 +1026,9 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/CloudFoam+/Black/Cloudfoam_Ultimate_Shoes_Black_BC0018_06_standard.jpg'
     ],
     price: 90,
-    color: 'black'
+    color: 'black',
+    gender: 'Men',
+    type: 'Shoes'
   },
   {
     productID: 50,
@@ -815,7 +1045,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Blue/Trefoil_Hoodie_Blue_DV1504_41_detail.jpg'
     ],
     price: 80,
-    color: 'blue'
+    gender: 'Men',
+    type: 'Apparel',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Blue/Trefoil_Hoodie_Blue_DV1504_21_model.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Black/Trefoil_Hoodie_Black_DT7964_21_model.jpg'
+    ]
   },
   {
     productID: 51,
@@ -832,7 +1067,9 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Superstar_Originals_Men/Superstar_Shoes_White_C77124_07_standard.jpg'
     ],
     price: 90,
-    color: 'white'
+    color: 'white',
+    gender: 'Men',
+    type: 'Shoes'
   },
   {
     productID: 52,
@@ -849,7 +1086,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/White/Ultraboost_Shoes_White_BB6308_05_standard.jpg'
     ],
     price: 120,
-    color: 'white'
+    gender: 'Women',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/White/Ultraboost_Shoes_White_BB6308_01_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/Black/Ultraboost_Shoes_Black_F36123_01_standard.jpg'
+    ]
   },
   {
     productID: 53,
@@ -864,7 +1106,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Black/Trefoil_Hoodie_Black_DT7964_25_model.jpg'
     ],
     price: 80,
-    color: 'black'
+    gender: 'Men',
+    type: 'Apparel',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Black/Trefoil_Hoodie_Black_DT7964_21_model.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Blue/Trefoil_Hoodie_Blue_DV1504_21_model.jpg'
+    ]
   },
   {
     productID: 54,
@@ -881,7 +1128,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Blue/Trefoil_Hoodie_Blue_DV1504_41_detail.jpg'
     ],
     price: 80,
-    color: 'blue'
+    gender: 'Men',
+    type: 'Apparel',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Blue/Trefoil_Hoodie_Blue_DV1504_21_model.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Black/Trefoil_Hoodie_Black_DT7964_21_model.jpg'
+    ]
   },
   {
     productID: 55,
@@ -897,7 +1149,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black/Sobakov_Shoes_Black_B41968_07_standard.jpg'
     ],
     price: 120,
-    color: 'black'
+    gender: 'Men',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black/Sobakov_Shoes_Black_B41968_07_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black%3AWhite/Sobakov_Shoes_Black_BD7549_01_standard.jpg'
+    ]
   },
   {
     productID: 56,
@@ -913,7 +1170,13 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Pureboost/Blue/Pureboost_Go_Shoes_Blue_B37804_06_standard.jpg.png'
     ],
     price: 140,
-    color: 'blue'
+    color: 'blue',
+    gender: 'Men',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Pureboost/Blue/Pureboost_Go_Shoes_Blue_B37804_01_standard.jpg.png',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Pureboost/Black/Pureboost_Go_Shoes_Black_B37803_010_hover_standard.jpg'
+    ]
   },
   {
     productID: 57,
@@ -929,7 +1192,9 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/CloudFoam+/Black/Cloudfoam_Ultimate_Shoes_Black_BC0018_06_standard.jpg'
     ],
     price: 140,
-    color: 'black'
+    color: 'black',
+    gender: 'Men',
+    type: 'Shoes'
   },
   {
     productID: 58,
@@ -945,7 +1210,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Blue/NMD_R1_shoeview1.jpg'
     ],
     price: 140,
-    color: 'blue'
+    gender: 'Women',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Blue/NMD_R1_Shoes_Blue_BD8030_01_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Pink/pinkShoe.jpg'
+    ]
   },
   {
     productID: 59,
@@ -960,7 +1230,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Black/Trefoil_Hoodie_Black_DT7964_25_model.jpg'
     ],
     price: 80,
-    color: 'black'
+    gender: 'Men',
+    type: 'Apparel',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Black/Trefoil_Hoodie_Black_DT7964_21_model.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Blue/Trefoil_Hoodie_Blue_DV1504_21_model.jpg'
+    ]
   },
   {
     productID: 60,
@@ -976,7 +1251,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Women+Tiro+19+Training+Pants/Black/Tiro_19_Training_Pants_Black_D95957_25_outfit.jpg'
     ],
     price: 90,
-    color: 'black'
+    gender: 'Women',
+    type: 'Apparel',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Women+Tiro+19+Training+Pants/Black/Tiro_19_Training_Pants_Black_D95957_21_model.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Women+Tiro+19+Training+Pants/Blue/Tiro_19_Training_Pants_Blue_DT5984_21_model.jpg'
+    ]
   },
   {
     productID: 61,
@@ -991,7 +1271,13 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/POD-S3.1_Women_Shoes/Grey/POD_S3.1_Shoes_Grey_B37458_05_standard.jpg'
     ],
     price: 120,
-    color: 'grey'
+    color: 'grey',
+    gender: 'Women',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/POD-S3.1_Women_Shoes/Grey/POD_S3.1_Shoes_Grey_B37458_01_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/POD-S3.1_Women_Shoes/Mint/POD_S3.1_Shoes_Green_B37465_01_standard.jpg'
+    ]
   },
   {
     productID: 62,
@@ -1008,7 +1294,9 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Superstar_Originals_Men/Superstar_Shoes_White_C77124_07_standard.jpg'
     ],
     price: 130,
-    color: 'white'
+    color: 'white',
+    gender: 'Men',
+    type: 'Shoes'
   },
   {
     productID: 63,
@@ -1023,7 +1311,9 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/CloudFoam+/White/Cloudfoam_Ultimate_Shoes_White_BC0121_06_standard.jpg'
     ],
     price: 90,
-    color: 'white'
+    color: 'white',
+    gender: 'Men',
+    type: 'Shoes'
   },
   {
     productID: 64,
@@ -1039,7 +1329,13 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Women+Tiro+19+Training+Pants/Black/Tiro_19_Training_Pants_Black_D95957_25_outfit.jpg'
     ],
     price: 90,
-    color: 'black'
+    color: 'black',
+    gender: 'Women',
+    type: 'Apparel',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Women+Tiro+19+Training+Pants/Black/Tiro_19_Training_Pants_Black_D95957_21_model.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Women+Tiro+19+Training+Pants/Blue/Tiro_19_Training_Pants_Blue_DT5984_21_model.jpg'
+    ]
   },
   {
     productID: 65,
@@ -1056,7 +1352,13 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/White/Ultraboost_Shoes_White_BB6308_05_standard.jpg'
     ],
     price: 100,
-    color: 'white'
+    color: 'white',
+    type: 'Shoes',
+    gender: 'Women',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/White/Ultraboost_Shoes_White_BB6308_01_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/Black/Ultraboost_Shoes_Black_F36123_01_standard.jpg'
+    ]
   },
   {
     productID: 66,
@@ -1072,7 +1374,13 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Women+Tiro+19+Training+Pants/Blue/Tiro_19_Training_Pants_Blue_DT5984_41_detail.jpg'
     ],
     price: 110,
-    color: 'blue'
+    color: 'blue',
+    gender: 'Women',
+    type: 'Apparel',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Women+Tiro+19+Training+Pants/Blue/Tiro_19_Training_Pants_Blue_DT5984_21_model.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Women+Tiro+19+Training+Pants/Black/Tiro_19_Training_Pants_Black_D95957_21_model.jpg'
+    ]
   },
   {
     productID: 67,
@@ -1087,7 +1395,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/POD-S3.1_Women_Shoes/Grey/POD_S3.1_Shoes_Grey_B37458_05_standard.jpg'
     ],
     price: 110,
-    color: 'grey'
+    gender: 'Women',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/POD-S3.1_Women_Shoes/Grey/POD_S3.1_Shoes_Grey_B37458_01_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/POD-S3.1_Women_Shoes/Mint/POD_S3.1_Shoes_Green_B37465_01_standard.jpg'
+    ]
   },
   {
     productID: 68,
@@ -1104,7 +1417,9 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Superstar_Originals_Men/Superstar_Shoes_White_C77124_07_standard.jpg'
     ],
     price: 110,
-    color: 'white'
+    color: 'white',
+    gender: 'Men',
+    type: 'Shoes'
   },
   {
     productID: 69,
@@ -1121,7 +1436,9 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Superstar_Originals_Men/Superstar_Shoes_White_C77124_07_standard.jpg'
     ],
     price: 90,
-    color: 'white'
+    color: 'white',
+    gender: 'Men',
+    type: 'Shoes'
   },
   {
     productID: 70,
@@ -1137,7 +1454,13 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Women+Tiro+19+Training+Pants/Blue/Tiro_19_Training_Pants_Blue_DT5984_41_detail.jpg'
     ],
     price: 120,
-    color: 'blue'
+    color: 'blue',
+    gender: 'Women',
+    type: 'Apparel',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Women+Tiro+19+Training+Pants/Blue/Tiro_19_Training_Pants_Blue_DT5984_21_model.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Women+Tiro+19+Training+Pants/Black/Tiro_19_Training_Pants_Black_D95957_21_model.jpg'
+    ]
   },
   {
     productID: 71,
@@ -1152,7 +1475,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/POD-S3.1_Women_Shoes/Grey/POD_S3.1_Shoes_Grey_B37458_05_standard.jpg'
     ],
     price: 110,
-    color: 'grey'
+    gender: 'Women',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/POD-S3.1_Women_Shoes/Grey/POD_S3.1_Shoes_Grey_B37458_01_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/POD-S3.1_Women_Shoes/Mint/POD_S3.1_Shoes_Green_B37465_01_standard.jpg'
+    ]
   },
   {
     productID: 72,
@@ -1169,7 +1497,9 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Superstar_Originals_Men/Superstar_Shoes_White_C77124_07_standard.jpg'
     ],
     price: 130,
-    color: 'white'
+    color: 'white',
+    gender: 'Men',
+    type: 'Shoes'
   },
   {
     productID: 73,
@@ -1185,7 +1515,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Pureboost/Blue/Pureboost_Go_Shoes_Blue_B37804_06_standard.jpg.png'
     ],
     price: 140,
-    color: 'blue'
+    gender: 'Men',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Pureboost/Blue/Pureboost_Go_Shoes_Blue_B37804_01_standard.jpg.png',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Pureboost/Black/Pureboost_Go_Shoes_Black_B37803_010_hover_standard.jpg'
+    ]
   },
   {
     productID: 74,
@@ -1200,7 +1535,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Women+Hoodie/White/Cropped_Hoodie_White_DX2321_25_model.jpg'
     ],
     price: 100,
-    color: 'white'
+    gender: 'Women',
+    type: 'Apparel',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Women+Hoodie/White/Cropped_Hoodie_White_DX2321_21_model.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Women+Hoodie/Pink/Cropped_Hoodie_Pink_DX2161_21_model.jpg'
+    ]
   },
   {
     productID: 75,
@@ -1217,7 +1557,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Women+Hoodie/Pink/Cropped_Hoodie_Pink_DX2161_41_detail.jpg'
     ],
     price: 140,
-    color: 'pink'
+    gender: 'Women',
+    type: 'Apparel',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Women+Hoodie/Pink/Cropped_Hoodie_Pink_DX2161_21_model.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Women+Hoodie/White/Cropped_Hoodie_White_DX2321_21_model.jpg'
+    ]
   },
   {
     productID: 76,
@@ -1233,7 +1578,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Pink/shoeview6.jpg'
     ],
     price: 140,
-    color: 'pink'
+    gender: 'Women',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Pink/pinkShoe.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Blue/NMD_R1_Shoes_Blue_BD8030_01_standard.jpg'
+    ]
   },
   {
     productID: 77,
@@ -1249,7 +1599,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Pink/shoeview6.jpg'
     ],
     price: 80,
-    color: 'pink'
+    gender: 'Women',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Pink/pinkShoe.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Blue/NMD_R1_Shoes_Blue_BD8030_01_standard.jpg'
+    ]
   },
   {
     productID: 78,
@@ -1265,7 +1620,14 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Nite+Jogger+Shoes+-+Men/Black/Nite_Jogger_Shoes_Black_BD7954_06_standard.jpg'
     ],
     price: 90,
-    color: 'black'
+    gender: 'Men',
+    type: 'Apparel',
+    defaultColor: 'CORE BLACK / CARBON / CARBON',
+    otherColor: 'CLOUD WHITE / CRYSTAL WHITE / CRYSTAL WHITE',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Nite+Jogger+Shoes+-+Men/Black/Nite_Jogger_Shoes_Black_BD7954_01_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Nite+Jogger+Shoes+-+Men/White/Nite_Jogger_Shoes_White_BD7676_01_standard.jpg'
+    ]
   },
   {
     productID: 79,
@@ -1281,7 +1643,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black/Sobakov_Shoes_Black_B41968_07_standard.jpg'
     ],
     price: 120,
-    color: 'black'
+    gender: 'Men',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black/Sobakov_Shoes_Black_B41968_07_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black%3AWhite/Sobakov_Shoes_Black_BD7549_01_standard.jpg'
+    ]
   },
   {
     productID: 80,
@@ -1296,7 +1663,9 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/CloudFoam+/White/Cloudfoam_Ultimate_Shoes_White_BC0121_06_standard.jpg'
     ],
     price: 130,
-    color: 'white'
+    color: 'white',
+    gender: 'Men',
+    type: 'Shoes'
   },
   {
     productID: 81,
@@ -1312,7 +1681,14 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Nite+Jogger+Shoes+-+Men/Black/Nite_Jogger_Shoes_Black_BD7954_06_standard.jpg'
     ],
     price: 110,
-    color: 'black'
+    gender: 'Men',
+    type: 'Shoes',
+    defaultColor: 'CORE BLACK / CARBON / CARBON',
+    otherColor: 'CLOUD WHITE / CRYSTAL WHITE / CRYSTAL WHITE',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Nite+Jogger+Shoes+-+Men/Black/Nite_Jogger_Shoes_Black_BD7954_01_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Nite+Jogger+Shoes+-+Men/White/Nite_Jogger_Shoes_White_BD7676_01_standard.jpg'
+    ]
   },
   {
     productID: 82,
@@ -1328,7 +1704,9 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Swift+Run+ShoesMen/White/Swift_Run_Shoes_White_B37725_06_standard.jpg'
     ],
     price: 120,
-    color: 'white'
+    color: 'white',
+    gender: 'Men',
+    type: 'Shoes'
   },
   {
     productID: 83,
@@ -1344,7 +1722,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Pureboost/Blue/Pureboost_Go_Shoes_Blue_B37804_06_standard.jpg.png'
     ],
     price: 90,
-    color: 'blue'
+    gender: 'Men',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Pureboost/Blue/Pureboost_Go_Shoes_Blue_B37804_01_standard.jpg.png',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Pureboost/Black/Pureboost_Go_Shoes_Black_B37803_010_hover_standard.jpg'
+    ]
   },
   {
     productID: 84,
@@ -1360,7 +1743,9 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Swift+Run+ShoesMen/White/Swift_Run_Shoes_White_B37725_06_standard.jpg'
     ],
     price: 140,
-    color: 'white'
+    color: 'white',
+    gender: 'Men',
+    type: 'Shoes'
   },
   {
     productID: 85,
@@ -1377,7 +1762,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/White/Ultraboost_Shoes_White_BB6308_05_standard.jpg'
     ],
     price: 110,
-    color: 'white'
+    gender: 'Women',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/White/Ultraboost_Shoes_White_BB6308_01_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/Black/Ultraboost_Shoes_Black_F36123_01_standard.jpg'
+    ]
   },
   {
     productID: 86,
@@ -1393,7 +1783,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black/Sobakov_Shoes_Black_B41968_07_standard.jpg'
     ],
     price: 140,
-    color: 'black'
+    gender: 'Men',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black/Sobakov_Shoes_Black_B41968_07_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black%3AWhite/Sobakov_Shoes_Black_BD7549_01_standard.jpg'
+    ]
   },
   {
     productID: 87,
@@ -1410,7 +1805,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/White/Ultraboost_Shoes_White_BB6308_05_standard.jpg'
     ],
     price: 120,
-    color: 'white'
+    gender: 'Women',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/White/Ultraboost_Shoes_White_BB6308_01_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Ultraboost_women/Black/Ultraboost_Shoes_Black_F36123_01_standard.jpg'
+    ]
   },
   {
     productID: 88,
@@ -1426,7 +1826,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Pink/shoeview6.jpg'
     ],
     price: 140,
-    color: 'pink'
+    gender: 'Women',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Pink/pinkShoe.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Blue/NMD_R1_Shoes_Blue_BD8030_01_standard.jpg'
+    ]
   },
   {
     productID: 89,
@@ -1441,7 +1846,9 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/CloudFoam+/White/Cloudfoam_Ultimate_Shoes_White_BC0121_06_standard.jpg'
     ],
     price: 130,
-    color: 'white'
+    color: 'white',
+    gender: 'Men',
+    type: 'Shoes'
   },
   {
     productID: 90,
@@ -1458,7 +1865,9 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Superstar_Originals_Men/Superstar_Shoes_White_C77124_07_standard.jpg'
     ],
     price: 130,
-    color: 'white'
+    color: 'white',
+    gender: 'Men',
+    type: 'Shoes'
   },
   {
     productID: 91,
@@ -1474,7 +1883,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Pink/shoeview6.jpg'
     ],
     price: 140,
-    color: 'pink'
+    gender: 'Women',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Pink/pinkShoe.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Blue/NMD_R1_Shoes_Blue_BD8030_01_standard.jpg'
+    ]
   },
   {
     productID: 92,
@@ -1490,7 +1904,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black/Sobakov_Shoes_Black_B41968_07_standard.jpg'
     ],
     price: 110,
-    color: 'black'
+    gender: 'Men',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black/Sobakov_Shoes_Black_B41968_07_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Sobakov+Shoes/Black%3AWhite/Sobakov_Shoes_Black_BD7549_01_standard.jpg'
+    ]
   },
   {
     productID: 93,
@@ -1507,7 +1926,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Blue/Trefoil_Hoodie_Blue_DV1504_41_detail.jpg'
     ],
     price: 110,
-    color: 'blue'
+    gender: 'Men',
+    type: 'Apparel',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Blue/Trefoil_Hoodie_Blue_DV1504_21_model.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Black/Trefoil_Hoodie_Black_DT7964_21_model.jpg'
+    ]
   },
   {
     productID: 94,
@@ -1522,7 +1946,9 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/CloudFoam+/White/Cloudfoam_Ultimate_Shoes_White_BC0121_06_standard.jpg'
     ],
     price: 80,
-    color: 'white'
+    color: 'white',
+    gender: 'Men',
+    type: 'Shoes'
   },
   {
     productID: 95,
@@ -1553,7 +1979,14 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Nite+Jogger+Shoes+-+Men/Black/Nite_Jogger_Shoes_Black_BD7954_06_standard.jpg'
     ],
     price: 110,
-    color: 'black'
+    gender: 'Men',
+    type: 'Shoes',
+    defaultColor: 'CORE BLACK / CARBON / CARBON',
+    otherColor: 'CLOUD WHITE / CRYSTAL WHITE / CRYSTAL WHITE',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Nite+Jogger+Shoes+-+Men/Black/Nite_Jogger_Shoes_Black_BD7954_01_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Nite+Jogger+Shoes+-+Men/White/Nite_Jogger_Shoes_White_BD7676_01_standard.jpg'
+    ]
   },
   {
     productID: 97,
@@ -1569,7 +2002,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Blue/NMD_R1_shoeview1.jpg'
     ],
     price: 140,
-    color: 'blue'
+    gender: 'Women',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Blue/NMD_R1_Shoes_Blue_BD8030_01_standard.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Pink/pinkShoe.jpg'
+    ]
   },
   {
     productID: 98,
@@ -1586,7 +2024,9 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Superstar_Originals_Men/Superstar_Shoes_White_C77124_07_standard.jpg'
     ],
     price: 130,
-    color: 'white'
+    color: 'white',
+    gender: 'Men',
+    type: 'Shoes'
   },
   {
     productID: 99,
@@ -1601,7 +2041,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Black/Trefoil_Hoodie_Black_DT7964_25_model.jpg'
     ],
     price: 120,
-    color: 'black'
+    gender: 'Men',
+    type: 'Apparel',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Black/Trefoil_Hoodie_Black_DT7964_21_model.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/Adidas+Men+Hoodie/Blue/Trefoil_Hoodie_Blue_DV1504_21_model.jpg'
+    ]
   },
   {
     productID: 100,
@@ -1617,7 +2062,12 @@ let data = [
       'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Pink/shoeview6.jpg'
     ],
     price: 120,
-    color: 'pink'
+    gender: 'Women',
+    type: 'Shoes',
+    miniImages: [
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Pink/pinkShoe.jpg',
+      'https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Blue/NMD_R1_Shoes_Blue_BD8030_01_standard.jpg'
+    ]
   }
 ];
 
