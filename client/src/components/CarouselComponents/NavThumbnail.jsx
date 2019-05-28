@@ -37,9 +37,11 @@ class NavThumbnail extends React.Component {
             </button>
           </div>
 
+          
+
           {this.props.images.map((image, index) => (
             <div
-              className={[styles.thumbnail, styles.thumbnail].join(' ')}
+              className={styles.thumbnail}
               key={index}
               height="50px"
               width="50px"
