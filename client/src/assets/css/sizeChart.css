@@ -14,7 +14,8 @@
   background: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
   position: absolute;
-  top: 15vh;
+  /* top: 15vh; */
+  top: 10px;
   left: 5%;
   max-height: 100%;
   overflow-y: auto;
@@ -37,8 +38,6 @@
   transform: translateZ(0);
   justify-content: center;
   right: 0;
-
-  position: absolute;
 }
 .modalActive {
   opacity: 1;
@@ -107,6 +106,11 @@
   width: 40%;
   max-width: 40rem;
   overflow: visible;
+}
+
+.contentFreeze {
+  overflow: hidden;
+  position: fixed;
 }
 
 /* CSS For Measurement Table  */

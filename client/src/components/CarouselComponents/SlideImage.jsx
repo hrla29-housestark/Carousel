@@ -6,12 +6,12 @@ const SlideImage = props => {
     backgroundImage: `url(${props.url})`
   };
   return (
-    <div>
+    <div className={styles.centerImage}>
       <img
         src={props.url}
-        height="auto"
-        width="845px"
-        object-fit="cover"
+        height="600px"
+        width="600px"
+        display="block"
         style={styling}
       />
     </div>

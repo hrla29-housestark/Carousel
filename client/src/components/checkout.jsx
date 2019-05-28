@@ -25,7 +25,6 @@ class Checkout extends React.Component {
     };
     this.quantityDropdown = this.quantityDropdown.bind(this);
     this.closeDropdown = this.closeDropdown.bind(this);
-    this.getAdidas = this.getAdidas.bind(this);
     this.changeClass = this.changeClass.bind(this);
     this.updateQuantity = this.updateQuantity.bind(this);
     this.updateArrow = this.updateArrow.bind(this);
@@ -41,19 +40,7 @@ class Checkout extends React.Component {
     this.switchProduct = this.switchProduct.bind(this);
   }
 
-  // componentDidMount() {
-  //   this.getAdidas();
-  // }
-  getAdidas() {
-    axios.get('/api/products').then(data =>
-      this.setState(
-        {
-          products: data.data
-        },
-        () => console.log(data.data)
-      )
-    );
-  }
+  getAdidaProduct() {}
   quantityDropdown() {
     this.setState(
       {

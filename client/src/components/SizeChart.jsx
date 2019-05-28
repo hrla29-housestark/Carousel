@@ -3,16 +3,21 @@ import ReactDOM from 'react-dom';
 import styles from '../assets/css/sizeChart.css';
 import Measure from '../components/Measure.jsx';
 
-
 const SizeChart = props => (
   <div
-    className={[styles.modal, styles.modalActive, styles.modalActive1, styles.slide].join(
-      ' '
-    )}
+    className={[
+      styles.modal,
+      styles.modalActive,
+      styles.modalActive1,
+      styles.slide
+    ].join(' ')}
   >
     <button
       className={[styles.btnOverlay, styles.btnOverlay2].join(' ')}
-      onClick={props.isOpen}
+      onClick={() => {
+        props.isOpen();
+        props.changeOverflow();
+      }}
     />
     <div className={styles.sizeChartBody}>
       <h2 className={styles.sizeChartText}> SIZE CHART</h2>
@@ -587,4 +592,3 @@ const SizeChart = props => (
 );
 
 export default SizeChart;
-

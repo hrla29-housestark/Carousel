@@ -7,7 +7,6 @@ import SizeChart from './SizeChart.jsx';
 import sizeChartStyles from '../assets/css/sizeChart.css';
 import CarouselStyle from '../assets/css/carousel.css';
 import Carousel from '../components/Carousel.jsx';
-// import NavThumbnail from '../components/CarouselComponents/NavThumbnail.jsx';
 
 const modal = document.getElementById('modal');
 
@@ -15,9 +14,11 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isOpen: false
+      isOpen: false,
+      overflow: false
     };
     this.renderModal = this.renderModal.bind(this);
+    this.changeOverflow = this.changeOverflow.bind(this);
   }
 
   renderModal() {
@@ -26,16 +27,27 @@ class App extends React.Component {
     });
   }
 
+  changeOverflow() {
+    this.setState({
+      overflow: !this.state.overflow
+    });
+  }
+
   render() {
     return (
       <div>
         <TopNavigation />
         <div
-          className={[sizeChartStyles.content, sizeChartStyles.slide].join(' ')}
+          className={[
+            this.state.overflow
+              ? sizeChartStyles.contentFreeze
+              : sizeChartStyles.content,
+            sizeChartStyles.slide
+          ].join(' ')}
         >
           {this.state.isOpen
             ? ReactDOM.createPortal(
-                <SizeChart isOpen={this.renderModal} />,
+                <SizeChart isOpen={this.renderModal} changeOverflow={this.changeOverflow}/>,
                 modal
               )
             : null}
@@ -44,14 +56,6 @@ class App extends React.Component {
         <div className={CarouselStyle.container}>
           <div className={CarouselStyle.carouselLeft}>
             <Carousel />
-            {/* Thumbnail Navigation? */}
-            {/* <div
-              className={CarouselStyle.thumbnailContainer}
-              width="50px"
-              max-height="350px"
-            >
-              <NavThumbnail />
-            </div> */}
           </div>
           <div className={styles.checkoutPlacement}>
             <Checkout
