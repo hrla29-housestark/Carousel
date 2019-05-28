@@ -8,10 +8,10 @@ class NavThumbnail extends React.Component {
   }
 
   render() {
-    const styling = {
-      backgroundImage: `url(${this.props.image})`
-      // transform: `translate(0px, -60px)`
-    };
+    // const styling = {
+    //   backgroundImage: `url(${this.props.image})`
+    //   // transform: `translate(0px, -60px)`
+    // };
     return (
       <div>
         <div className={styles.navContainer}>
@@ -39,7 +39,7 @@ class NavThumbnail extends React.Component {
             key={index}
           >
             <img
-              style={styling}
+              // style={styling}
               src={image}
               height="58px"
               width="58px"
