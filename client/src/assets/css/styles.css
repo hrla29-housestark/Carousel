@@ -649,14 +649,39 @@ button {
   font-family: 'adihausDINRegular';
   font-weight: 700;
   transform: translate(-3px, -3px);
+  /* display: inline-flex;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+  min-height: 50px;
+  line-height: 50px;
+  padding: 0 21px;
+  margin: 0;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  font-family: AdihausDIN;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transform: translate(-3px, -3px); */
+}
+
+.btnDesign:hover {
+  color: gray;
 }
 .btnDesign::before {
   content: '';
   display: block;
   position: absolute;
   transition: 0.1s cubic-bezier(0.3, 0, 0.45, 1);
-  border-bottom: 1px solid #000;
-  border-left: 1px solid #000;
+  /* border-bottom: 1px solid #000; */
+  /* border-left: 1px solid #000; */
   bottom: -5px;
   height: 3px;
   left: 3px;
@@ -664,7 +689,7 @@ button {
 }
 
 .btnDesign::after {
-  content: '';
+  /* content: '';
   display: block;
   position: absolute;
   border-right: 1px solid #000;
@@ -672,7 +697,24 @@ button {
   height: 100%;
   right: -5px;
   top: 4px;
-  width: 3px;
+  width: 3px; */
+
+  content: '';
+  display: block;
+  position: absolute;
+  left: 4px;
+  top: 3px;
+  width: 100%;
+  height: 50px;
+  box-shadow: inset 0 0 0 1px #000;
+}
+
+.btnDesign:active {
+  transform: translate(0, 0);
+}
+
+.btnDesign:active::after {
+  transform: translate(-3px, -3px);
 }
 .btnPlacement {
   align-items: center;

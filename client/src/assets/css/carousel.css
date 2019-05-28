@@ -154,6 +154,19 @@
   }
 }
 
+.thumbnailContainer {
+  position: absolute;
+  left: 15px;
+  top: 35px;
+  bottom: 60px;
+  /* overflow: hidden; */
+  display: block;
+}
+.thumbnailContainer2 {
+  overflow-y: visible;
+  overflow-x: visible;
+  margin: auto;
+}
 .upArrowBtn {
   margin-top: 0;
   padding-top: 0;
@@ -184,6 +197,7 @@
   overflow: hidden;
   width: auto;
   padding-bottom: 2px;
+  /* transform: translate(-3px, -3px); */
 }
 
 .thumbnail:hover {
