@@ -7,12 +7,16 @@ mongoose
   .catch(err => console.error(err));
 
 const adidasSchema = mongoose.Schema({
-  productId: Number,
+  productID: Number,
   productName: String,
   productType: String,
   imageUrl: [String],
-  price: String,
-  color: [String]
+  price: Number,
+  gender: String,
+  type: String,
+  defaultColor: String,
+  otherColor: String,
+  miniImages: [String]
 });
 
 const Adidas = mongoose.model('Adidas', adidasSchema);
