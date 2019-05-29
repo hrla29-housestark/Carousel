@@ -87,7 +87,10 @@ class Carousel extends React.Component {
         </div>
 
         <div className={styles.row}>
-          <SlideImage url={this.state.images[this.state.currentIndex]} />
+          <SlideImage
+            url={this.state.images[this.state.currentIndex]}
+            openModal={this.props.openModal}
+          />
         </div>
         <div>
           <LeftArrow left={this.prevSlide} direction="left" />

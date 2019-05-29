@@ -32,7 +32,6 @@ class App extends React.Component {
     });
   }
 
-  // open modal (set isModalOpen, false)
   openModal() {
     this.setState({
       isModalOpen: true
@@ -67,13 +66,15 @@ class App extends React.Component {
             : null}
         </div>
 
-        {this.state.isModalOpen
-          ? ReactDOM.createPortal(<CarouselModal />, carouselModal)
-          : null}
+        <div>
+          {this.state.isModalOpen
+            ? ReactDOM.createPortal(<CarouselModal />, carouselModal)
+            : null}
+        </div>
 
         <div className={CarouselStyle.container}>
           <div className={CarouselStyle.carouselLeft}>
-            <Carousel />
+            <Carousel openModal={this.openModal} />
           </div>
           <div className={styles.checkoutPlacement}>
             <Checkout

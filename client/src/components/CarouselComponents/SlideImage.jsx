@@ -13,6 +13,10 @@ const SlideImage = props => {
         width="600px"
         display="block"
         style={styling}
+        onClick={() => {
+          props.openModal();
+          console.log('cliekced');
+        }}
       />
     </div>
   );
