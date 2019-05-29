@@ -6,6 +6,9 @@ import LeftArrow from '../components/CarouselComponents/LeftArrow.jsx';
 import SlideImage from '../components/CarouselComponents/SlideImage.jsx';
 import axios from 'axios';
 import NavThumbnail from '../components/CarouselComponents/NavThumbnail.jsx';
+import CarouselModal from '../components/CarouselComponents/CarouselModal.jsx';
+
+const carouselModal = document.getElementById('modal-Carousel');
 
 class Carousel extends React.Component {
   constructor(props) {
@@ -15,12 +18,14 @@ class Carousel extends React.Component {
       product: '',
       images: [],
       currentIndex: 0,
-      currentVal: 0
+      currentVal: 0,
+      isModalOpen: false
     };
     this.prevSlide = this.prevSlide.bind(this);
     this.nextSlide = this.nextSlide.bind(this);
     this.getAdidas = this.getAdidas.bind(this);
     this.changeImage = this.changeImage.bind(this);
+    this.openModal = this.openModal.bind(this);
   }
 
   componentDidMount() {
@@ -38,6 +43,17 @@ class Carousel extends React.Component {
         })
       )
       .catch(err => console.log('failed to retrieve data'));
+  }
+  closeModal() {
+    this.setState({
+      isModalOpen: false
+    });
+  }
+
+  openModal() {
+    this.setState({
+      isModalOpen: true
+    });
   }
 
   nextSlide() {
@@ -75,6 +91,20 @@ class Carousel extends React.Component {
   render() {
     return (
       <div>
+        <div>
+          {this.state.isModalOpen
+            ? ReactDOM.createPortal(
+                <CarouselModal
+                  images={this.state.images}
+                  left={this.prevSlide}
+                  right={this.nextSlide}
+                  index={this.state.currentIndex}
+                />,
+                carouselModal
+              )
+            : null}
+        </div>
+
         <div
           className={styles.thumbnailContainer}
           width="50px"
@@ -89,7 +119,7 @@ class Carousel extends React.Component {
         <div className={styles.row}>
           <SlideImage
             url={this.state.images[this.state.currentIndex]}
-            openModal={this.props.openModal}
+            openModal={this.openModal}
           />
         </div>
         <div>

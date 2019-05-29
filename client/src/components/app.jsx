@@ -10,7 +10,7 @@ import Carousel from '../components/Carousel.jsx';
 import CarouselModal from '../components/CarouselComponents/CarouselModal.jsx';
 
 const modal = document.getElementById('modal');
-const carouselModal = document.getElementById('modal-Carousel');
+// const carouselModal = document.getElementById('modal-Carousel');
 
 class App extends React.Component {
   constructor(props) {
@@ -22,20 +22,6 @@ class App extends React.Component {
     };
     this.renderModal = this.renderModal.bind(this);
     this.changeOverflow = this.changeOverflow.bind(this);
-    this.closeModal = this.closeModal.bind(this);
-    this.openModal = this.openModal.bind(this);
-  }
-
-  closeModal() {
-    this.setState({
-      isModalOpen: false
-    });
-  }
-
-  openModal() {
-    this.setState({
-      isModalOpen: true
-    });
   }
 
   renderModal() {
@@ -66,11 +52,11 @@ class App extends React.Component {
             : null}
         </div>
 
-        <div>
+        {/* <div>
           {this.state.isModalOpen
             ? ReactDOM.createPortal(<CarouselModal />, carouselModal)
             : null}
-        </div>
+        </div> */}
 
         <div className={CarouselStyle.container}>
           <div className={CarouselStyle.carouselLeft}>

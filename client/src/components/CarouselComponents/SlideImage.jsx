@@ -15,7 +15,7 @@ const SlideImage = props => {
         style={styling}
         onClick={() => {
           props.openModal();
-          console.log('cliekced');
+          console.log('clicked');
         }}
       />
     </div>

@@ -30,7 +30,6 @@
   display: flex;
   flex-direction: row;
   overflow-y: hidden;
-  /* overflow-x: hidden; */
   object-fit: cover;
   height: 600px;
   margin: auto;
@@ -42,22 +41,51 @@
   align-items: center;
   justify-content: center;
   position: fixed;
-
   bottom: 50px;
-  padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #ebedee;
   z-index: 9999;
   opacity: 1;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
   animation: show 0.5s ease;
-  border: 1px solid red;
-  height: 79%;
+  border: 1px solid black;
+  height: 85%;
   width: 100%;
+  left: 0;
 }
 
 .centerImage {
   width: auto;
   height: auto;
   margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  overflow-y: hidden;
+}
+
+.leftArrow {
+  display: inline-block;
+  height: 25px;
+  vertical-align: text-top;
+  width: 24px;
+  cursor: pointer;
+  top: 50%;
+  padding-right: 100px;
+  position: absolute;
+  left: 50px;
+}
+
+.rightArrow {
+  display: inline-block;
+  height: 24px;
+  vertical-align: text-top;
+  width: 24px;
+  cursor: pointer;
+  top: 50%;
+  padding-right: 100px;
+  position: absolute;
+  right: 0;
 }
