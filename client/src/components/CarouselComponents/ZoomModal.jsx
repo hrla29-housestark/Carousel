@@ -3,7 +3,8 @@ import styles from '../../../src/assets/css/CarouselModal.css';
 
 const ZoomModal = props => {
   const styling = {
-    backgroundImage: `url(${props.url})`
+    backgroundImage: `url(${props.url})`,
+    overflow: 'hidden'
   };
   const containerStyling = {
     display: 'flex',
@@ -23,6 +24,8 @@ const ZoomModal = props => {
         style={styling}
         height="auto"
         width="550px"
+        onClick={props.toggleZoom}
+        style={{ transformOrigin: `${props.x}px ${props.y}px` }}
       />
 
       <div className={styles.slideBar}>

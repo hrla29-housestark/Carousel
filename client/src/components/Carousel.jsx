@@ -9,8 +9,7 @@ import NavThumbnail from '../components/CarouselComponents/NavThumbnail.jsx';
 import CarouselModal from '../components/CarouselComponents/CarouselModal.jsx';
 import ZoomModal from '../components/CarouselComponents/ZoomModal.jsx';
 import Skylight from 'react-skylight';
-
-// const carouselModal = document.getElementById('modal-Carousel');
+import { timingSafeEqual } from 'crypto';
 
 class Carousel extends React.Component {
   constructor(props) {
@@ -23,18 +22,21 @@ class Carousel extends React.Component {
       currentIndex: 0,
       currentVal: 0,
       isModalOpen: false,
-      zoomImage: '',
-      enableZoom: false
+      enableZoom: false,
+      x: null,
+      y: null
     };
     this.prevSlide = this.prevSlide.bind(this);
     this.nextSlide = this.nextSlide.bind(this);
     this.getAdidas = this.getAdidas.bind(this);
     this.changeImage = this.changeImage.bind(this);
     this.openModal = this.openModal.bind(this);
-    this.enter = this.enter.bind(this);
-    this.exit = this.exit.bind(this);
-    this.follow = this.follow.bind(this);
     this.openSkylight = this.openSkylight.bind(this);
+    this.getOne = this.getOne.bind(this);
+    this.updatePosition = this.updatePosition.bind(this);
+    this.zoomFeature = this.zoomFeature.bind(this);
+    this.zoomOut = this.zoomOut.bind(this);
+    this.toggleZoom = this.toggleZoom.bind(this);
   }
 
   componentDidMount() {
@@ -54,6 +56,13 @@ class Carousel extends React.Component {
       )
       .catch(err => console.log('failed to retrieve data'));
   }
+  getOne() {
+    axios
+      .get(`/api/products/${this.state.productID}`)
+      .then(data => console.log('test', data))
+      .catch(err => console.error(err));
+  }
+
   closeModal() {
     this.setState({
       isModalOpen: false
@@ -97,19 +106,41 @@ class Carousel extends React.Component {
     });
   }
 
-  enter(e) {
-    let image = document.getElementById(e.target.id);
-    image.style.transform = 'scale(2.4)';
+  zoomFeature(e) {
+    e.target.addEventListener('mousemove', this.updatePosition);
+    e.target.style.transform = 'scale(2)';
+    this.setState(
+      {
+        enableZoom: true
+      },
+      () => console.log('TRUUEE', this.state.enableZoom)
+    );
   }
 
-  exit(e) {
-    let image = document.getElementById(e.target.id);
-    image.style.transform = 'scale(1)';
+  zoomOut(e) {
+    e.target.removeEventListener('mousemove', this.updatePosition);
+    e.target.style.transform = 'none';
+    this.setState(
+      {
+        enableZoom: false
+      },
+      () => console.log('FALSE', this.state.enableZoom)
+    );
   }
 
-  follow(e) {
-    let image = document.getElementById(e.target.id);
-    image.style.transformOrigin = `${e.pageX - 110}px ${e.pageY}px`;
+  updatePosition(e) {
+    this.setState({
+      x: e.offsetX,
+      y: e.offsetY
+    });
+  }
+
+  toggleZoom(e) {
+    if (this.state.enableZoom === false) {
+      this.zoomFeature(e);
+    } else {
+      this.zoomOut(e);
+    }
   }
 
   openSkylight() {
@@ -128,7 +159,8 @@ class Carousel extends React.Component {
       padding: '0',
       marginLeft: '-25%',
       marginTop: '-200px',
-      position: 'fixed'
+      position: 'fixed',
+      overflow: 'hidden'
     };
 
     const closeButtonStyle = {
@@ -170,11 +202,13 @@ class Carousel extends React.Component {
             url={this.state.images[this.state.currentIndex]}
             openModal={this.openModal}
             dialogStyle={zoomModalStyle}
+            toggleZoom={this.toggleZoom}
+            x={this.state.x}
+            y={this.state.y}
           />
 
           <RightArrow right={this.nextSlide} />
         </Skylight>
-
         <div
           className={styles.thumbnailContainer}
           width="50px"

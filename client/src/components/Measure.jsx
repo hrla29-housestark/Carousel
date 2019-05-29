@@ -46,8 +46,9 @@ const Measure = props => (
                 <div className={styles.img1}>
                   <img
                     src="https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/FEC+Images/Measurement1.jpg"
-                    width="115%"
-                    height="100%"
+                    // width="115%"
+                    // height="100%"
+                    className={styles.imgClass}
                   />
                 </div>
                 <div className={styles.imgDescription}>
