@@ -11,28 +11,23 @@ class NavThumbnail extends React.Component {
       disableUpBtn: false,
       disableBottomBtn: false,
       currentCount: 0,
-      upCount: 0
+      hideBottomArrow: false
     };
-    // this.slideDown = this.slideDown.bind(this);
     this.slideUp = this.slideUp.bind(this);
     this.downArrow = this.downArrow.bind(this);
     this.toggleTopArrow = this.toggleTopArrow.bind(this);
-    // this.toggleDownArrow = this.toggleDownArrow.bind(this);
+    this.toggleDownArrow = this.toggleDownArrow.bind(this);
   }
 
   downArrow() {
     let newValue = this.state.transform - 66;
-    // if (this.state.currentCount === 1) {
-    //   this.setState({
-    //     index: 0
-    //   });
-    // }
-    if (this.state.currentCount === 1) {
+    if (this.state.currentCount === 2) {
       const newCount = 0;
-      this.setState(
+      return this.setState(
         {
           disableBottomBtn: true,
-          currentCount: newCount
+          currentCount: newCount,
+          index: 0
         },
         () => console.log(this.state.currentCount)
       );
@@ -50,7 +45,6 @@ class NavThumbnail extends React.Component {
     const newValue = this.state.transform + 66;
 
     if (this.state.currentCount === 1) {
-      const newCount = 0;
       this.setState(
         {
           disableUpBtn: true
@@ -58,7 +52,7 @@ class NavThumbnail extends React.Component {
         () => console.log(this.state.currentCount)
       );
     }
-    const newCount = this.state.currentCount - 1;
+    const newCount = this.state.currentCount + 1;
     this.setState({
       currentCount: newCount
     });
@@ -73,11 +67,11 @@ class NavThumbnail extends React.Component {
     });
   }
 
-  // toggleDownArrow() {
-  //   this.setState({
-  //     index: 0
-  //   });
-  // }
+  toggleDownArrow() {
+    this.setState({
+      index: 0
+    });
+  }
 
   render() {
     const { transform } = this.state;
@@ -97,7 +91,10 @@ class NavThumbnail extends React.Component {
           >
             <button
               className={styles.upArrowBtn}
-              onClick={this.slideUp}
+              onClick={() => {
+                this.slideUp();
+                // this.toggleDownArrow();
+              }}
               disabled={this.state.disableUpBtn ? 'disabled' : ''}
             >
               <svg
