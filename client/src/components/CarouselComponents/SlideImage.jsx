@@ -11,35 +11,17 @@ const SlideImage = props => {
   }
   return (
     <div className={[styles.centerImage, style.zoomContainer].join(' ')}>
-      {props.enableZoom ? (
-        <img
-          src={props.url}
-          height="600px"
-          width="600px"
-          display="block"
-          style={styling}
-          onClick={() => {
-            props.openModal();
-            console.log('clicked');
-          }}
-          zoomScale={3}
-          height={600}
-          width={600}
-          transitionTime={0.5}
-        />
-      ) : (
-        <img
-          src={props.url}
-          height="600px"
-          width="600px"
-          display="block"
-          style={styling}
-          onClick={() => {
-            props.openModal();
-            console.log('clicked');
-          }}
-        />
-      )}
+      <img
+        src={props.url}
+        height="600px"
+        width="600px"
+        display="block"
+        style={styling}
+        onClick={() => {
+          props.openModal();
+          console.log('clicked');
+        }}
+      />
     </div>
   );
 };

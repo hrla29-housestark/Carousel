@@ -7,8 +7,10 @@ import SlideImage from '../components/CarouselComponents/SlideImage.jsx';
 import axios from 'axios';
 import NavThumbnail from '../components/CarouselComponents/NavThumbnail.jsx';
 import CarouselModal from '../components/CarouselComponents/CarouselModal.jsx';
+import ZoomModal from '../components/CarouselComponents/ZoomModal.jsx';
+import Skylight from 'react-skylight';
 
-const carouselModal = document.getElementById('modal-Carousel');
+// const carouselModal = document.getElementById('modal-Carousel');
 
 class Carousel extends React.Component {
   constructor(props) {
@@ -32,6 +34,7 @@ class Carousel extends React.Component {
     this.enter = this.enter.bind(this);
     this.exit = this.exit.bind(this);
     this.follow = this.follow.bind(this);
+    this.openSkylight = this.openSkylight.bind(this);
   }
 
   componentDidMount() {
@@ -109,10 +112,27 @@ class Carousel extends React.Component {
     image.style.transformOrigin = `${e.pageX - 110}px ${e.pageY}px`;
   }
 
+  openSkylight() {
+    this.modal.show();
+  }
+
   render() {
+    const zoomModalStyle = {
+      backgroundColor: '#ebedee',
+      width: '100%',
+      left: '0',
+      top: '10%',
+      boxSizing: 'border-box',
+      maxHeight: '80vh',
+      margin: '0',
+      padding: '0',
+      marginLeft: '-25%',
+      marginTop: '-200px',
+      position: 'fixed'
+    };
     return (
       <div>
-        <div>
+        {/* <div>
           {this.state.isModalOpen
             ? ReactDOM.createPortal(
                 <CarouselModal
@@ -120,11 +140,29 @@ class Carousel extends React.Component {
                   left={this.prevSlide}
                   right={this.nextSlide}
                   index={this.state.currentIndex}
+                  url={this.state.images[this.state.currentIndex]}
+                  openModal={this.openModal}
+                  enableZoom={this.state.enableZoom}
                 />,
                 carouselModal
               )
             : null}
-        </div>
+        </div> */}
+        <Skylight
+          hideOnOverlayClicked
+          ref={ref => (this.modal = ref)}
+          dialogStyles={zoomModalStyle}
+        >
+          <ZoomModal
+            images={this.state.images}
+            left={this.prevSlide}
+            right={this.nextSlide}
+            index={this.state.currentIndex}
+            url={this.state.images[this.state.currentIndex]}
+            openModal={this.openModal}
+            dialogStyle={zoomModalStyle}
+          />
+        </Skylight>
 
         <div
           className={styles.thumbnailContainer}
@@ -142,11 +180,7 @@ class Carousel extends React.Component {
             url={this.state.images[this.state.currentIndex]}
             openModal={this.openModal}
             enableZoom={this.state.enableZoom}
-            // id={this.state.productID}
-            // image={this.state.zoomImage}
-            // enter={this.enter}
-            // exit={this.exit}
-            // follow={this.follow}
+            openModal={this.openSkylight}
           />
         </div>
         <div>

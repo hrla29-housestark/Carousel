@@ -4,6 +4,7 @@ import styles from '../../assets/css/CarouselModal.css';
 import SlideImage from '../../components/CarouselComponents/SlideImage.jsx';
 import RightArrow from '../../components/CarouselComponents/RightArrow';
 import LeftArrow from '../../components/CarouselComponents/LeftArrow';
+import ZoomModal from '../../components/CarouselComponents/ZoomModal.jsx';
 
 class CarouselModal extends React.Component {
   constructor(props) {
@@ -15,12 +16,17 @@ class CarouselModal extends React.Component {
     return (
       <div className={styles.carouselPositioning}>
         <button className={styles.closeModalBtn} />
-        <div className={styles.row}>
-          <SlideImage
+        {/* <div className={styles.row}> */}
+        {/* <SlideImage
             url={this.props.images[this.props.index]}
             openModal={this.openModal}
-          />
-        </div>
+          /> */}
+        {/* <ZoomModal
+            url={this.props.url}
+            openModal={this.props.openModal}
+            enableZoom={this.state.enableZoom}
+          /> */}
+        {/* </div> */}
         <div className={styles.leftArrow}>
           <LeftArrow left={this.props.left} />
         </div>

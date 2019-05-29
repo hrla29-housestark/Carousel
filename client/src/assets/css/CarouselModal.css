@@ -143,9 +143,14 @@
   overflow: hidden;
   max-height: 636px;
   max-width: 424px;
-}
+} */
 
-.zoomBox {
+/* .zoomBox {
   width: 424px;
   height: 636px;
 } */
+
+.zoomModal {
+  height: 100%;
+  width: 510px;
+}
