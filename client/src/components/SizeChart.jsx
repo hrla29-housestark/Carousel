@@ -8,8 +8,8 @@ const SizeChart = props => (
     className={[
       styles.modal,
       styles.modalActive,
-      styles.modalActive1,
-      styles.slide
+      styles.modalActive1
+      // styles.slide
     ].join(' ')}
   >
     <button

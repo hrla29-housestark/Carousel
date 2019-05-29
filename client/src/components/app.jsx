@@ -7,18 +7,36 @@ import SizeChart from './SizeChart.jsx';
 import sizeChartStyles from '../assets/css/sizeChart.css';
 import CarouselStyle from '../assets/css/carousel.css';
 import Carousel from '../components/Carousel.jsx';
+import CarouselModal from '../components/CarouselComponents/CarouselModal.jsx';
 
 const modal = document.getElementById('modal');
+const carouselModal = document.getElementById('modal-Carousel');
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       isOpen: false,
-      overflow: false
+      overflow: false,
+      isModalOpen: false
     };
     this.renderModal = this.renderModal.bind(this);
     this.changeOverflow = this.changeOverflow.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+    this.openModal = this.openModal.bind(this);
+  }
+
+  closeModal() {
+    this.setState({
+      isModalOpen: false
+    });
+  }
+
+  // open modal (set isModalOpen, false)
+  openModal() {
+    this.setState({
+      isModalOpen: true
+    });
   }
 
   renderModal() {
@@ -37,21 +55,21 @@ class App extends React.Component {
     return (
       <div>
         <TopNavigation />
-        <div
-          className={[
-            this.state.overflow
-              ? sizeChartStyles.contentFreeze
-              : sizeChartStyles.content,
-            sizeChartStyles.slide
-          ].join(' ')}
-        >
+        <div>
           {this.state.isOpen
             ? ReactDOM.createPortal(
-                <SizeChart isOpen={this.renderModal} changeOverflow={this.changeOverflow}/>,
+                <SizeChart
+                  isOpen={this.renderModal}
+                  changeOverflow={this.changeOverflow}
+                />,
                 modal
               )
             : null}
         </div>
+
+        {this.state.isModalOpen
+          ? ReactDOM.createPortal(<CarouselModal />, carouselModal)
+          : null}
 
         <div className={CarouselStyle.container}>
           <div className={CarouselStyle.carouselLeft}>
