@@ -5,14 +5,41 @@ class NavThumbnail extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      transform: 0
+      transform: 0,
+      index: 0,
+      bottomIndex: 40,
+      disableUpBtn: false,
+      disableBottomBtn: false,
+      currentCount: 0
     };
-    this.slideDown = this.slideDown.bind(this);
+    // this.slideDown = this.slideDown.bind(this);
     this.slideUp = this.slideUp.bind(this);
+    this.downArrow = this.downArrow.bind(this);
+    // this.toggleTopArrow = this.toggleTopArrow.bind(this);
+    // this.toggleDownArrow = this.toggleDownArrow.bind(this);
   }
 
-  slideDown() {
-    const newValue = this.state.transform - 70;
+  downArrow() {
+    let newValue = this.state.transform - 66;
+    // Hides Top Arrow
+    // if (this.state.currentCount === 1) {
+    //   this.setState({
+    //     index: 0
+    //   });
+    // }
+    if (this.state.currentCount === this.props.images.length) {
+      this.setState({
+        disableBottomBtn: true
+      });
+    }
+    const newCount = this.state.currentCount + 1;
+    console.log(newCount);
+    this.setState(
+      {
+        currentCount: newCount
+      },
+      () => console.log('this is state', this.state.currentCount)
+    );
     this.setState({
       transform: newValue
     });
@@ -24,6 +51,18 @@ class NavThumbnail extends React.Component {
       transform: newValue
     });
   }
+
+  // toggleTopArrow() {
+  //   this.setState({
+  //     index: 40
+  //   });
+  // }
+
+  // toggleDownArrow() {
+  //   this.setState({
+  //     index: 0
+  //   });
+  // }
 
   render() {
     const { transform } = this.state;
@@ -37,8 +76,15 @@ class NavThumbnail extends React.Component {
           width="50px"
           max-height="350px"
         >
-          <div className={styles.navContainer}>
-            <button className={styles.upArrowBtn} onClick={this.slideUp}>
+          <div
+            className={styles.navContainer}
+            style={{ zIndex: this.state.index }}
+          >
+            <button
+              className={styles.upArrowBtn}
+              onClick={this.slideUp}
+              disabled={this.state.disableUpBtn ? 'disabled' : ''}
+            >
               <svg
                 className={styles.upArrowSvg}
                 viewBox="0 0 16 24"
@@ -52,7 +98,7 @@ class NavThumbnail extends React.Component {
                   strokeWidth="2"
                   d="M1.5 14.5L8 8l6.5 6.5"
                 />
-              </svg>{' '}
+              </svg>
             </button>
           </div>
 
@@ -74,7 +120,11 @@ class NavThumbnail extends React.Component {
           ))}
 
           <div className={styles.bottomArrow}>
-            <button className={styles.bottomArrowBtn} onClick={this.slideDown}>
+            <button
+              className={styles.bottomArrowBtn}
+              onClick={this.downArrow}
+              disabled={this.state.disableBottomBtn ? 'disabled' : ''}
+            >
               <svg
                 className={styles.bottomArrowSvg}
                 viewBox="0 0 16 24"

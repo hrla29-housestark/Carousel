@@ -146,7 +146,7 @@
     height: 25px;
     position: absolute;
     background: transparent;
-    z-index: 40;
+    /* z-index: 40; */
     display: flex;
     justify-content: center;
     cursor: pointer;
