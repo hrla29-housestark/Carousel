@@ -16,16 +16,22 @@ class Carousel extends React.Component {
     this.state = {
       products: [],
       product: '',
+      productID: '',
       images: [],
       currentIndex: 0,
       currentVal: 0,
-      isModalOpen: false
+      isModalOpen: false,
+      zoomImage: '',
+      enableZoom: false
     };
     this.prevSlide = this.prevSlide.bind(this);
     this.nextSlide = this.nextSlide.bind(this);
     this.getAdidas = this.getAdidas.bind(this);
     this.changeImage = this.changeImage.bind(this);
     this.openModal = this.openModal.bind(this);
+    this.enter = this.enter.bind(this);
+    this.exit = this.exit.bind(this);
+    this.follow = this.follow.bind(this);
   }
 
   componentDidMount() {
@@ -39,7 +45,8 @@ class Carousel extends React.Component {
         this.setState({
           products: data.data,
           product: data.data[0],
-          images: data.data[0].imageUrl
+          images: data.data[0].imageUrl,
+          productID: data.data[0].productID
         })
       )
       .catch(err => console.log('failed to retrieve data'));
@@ -52,7 +59,8 @@ class Carousel extends React.Component {
 
   openModal() {
     this.setState({
-      isModalOpen: true
+      isModalOpen: true,
+      enableZoom: true
     });
   }
 
@@ -62,12 +70,9 @@ class Carousel extends React.Component {
     const resetIndex = currentIndex === lastIndex;
     const index = resetIndex ? 0 : currentIndex + 1;
 
-    this.setState(
-      {
-        currentIndex: index
-      },
-      () => console.log(this.state.currentIndex)
-    );
+    this.setState({
+      currentIndex: index
+    });
   }
   prevSlide() {
     const lastIndex = this.state.images.length - 1;
@@ -88,6 +93,22 @@ class Carousel extends React.Component {
       currentIndex: idx
     });
   }
+
+  enter(e) {
+    let image = document.getElementById(e.target.id);
+    image.style.transform = 'scale(2.4)';
+  }
+
+  exit(e) {
+    let image = document.getElementById(e.target.id);
+    image.style.transform = 'scale(1)';
+  }
+
+  follow(e) {
+    let image = document.getElementById(e.target.id);
+    image.style.transformOrigin = `${e.pageX - 110}px ${e.pageY}px`;
+  }
+
   render() {
     return (
       <div>
@@ -120,6 +141,12 @@ class Carousel extends React.Component {
           <SlideImage
             url={this.state.images[this.state.currentIndex]}
             openModal={this.openModal}
+            enableZoom={this.state.enableZoom}
+            // id={this.state.productID}
+            // image={this.state.zoomImage}
+            // enter={this.enter}
+            // exit={this.exit}
+            // follow={this.follow}
           />
         </div>
         <div>

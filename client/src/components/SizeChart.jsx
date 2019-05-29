@@ -5,12 +5,9 @@ import Measure from '../components/Measure.jsx';
 
 const SizeChart = props => (
   <div
-    className={[
-      styles.modal,
-      styles.modalActive,
-      styles.modalActive1
-      // styles.slide
-    ].join(' ')}
+    className={[styles.modal, styles.modalActive, styles.modalActive1].join(
+      ' '
+    )}
   >
     <button
       className={[styles.btnOverlay, styles.btnOverlay2].join(' ')}
