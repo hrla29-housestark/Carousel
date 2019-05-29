@@ -52,12 +52,6 @@ class App extends React.Component {
             : null}
         </div>
 
-        {/* <div>
-          {this.state.isModalOpen
-            ? ReactDOM.createPortal(<CarouselModal />, carouselModal)
-            : null}
-        </div> */}
-
         <div className={CarouselStyle.container}>
           <div className={CarouselStyle.carouselLeft}>
             <Carousel openModal={this.openModal} />

@@ -130,29 +130,38 @@ class Carousel extends React.Component {
       marginTop: '-200px',
       position: 'fixed'
     };
+
+    const closeButtonStyle = {
+      display: 'flex',
+      cursor: 'pointer',
+      position: 'absolute',
+      fontSize: '45px',
+      fontWeight: '100',
+      right: '10px',
+      top: '-14px',
+      width: '34px',
+      height: '34px',
+      alignItems: 'center',
+      justifyContent: 'center',
+      border: '1px solid #000',
+      paddingBottom: '6px',
+      boxSizing: 'border-box',
+      fontFamily: 'system-ui',
+      innerText: '&times',
+      alignText: 'center',
+      backgroundColor: '#fff',
+      zIndex: '200'
+    };
     return (
       <div>
-        {/* <div>
-          {this.state.isModalOpen
-            ? ReactDOM.createPortal(
-                <CarouselModal
-                  images={this.state.images}
-                  left={this.prevSlide}
-                  right={this.nextSlide}
-                  index={this.state.currentIndex}
-                  url={this.state.images[this.state.currentIndex]}
-                  openModal={this.openModal}
-                  enableZoom={this.state.enableZoom}
-                />,
-                carouselModal
-              )
-            : null}
-        </div> */}
         <Skylight
           hideOnOverlayClicked
           ref={ref => (this.modal = ref)}
           dialogStyles={zoomModalStyle}
+          closeButtonStyle={closeButtonStyle}
         >
+          <LeftArrow left={this.prevSlide} />
+
           <ZoomModal
             images={this.state.images}
             left={this.prevSlide}
@@ -162,6 +171,8 @@ class Carousel extends React.Component {
             openModal={this.openModal}
             dialogStyle={zoomModalStyle}
           />
+
+          <RightArrow right={this.nextSlide} />
         </Skylight>
 
         <div
@@ -184,11 +195,11 @@ class Carousel extends React.Component {
           />
         </div>
         <div>
-          <LeftArrow left={this.prevSlide} direction="left" />
+          <LeftArrow left={this.prevSlide} />
         </div>
 
         <div>
-          <RightArrow right={this.nextSlide} direction="right" />
+          <RightArrow right={this.nextSlide} />
         </div>
       </div>
     );

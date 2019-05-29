@@ -1,5 +1,5 @@
 import React from 'react';
-import style from '../../../src/assets/css/CarouselModal.css';
+import styles from '../../../src/assets/css/CarouselModal.css';
 
 const ZoomModal = props => {
   const styling = {
@@ -19,12 +19,43 @@ const ZoomModal = props => {
     >
       <img
         src={props.url}
-        // className={style.zoomModal}
         id="zoomPic"
         style={styling}
         height="auto"
         width="550px"
       />
+
+      <div className={styles.slideBar}>
+        <ul className={styles.bar}>
+          <li className={styles.listBar}>
+            <span className={styles.listBarDotDefault}> Test </span>
+          </li>
+          <li className={styles.listBar}>
+            {' '}
+            <span className={styles.listBarDotSelected}> Test </span>
+          </li>
+          <li className={styles.listBar}>
+            {' '}
+            <span className={styles.listBarDotSelected}> Test </span>
+          </li>
+          <li className={styles.listBar}>
+            {' '}
+            <span className={styles.listBarDotSelected}> Test </span>
+          </li>
+          <li className={styles.listBar}>
+            {' '}
+            <span className={styles.listBarDotSelected}> Test </span>
+          </li>
+          <li className={styles.listBar}>
+            {' '}
+            <span className={styles.listBarDotSelected}> Test </span>
+          </li>
+          <li className={styles.listBar}>
+            {' '}
+            <span className={styles.listBarDotSelected}> Test </span>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };
