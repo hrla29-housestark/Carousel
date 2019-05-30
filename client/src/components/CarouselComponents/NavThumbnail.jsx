@@ -23,7 +23,7 @@ class NavThumbnail extends React.Component {
   downArrow() {
     let newValue = this.state.transform - 66;
     if (this.state.currentCount === 0) {
-      this.setState({
+      return this.setState({
         currentCount: 1,
         transform: newValue
       });
@@ -35,7 +35,7 @@ class NavThumbnail extends React.Component {
           index: 0,
           zIdx: '0'
         },
-        () => console.log('Test', this.state.zIdx)
+        () => console.log('Test', this.state.currentCount)
       );
     }
     const newCount = this.state.currentCount + 1;
@@ -56,7 +56,7 @@ class NavThumbnail extends React.Component {
       );
       this.toggleDownArrow();
     }
-    const newCount = this.state.currentCount + 1;
+    const newCount = this.state.currentCount - 1;
     this.setState(
       {
         currentCount: newCount,
