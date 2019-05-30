@@ -16,7 +16,8 @@ const adidasSchema = mongoose.Schema({
   type: String,
   defaultColor: String,
   otherColor: String,
-  miniImages: [String]
+  miniImages: [String],
+  color2: [String]
 });
 
 const Adidas = mongoose.model('Adidas', adidasSchema);
