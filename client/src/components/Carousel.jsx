@@ -213,6 +213,7 @@ class Carousel extends React.Component {
             toggleZoom={this.toggleZoom}
             x={this.state.x}
             y={this.state.y}
+            color={this.props.diffImages}
           />
 
           <RightArrow right={this.nextSlide} />

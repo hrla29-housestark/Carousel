@@ -142,14 +142,17 @@ class Checkout extends React.Component {
 
   switchProduct() {
     this.productClicked();
-    this.setState({
-      render: !this.state.render,
-      changeColor: !this.state.changeColor
-    });
+    this.setState(
+      {
+        render: !this.state.render,
+        changeColor: !this.state.changeColor
+      },
+      () => console.log(this.state.changeColor)
+    );
 
     //get request to grab images?
-    this.props.getProduct();
-    console.log(this.props.miniImages);
+    // this.props.getProduct(3);
+    this.props.changeProductColor();
   }
 
   freeShipping() {
@@ -190,8 +193,8 @@ class Checkout extends React.Component {
             <h5 className={styles.colorsInfo}> AVAILABLE COLORS </h5>
             <span className={styles.colors}>
               {this.state.changeColor
-                ? this.props.defaultColor
-                : this.props.otherColor}
+                ? this.props.product.defaultColor
+                : this.props.product.otherColor}
             </span>
             <br />
             <br />

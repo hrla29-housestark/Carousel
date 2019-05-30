@@ -30,32 +30,34 @@ class App extends React.Component {
     this.changeOverflow = this.changeOverflow.bind(this);
     this.getAdidaProducts = this.getAdidaProducts.bind(this);
     this.getOne = this.getOne.bind(this);
+    this.changeProductColor = this.changeProductColor.bind(this);
   }
 
   componentDidMount() {
-    this.getAdidaProducts();
+    // this.getAdidaProducts();
+    this.getOne();
   }
 
   getAdidaProducts() {
-    axios
-      .get('/api/products')
-      .then(data =>
-        this.setState({
-          products: data.data,
-          product: data.data[0],
-          images: data.data[0].imageUrl,
-          productID: data.data[0].productID,
-          miniImages: data.data[0].miniImages,
-          defaultColor: data.data[0].defaultColor,
-          otherColor: data.data[0].otherColor
-        })
-      )
-      .catch(err => console.error(err));
+    // axios
+    //   .get('/api/products')
+    //   .then(data =>
+    //     this.setState({
+    //       products: data.data,
+    //       product: data.data[0],
+    //       images: data.data[0].imageUrl,
+    //       productID: data.data[0].productID,
+    //       miniImages: data.data[0].miniImages,
+    //       defaultColor: data.data[0].defaultColor,
+    //       otherColor: data.data[0].otherColor
+    //     })
+    //   )
+    //   .catch(err => console.error(err));
   }
 
   getOne() {
     axios
-      .get(`/api/products/2`)
+      .get(`/api/products/3`)
       .then(data => {
         this.setState({
           product: data.data,
@@ -66,6 +68,13 @@ class App extends React.Component {
         });
       })
       .catch(err => console.error(err));
+  }
+
+  changeProductColor() {
+    const color = this.state.color;
+    this.setState({
+      images: color
+    });
   }
 
   renderModal() {
@@ -102,6 +111,7 @@ class App extends React.Component {
               openModal={this.openModal}
               product={this.state.product}
               images={this.state.images}
+              // diffImages={this.state.color}
             />
           </div>
           <div className={styles.checkoutPlacement}>
@@ -111,10 +121,11 @@ class App extends React.Component {
               closeModal={this.closeModal}
               product={this.state.product}
               miniImages={this.state.miniImages}
-              defaultColor={this.state.defaultColor}
-              otherColor={this.state.otherColor}
+              // defaultColor={this.state.defaultColor}
+              // otherColor={this.state.otherColor}
               getProduct={this.getOne}
               images={this.state.images}
+              changeProductColor={this.changeProductColor}
             />
           </div>
         </div>
