@@ -148,6 +148,8 @@ class Checkout extends React.Component {
     });
 
     //get request to grab images?
+    this.props.getProduct();
+    console.log(this.props.miniImages);
   }
 
   freeShipping() {

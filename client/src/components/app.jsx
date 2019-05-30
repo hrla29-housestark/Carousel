@@ -23,7 +23,8 @@ class App extends React.Component {
       images: [],
       defaultColor: '',
       otherColor: '',
-      miniImages: []
+      miniImages: [],
+      color: []
     };
     this.renderModal = this.renderModal.bind(this);
     this.changeOverflow = this.changeOverflow.bind(this);
@@ -54,12 +55,14 @@ class App extends React.Component {
 
   getOne() {
     axios
-      .get(`/api/products/${this.state.productID}`)
+      .get(`/api/products/2`)
       .then(data => {
         this.setState({
           product: data.data,
           productID: data.data.productID,
-          images: data.data.imageUrl
+          images: data.data.imageUrl,
+          color: data.data.color2,
+          miniImages: data.data.miniImages
         });
       })
       .catch(err => console.error(err));
@@ -95,7 +98,11 @@ class App extends React.Component {
 
         <div className={CarouselStyle.container}>
           <div className={CarouselStyle.carouselLeft}>
-            <Carousel openModal={this.openModal} />
+            <Carousel
+              openModal={this.openModal}
+              product={this.state.product}
+              images={this.state.images}
+            />
           </div>
           <div className={styles.checkoutPlacement}>
             <Checkout
@@ -106,6 +113,8 @@ class App extends React.Component {
               miniImages={this.state.miniImages}
               defaultColor={this.state.defaultColor}
               otherColor={this.state.otherColor}
+              getProduct={this.getOne}
+              images={this.state.images}
             />
           </div>
         </div>

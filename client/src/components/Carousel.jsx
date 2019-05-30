@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import styles from '../assets/css/carousel.css';
 import RightArrow from '../components/CarouselComponents/RightArrow.jsx';
 import LeftArrow from '../components/CarouselComponents/LeftArrow.jsx';
@@ -28,46 +27,46 @@ class Carousel extends React.Component {
     };
     this.prevSlide = this.prevSlide.bind(this);
     this.nextSlide = this.nextSlide.bind(this);
-    this.getAdidas = this.getAdidas.bind(this);
+    // this.getAdidas = this.getAdidas.bind(this);
     this.changeImage = this.changeImage.bind(this);
     this.openModal = this.openModal.bind(this);
     this.openSkylight = this.openSkylight.bind(this);
-    this.getOne = this.getOne.bind(this);
+    // this.getOne = this.getOne.bind(this);
     this.updatePosition = this.updatePosition.bind(this);
     this.zoomFeature = this.zoomFeature.bind(this);
     this.zoomOut = this.zoomOut.bind(this);
     this.toggleZoom = this.toggleZoom.bind(this);
   }
 
-  componentDidMount() {
-    this.getAdidas();
-  }
+  // componentDidMount() {
+  //   this.getAdidas();
+  // }
 
   getAdidas() {
-    axios
-      .get('/api/products')
-      .then(data =>
-        this.setState({
-          products: data.data,
-          product: data.data[0],
-          images: data.data[0].imageUrl,
-          productID: data.data[0].productID
-        })
-      )
-      .catch(err => console.log('failed to retrieve data'));
+    // axios
+    //   .get('/api/products')
+    //   .then(data =>
+    //     this.setState({
+    //       products: data.data,
+    //       product: data.data[0],
+    //       images: data.data[0].imageUrl,
+    //       productID: data.data[0].productID
+    //     })
+    //   )
+    //   .catch(err => console.log('failed to retrieve data'));
   }
-  getOne() {
-    axios
-      .get(`/api/products/${this.state.productID}`)
-      .then(data => {
-        this.setState({
-          product: data.data,
-          productID: data.data.productID,
-          images: data.data.imageUrl
-        });
-      })
-      .catch(err => console.error(err));
-  }
+  // getOne() {
+  //   axios
+  //     .get(`/api/products/${this.state.productID}`)
+  //     .then(data => {
+  //       this.setState({
+  //         product: data.data,
+  //         productID: data.data.productID,
+  //         images: data.data.imageUrl
+  //       });
+  //     })
+  //     .catch(err => console.error(err));
+  // }
 
   closeModal() {
     this.setState({
@@ -83,7 +82,8 @@ class Carousel extends React.Component {
   }
 
   nextSlide() {
-    const lastIndex = this.state.images.length - 1;
+    //this.state.images.length - 1;
+    const lastIndex = this.props.images.length - 1;
     const { currentIndex } = this.state;
     const resetIndex = currentIndex === lastIndex;
     const index = resetIndex ? 0 : currentIndex + 1;
@@ -93,7 +93,8 @@ class Carousel extends React.Component {
     });
   }
   prevSlide() {
-    const lastIndex = this.state.images.length - 1;
+    //this.state.images.length - 1;
+    const lastIndex = this.props.images.length - 1;
     const { currentIndex } = this.state;
     const resetIndex = currentIndex === 0;
     const index = resetIndex ? lastIndex : currentIndex - 1;
@@ -102,7 +103,7 @@ class Carousel extends React.Component {
       {
         currentIndex: index
       },
-      () => console.log(this.state.currentIndex)
+      () => console.log(this.props.images)
     );
   }
 
@@ -202,11 +203,11 @@ class Carousel extends React.Component {
           <LeftArrow left={this.prevSlide} />
 
           <ZoomModal
-            images={this.state.images}
+            images={this.props.images}
             left={this.prevSlide}
             right={this.nextSlide}
             index={this.state.currentIndex}
-            url={this.state.images[this.state.currentIndex]}
+            url={this.props.images[this.state.currentIndex]}
             openModal={this.openModal}
             dialogStyle={zoomModalStyle}
             toggleZoom={this.toggleZoom}
@@ -222,14 +223,14 @@ class Carousel extends React.Component {
           max-height="350px"
         >
           <NavThumbnail
-            images={this.state.images}
+            images={this.props.images}
             changeImage={this.changeImage}
           />
         </div>
 
         <div className={styles.row}>
           <SlideImage
-            url={this.state.images[this.state.currentIndex]}
+            url={this.props.images[this.state.currentIndex]}
             openModal={this.openModal}
             enableZoom={this.state.enableZoom}
             openModal={this.openSkylight}
