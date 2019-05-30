@@ -4,7 +4,7 @@
 
 /* Product Details */
 .productName {
-  font-family: 'adineuePROKZ-Black';
+  font-family: 'adineuePRO-Bold';
   font-size: 28px;
 }
 
@@ -18,19 +18,16 @@
 .checkoutPlacement {
   display: flex;
   flex-direction: column;
-  /* flex-wrap: wrap; */
   align-items: flex-end;
   width: 26%;
   position: relative;
-
-  /* overflow: auto; */
 }
 
 .colorsInfo {
   font-family: 'adihausDINBold';
-  font-size: 20px;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  font-size: 15px;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
 }
 
 .colors {

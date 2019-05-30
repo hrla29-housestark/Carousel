@@ -3,6 +3,8 @@ import styles from '../assets/css/styles.css';
 import Selection from './Selection.jsx';
 import axios from 'axios';
 import AddToBag from '../components/AddToBag.jsx';
+import Shipping from '../../src/components/Shipping.jsx';
+import style from '../assets/css/shipping.css';
 
 class Checkout extends React.Component {
   constructor(props) {
@@ -21,7 +23,9 @@ class Checkout extends React.Component {
       showButtons: false,
       hideHeartBtn: false,
       productClicked: true,
-      render: false
+      render: false,
+      shipping: false,
+      changeColor: true
     };
     this.quantityDropdown = this.quantityDropdown.bind(this);
     this.closeDropdown = this.closeDropdown.bind(this);
@@ -38,9 +42,9 @@ class Checkout extends React.Component {
     this.hideHeartBtnFunc = this.hideHeartBtnFunc.bind(this);
     this.productClicked = this.productClicked.bind(this);
     this.switchProduct = this.switchProduct.bind(this);
+    this.freeShipping = this.freeShipping.bind(this);
   }
 
-  getAdidaProduct() {}
   quantityDropdown() {
     this.setState(
       {
@@ -123,17 +127,11 @@ class Checkout extends React.Component {
     this.setState({
       showButtons: !this.state.showButtons
     });
-    // this.setState({
-    //   hideHeartBtn: !this.state.hideHeartBtn
-    // });
   }
   hideHeartBtnFunc() {
     this.setState({
       hideHeartBtn: !this.state.hideHeartBtn
     });
-    // this.setState({
-    //   showButtons: !this.state.showButtons
-    // });
   }
 
   productClicked() {
@@ -143,14 +141,21 @@ class Checkout extends React.Component {
   }
 
   switchProduct() {
-    // this.setState({
-    //   productClicked: !this.state.productClicked
-    // });
     this.productClicked();
     this.setState({
-      render: !this.state.render
+      render: !this.state.render,
+      changeColor: !this.state.changeColor
+    });
+
+    //get request to grab images?
+  }
+
+  freeShipping() {
+    this.setState({
+      shipping: !this.state.shipping
     });
   }
+
   render() {
     return (
       <div>
@@ -166,17 +171,25 @@ class Checkout extends React.Component {
             </span>
           </div>
           <br />
-          <span className={styles.productType}> WOMEN'S ORIGINALS</span>
+          <span className={styles.productType}>
+            {this.props.product.productType}
+          </span>
           <br />
-          <span className={styles.productName}> NMD_R1 SHOES</span>
+          <span className={styles.productName}>
+            {this.props.product.productName}
+          </span>
           <br />
-          <span className={styles.productPrice}> $130 </span>
+          <span className={styles.productPrice}>
+            {`$${this.props.product.price}`}
+          </span>
           <br />
           <br />
           <div className={styles.formatting}>
             <h5 className={styles.colorsInfo}> AVAILABLE COLORS </h5>
             <span className={styles.colors}>
-              CORE BLACK / CORE BLACK / ORCHID TINT
+              {this.state.changeColor
+                ? this.props.defaultColor
+                : this.props.otherColor}
             </span>
             <br />
             <br />
@@ -202,7 +215,7 @@ class Checkout extends React.Component {
                 ) : null}
                 <img
                   className={[styles.circleImg, styles.child].join(' ')}
-                  src="https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Blue/NMD_R1_Shoes_Blue_BD8030_01_standard.jpg"
+                  src={this.props.miniImages[0]}
                   onClick={this.switchProduct}
                 />
               </div>
@@ -228,7 +241,7 @@ class Checkout extends React.Component {
                 ) : null}
                 <img
                   className={[styles.circleImg, styles.child].join(' ')}
-                  src="https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/NMD_R1_Women/Pink/pinkShoe.jpg"
+                  src={this.props.miniImages[1]}
                   onClick={this.switchProduct}
                 />
               </div>
@@ -281,6 +294,38 @@ class Checkout extends React.Component {
           hideBtnState={this.state.showButtons}
           hideHeartBtnState={this.state.hideHeartBtn}
         />
+        <div className={style.bottomFirst}>
+          <svg
+            className={style.carIcon}
+            viewBox="0 0 19 19"
+            width="100%"
+            height="100%"
+          >
+            <g fill="none" stroke="currentColor" strokeMiterlimit="10">
+              <path d="M13.42 13.5H9.5" />
+              <path
+                strokeLinecap="square"
+                d="M4.5 5.5h10l4 3v5h-2M6.5 13.5h-2m0-6h-4"
+              />
+              <circle cx="8" cy="13" r="1.5" />
+              <circle cx="15" cy="13" r="1.5" />
+              <path strokeLinecap="square" d="M1.5 9.5h3m-2 2h2" />
+            </g>
+          </svg>
+          <div
+            id="itemName"
+            className={style.itemName}
+            onClick={() => this.freeShipping()}
+          >
+            FREE SHIPPING AND FREE RETURNS
+          </div>
+        </div>
+
+        {this.state.shipping ? (
+          <Shipping handleFreeShipping={this.freeShipping} />
+        ) : (
+          ''
+        )}
       </div>
     );
   }

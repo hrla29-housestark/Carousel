@@ -1,0 +1,91 @@
+.button {
+  opacity: 0.3;
+  transition: opacity 0.2s cubic-bezier(0.3, 0, 0.45, 1), visibility 0s;
+  visibility: visible;
+  background-color: rgb(0, 0, 1);
+  bottom: 0;
+  cursor: pointer;
+  display: block;
+  left: 0;
+  pointer-events: all;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: opacity 0.2s cubic-bezier(0.3, 0, 0.45, 1) 0.1s,
+    visibility 0s linear 0.3s;
+  width: 100%;
+}
+.fadeIn {
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  border: 1px solid black;
+  width: 50%;
+  margin: 70px auto;
+  background-color: white;
+}
+.fadeInCross {
+  position: relative;
+  left: 97%;
+  bottom: 10px;
+  border: 1px solid black;
+  height: 34px;
+  width: 34px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.model1 {
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
+  padding: 20px 15px;
+  margin-top: -37px;
+}
+.h5Header {
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.body {
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+  line-height: 22px;
+}
+.shippingHeader {
+  font-size: 26px;
+}
+
+.bottomFirst {
+  display: flex;
+  padding: 0 10px;
+  margin-top: 8px;
+}
+
+.carIcon {
+  width: 19px;
+  height: 19px;
+  margin-right: 2px;
+}
+
+.itemName {
+  font-size: 14px;
+  cursor: pointer;
+  font-family: 'adihausDINRegular', Arial, Helvetica, sans-serif;
+}

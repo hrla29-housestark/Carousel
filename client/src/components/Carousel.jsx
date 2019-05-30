@@ -59,7 +59,13 @@ class Carousel extends React.Component {
   getOne() {
     axios
       .get(`/api/products/${this.state.productID}`)
-      .then(data => console.log('test', data))
+      .then(data => {
+        this.setState({
+          product: data.data,
+          productID: data.data.productID,
+          images: data.data.imageUrl
+        });
+      })
       .catch(err => console.error(err));
   }
 
@@ -186,6 +192,7 @@ class Carousel extends React.Component {
     };
     return (
       <div>
+        {/* <button onClick={this.getOne}> TEESTING BUTTON </button> */}
         <Skylight
           hideOnOverlayClicked
           ref={ref => (this.modal = ref)}

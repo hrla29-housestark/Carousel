@@ -28,17 +28,18 @@ const TopNavigation = props => (
         <li className={styles.resizeText}>
           <span className={styles.separator}>/</span>{' '}
           <span className={[styles.underlineText, styles.nav].join(' ')}>
-            Women
+            {props.details.gender}
           </span>
         </li>
         <li className={styles.resizeText}>
           <span className={styles.separator}>/</span>{' '}
           <span className={[styles.underlineText, styles.nav].join(' ')}>
-            Shoes
+            {props.details.type}
           </span>
         </li>
         <li className={styles.resizeText}>
-          <span className={styles.separator}>/</span> <span> NMD_R1 Shoes</span>
+          <span className={styles.separator}>/</span>{' '}
+          <span> {props.details.productName}</span>
         </li>
       </ol>
     </div>
