@@ -29,14 +29,11 @@ class NavThumbnail extends React.Component {
       });
     }
     if (this.state.currentCount === 2) {
-      return this.setState(
-        {
-          disableBottomBtn: true,
-          index: 0,
-          zIdx: '0'
-        },
-        () => console.log('Test', this.state.currentCount)
-      );
+      return this.setState({
+        disableBottomBtn: true,
+        index: 0,
+        zIdx: '0'
+      });
     }
     const newCount = this.state.currentCount + 1;
     this.setState({
@@ -48,22 +45,16 @@ class NavThumbnail extends React.Component {
   slideUp() {
     const newValue = this.state.transform + 66;
     if (this.state.currentCount === 1) {
-      this.setState(
-        {
-          disableUpBtn: true
-        },
-        () => console.log(this.state.disableUpBtn)
-      );
+      this.setState({
+        disableUpBtn: true
+      });
       this.toggleDownArrow();
     }
     const newCount = this.state.currentCount - 1;
-    this.setState(
-      {
-        currentCount: newCount,
-        transform: newValue
-      },
-      () => console.log(this.state.currentCount)
-    );
+    this.setState({
+      currentCount: newCount,
+      transform: newValue
+    });
   }
 
   toggleTopArrow() {
@@ -143,8 +134,6 @@ class NavThumbnail extends React.Component {
                 this.toggleTopArrow();
               }}
               disabled={this.state.disableBottomBtn ? 'disabled' : ''}
-              // style={{ zIndex: this.state.zIdx }}
-              // display={{ display: 'none' }}
             >
               <svg
                 className={styles.bottomArrowSvg}

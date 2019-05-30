@@ -23,7 +23,14 @@ class Carousel extends React.Component {
       isModalOpen: false,
       enableZoom: false,
       x: null,
-      y: null
+      y: null,
+      li0: true,
+      li1: false,
+      li2: false,
+      li3: false,
+      li4: false,
+      li5: false,
+      li6: false
     };
     this.prevSlide = this.prevSlide.bind(this);
     this.nextSlide = this.nextSlide.bind(this);
@@ -36,6 +43,7 @@ class Carousel extends React.Component {
     this.zoomFeature = this.zoomFeature.bind(this);
     this.zoomOut = this.zoomOut.bind(this);
     this.toggleZoom = this.toggleZoom.bind(this);
+    this.changeSlideBar = this.changeSlideBar.bind(this);
   }
 
   // componentDidMount() {
@@ -82,7 +90,6 @@ class Carousel extends React.Component {
   }
 
   nextSlide() {
-    //this.state.images.length - 1;
     const lastIndex = this.props.images.length - 1;
     const { currentIndex } = this.state;
     const resetIndex = currentIndex === lastIndex;
@@ -93,7 +100,6 @@ class Carousel extends React.Component {
     });
   }
   prevSlide() {
-    //this.state.images.length - 1;
     const lastIndex = this.props.images.length - 1;
     const { currentIndex } = this.state;
     const resetIndex = currentIndex === 0;
@@ -154,6 +160,23 @@ class Carousel extends React.Component {
     this.modal.show();
   }
 
+  changeSlideBar(e) {
+    // console.log('clicked');
+    let { id } = e.target;
+    let num = id[2];
+    console.log(e.target.id, 'hiiii');
+    this.setState({
+      li0: false,
+      li1: false,
+      li2: false,
+      li3: false,
+      li4: false,
+      li5: false,
+      li6: false,
+      [id]: [true, num]
+    });
+  }
+
   render() {
     const zoomModalStyle = {
       backgroundColor: '#ebedee',
@@ -193,7 +216,6 @@ class Carousel extends React.Component {
     };
     return (
       <div>
-        {/* <button onClick={this.getOne}> TEESTING BUTTON </button> */}
         <Skylight
           hideOnOverlayClicked
           ref={ref => (this.modal = ref)}
@@ -214,6 +236,15 @@ class Carousel extends React.Component {
             x={this.state.x}
             y={this.state.y}
             color={this.props.diffImages}
+            changeSlideBar={this.changeSlideBar}
+            li0={this.state.li0}
+            li1={this.state.li1}
+            li2={this.state.li2}
+            li3={this.state.li3}
+            li4={this.state.li4}
+            li5={this.state.li5}
+            li6={this.state.li6}
+            li7={this.state.li7}
           />
 
           <RightArrow right={this.nextSlide} />
@@ -238,11 +269,17 @@ class Carousel extends React.Component {
           />
         </div>
         <div>
-          <LeftArrow left={this.prevSlide} />
+          <LeftArrow
+            left={this.prevSlide}
+            // changeSlideBar={this.changeSlideBar}
+          />
         </div>
 
         <div>
-          <RightArrow right={this.nextSlide} />
+          <RightArrow
+            right={this.nextSlide}
+            // changeSlideBar={this.changeSlideBar}
+          />
         </div>
       </div>
     );

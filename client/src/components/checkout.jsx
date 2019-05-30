@@ -43,6 +43,7 @@ class Checkout extends React.Component {
     this.productClicked = this.productClicked.bind(this);
     this.switchProduct = this.switchProduct.bind(this);
     this.freeShipping = this.freeShipping.bind(this);
+    this.switchProductBack = this.switchProductBack.bind(this);
   }
 
   quantityDropdown() {
@@ -142,17 +143,23 @@ class Checkout extends React.Component {
 
   switchProduct() {
     this.productClicked();
-    this.setState(
-      {
-        render: !this.state.render,
-        changeColor: !this.state.changeColor
-      },
-      () => console.log(this.state.changeColor)
-    );
+    this.setState({
+      render: !this.state.render,
+      changeColor: !this.state.changeColor
+    });
 
     //get request to grab images?
     // this.props.getProduct(3);
     this.props.changeProductColor();
+  }
+
+  switchProductBack() {
+    this.productClicked();
+    this.setState({
+      render: !this.state.render,
+      changeColor: !this.state.changeColor
+    });
+    this.props.revert();
   }
 
   freeShipping() {
@@ -221,7 +228,7 @@ class Checkout extends React.Component {
                 <img
                   className={[styles.circleImg, styles.child].join(' ')}
                   src={this.props.miniImages[0]}
-                  onClick={this.switchProduct}
+                  onClick={this.switchProductBack}
                 />
               </div>
 

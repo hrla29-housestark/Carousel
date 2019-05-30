@@ -24,13 +24,17 @@ class App extends React.Component {
       defaultColor: '',
       otherColor: '',
       miniImages: [],
-      color: []
+      color: [],
+      originalImages: true,
+      originalImgs: [],
+      secondImgs: []
     };
     this.renderModal = this.renderModal.bind(this);
     this.changeOverflow = this.changeOverflow.bind(this);
     this.getAdidaProducts = this.getAdidaProducts.bind(this);
     this.getOne = this.getOne.bind(this);
     this.changeProductColor = this.changeProductColor.bind(this);
+    this.revertBack = this.revertBack.bind(this);
   }
 
   componentDidMount() {
@@ -72,8 +76,18 @@ class App extends React.Component {
 
   changeProductColor() {
     const color = this.state.color;
+    const imgs = this.state.images;
+
     this.setState({
-      images: color
+      images: color,
+      originalImgs: imgs,
+      secondImgs: color
+    });
+  }
+
+  revertBack() {
+    this.setState({
+      images: this.state.originalImgs
     });
   }
 
@@ -111,7 +125,6 @@ class App extends React.Component {
               openModal={this.openModal}
               product={this.state.product}
               images={this.state.images}
-              // diffImages={this.state.color}
             />
           </div>
           <div className={styles.checkoutPlacement}>
@@ -121,11 +134,10 @@ class App extends React.Component {
               closeModal={this.closeModal}
               product={this.state.product}
               miniImages={this.state.miniImages}
-              // defaultColor={this.state.defaultColor}
-              // otherColor={this.state.otherColor}
               getProduct={this.getOne}
               images={this.state.images}
               changeProductColor={this.changeProductColor}
+              revert={this.revertBack}
             />
           </div>
         </div>

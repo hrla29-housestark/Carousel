@@ -6,9 +6,6 @@ const SlideImage = props => {
   const styling = {
     backgroundImage: `url(${props.url})`
   };
-  {
-    console.log(props.id);
-  }
   return (
     <div className={[styles.centerImage, style.zoomContainer].join(' ')}>
       <img
@@ -19,7 +16,6 @@ const SlideImage = props => {
         style={styling}
         onClick={() => {
           props.openModal();
-          console.log('clicked');
         }}
       />
     </div>
