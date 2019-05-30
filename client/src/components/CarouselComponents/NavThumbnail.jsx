@@ -11,7 +11,8 @@ class NavThumbnail extends React.Component {
       disableUpBtn: false,
       disableBottomBtn: false,
       currentCount: 0,
-      hideBottomArrow: false
+      hideBottomArrow: false,
+      zIdx: ''
     };
     this.slideUp = this.slideUp.bind(this);
     this.downArrow = this.downArrow.bind(this);
@@ -21,44 +22,48 @@ class NavThumbnail extends React.Component {
 
   downArrow() {
     let newValue = this.state.transform - 66;
+    if (this.state.currentCount === 0) {
+      this.setState({
+        currentCount: 1,
+        transform: newValue
+      });
+    }
     if (this.state.currentCount === 2) {
-      const newCount = 0;
       return this.setState(
         {
           disableBottomBtn: true,
-          currentCount: newCount,
-          index: 0
+          index: 0,
+          zIdx: '0'
         },
-        () => console.log(this.state.currentCount)
+        () => console.log('Test', this.state.zIdx)
       );
     }
     const newCount = this.state.currentCount + 1;
     this.setState({
-      currentCount: newCount
-    });
-    this.setState({
+      currentCount: newCount,
       transform: newValue
     });
   }
 
   slideUp() {
     const newValue = this.state.transform + 66;
-
     if (this.state.currentCount === 1) {
       this.setState(
         {
           disableUpBtn: true
         },
-        () => console.log(this.state.currentCount)
+        () => console.log(this.state.disableUpBtn)
       );
+      this.toggleDownArrow();
     }
     const newCount = this.state.currentCount + 1;
-    this.setState({
-      currentCount: newCount
-    });
-    this.setState({
-      transform: newValue
-    });
+    this.setState(
+      {
+        currentCount: newCount,
+        transform: newValue
+      },
+      () => console.log(this.state.currentCount)
+    );
   }
 
   toggleTopArrow() {
@@ -69,7 +74,7 @@ class NavThumbnail extends React.Component {
 
   toggleDownArrow() {
     this.setState({
-      index: 0
+      zIdx: 0
     });
   }
 
@@ -138,6 +143,8 @@ class NavThumbnail extends React.Component {
                 this.toggleTopArrow();
               }}
               disabled={this.state.disableBottomBtn ? 'disabled' : ''}
+              // style={{ zIndex: this.state.zIdx }}
+              // display={{ display: 'none' }}
             >
               <svg
                 className={styles.bottomArrowSvg}

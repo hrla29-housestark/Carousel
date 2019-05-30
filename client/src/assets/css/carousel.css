@@ -127,14 +127,7 @@
     left: 15px;
     top: 80px;
     bottom: 60px;
-    /* overflow: hidden; */
     display: block;
-    /* transition: transform 0.2s cubic-bezier(0.3, 0, 0.45, 1);
-    transform: translate(0); */
-    /* white-space: nowrap; */
-    /* overflow-y: visible;
-    overflow-x: visible; */
-    /* width: auto; */
   }
 }
 
