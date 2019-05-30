@@ -4,13 +4,10 @@ import styles from '../assets/css/styles.css';
 import Checkout from './checkout.jsx';
 import TopNavigation from './TopNavigation.jsx';
 import SizeChart from './SizeChart.jsx';
-import sizeChartStyles from '../assets/css/sizeChart.css';
 import CarouselStyle from '../assets/css/carousel.css';
 import Carousel from '../components/Carousel.jsx';
-import CarouselModal from '../components/CarouselComponents/CarouselModal.jsx';
 
 const modal = document.getElementById('modal');
-// const carouselModal = document.getElementById('modal-Carousel');
 
 class App extends React.Component {
   constructor(props) {

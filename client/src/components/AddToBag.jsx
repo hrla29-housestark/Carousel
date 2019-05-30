@@ -50,24 +50,6 @@ const AddToBag = props => (
         </div>
       </div>
     ) : null}
-
-    {/* */}
-    {/* <div
-      className={[styles.addBagTransition, styles.addBagTransition2].join(' ')}
-    >
-      <div className={styles.bagWrap}>
-        <button
-          className={[
-            styles.btnText,
-            styles.floatBag,
-            styles.floatBag2,
-            styles.floatBagColor
-          ].join(' ')}
-        >
-          Add To Bag
-        </button>
-      </div>
-    </div> */}
   </div>
 );
 

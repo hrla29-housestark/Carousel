@@ -170,7 +170,7 @@ class Carousel extends React.Component {
       fontSize: '45px',
       fontWeight: '100',
       right: '10px',
-      top: '-14px',
+      top: '10px',
       width: '34px',
       height: '34px',
       alignItems: 'center',
@@ -182,7 +182,7 @@ class Carousel extends React.Component {
       innerText: '&times',
       alignText: 'center',
       backgroundColor: '#fff',
-      zIndex: '200'
+      zIndex: '300'
     };
     return (
       <div>

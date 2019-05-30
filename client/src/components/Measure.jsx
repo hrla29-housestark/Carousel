@@ -30,9 +30,6 @@ const Measure = props => (
         <h5 className={styles.text}> HOW TO MEASURE</h5>
         <div className={styles.divSlider}>
           <div className={styles.divContainer}>
-            {/* <div
-              className={[styles.chartCarousel, styles.chartOverflow].join(' ')}
-            > */}
             <div className={styles.imgWrap} width="100%">
               <div className={styles.imgWrap2}>
                 <header className={styles.header}>
@@ -46,13 +43,10 @@ const Measure = props => (
                 <div className={styles.img1}>
                   <img
                     src="https://s3-us-west-1.amazonaws.com/fecadidas/Adidas+JPG/FEC+Images/Measurement1.jpg"
-                    // width="115%"
-                    // height="100%"
                     className={styles.imgClass}
                   />
                 </div>
                 <div className={styles.imgDescription}>
-                  {' '}
                   <p>
                     Place a piece of paper on a hard floor with one end to the
                     wall. Stand on the piece of paper with the heel slightly
@@ -61,7 +55,6 @@ const Measure = props => (
                 </div>
               </div>
             </div>
-            {/* </div> */}
 
             <div className={styles.imgWrap} width="100%">
               <div className={styles.imgWrap2}>

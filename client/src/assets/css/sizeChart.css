@@ -70,8 +70,8 @@
   height: 34px;
   justify-content: center;
   position: absolute;
-  right: 105px;
-  top: 100px;
+  right: 316px;
+  top: 17px;
   transform: translate(50%, -50%);
   transition: transform 0.1s cubic-bezier(0.3, 0, 0.45, 1);
   width: 34px;
@@ -261,7 +261,7 @@
   .divContainer {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
 }
 

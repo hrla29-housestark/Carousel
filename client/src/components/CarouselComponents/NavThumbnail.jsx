@@ -93,7 +93,6 @@ class NavThumbnail extends React.Component {
               className={styles.upArrowBtn}
               onClick={() => {
                 this.slideUp();
-                // this.toggleDownArrow();
               }}
               disabled={this.state.disableUpBtn ? 'disabled' : ''}
             >
