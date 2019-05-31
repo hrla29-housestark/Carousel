@@ -36,36 +36,36 @@ const SizeChart = props => (
               <div className={styles.tableColumns}>
                 <table className={styles.table}>
                   <tbody>
-                    <tr>
+                    <tr className={styles.trCss}>
                       <td className={[styles.td, styles.tdBorder].join(' ')}>
                         <span className={styles.columnText}>
                           Heel-toe measurement
                         </span>
                       </td>
                     </tr>
-                    <tr>
+                    <tr className={styles.trCss}>
                       <td className={[styles.td, styles.tdBorder].join(' ')}>
                         <span className={styles.columnText}>US - Men's</span>
                       </td>
                     </tr>
-                    <tr>
+                    <tr className={styles.trCss}>
                       <td className={[styles.td, styles.tdBorder].join(' ')}>
                         <span className={styles.columnText}>US - Women's</span>
                       </td>
                     </tr>
 
-                    <tr>
+                    <tr className={styles.trCss}>
                       <td className={[styles.td, styles.tdBorder].join(' ')}>
                         <span className={styles.columnText}>UK</span>
                       </td>
                     </tr>
 
-                    <tr>
+                    <tr className={styles.trCss}>
                       <td className={[styles.td, styles.tdBorder].join(' ')}>
                         <span className={styles.columnText}>EU</span>
                       </td>
                     </tr>
-                    <tr>
+                    <tr className={styles.trCss}>
                       <td className={[styles.td, styles.tdBorder].join(' ')}>
                         <span className={styles.columnText}>JP</span>
                       </td>
