@@ -31,36 +31,13 @@ class App extends React.Component {
     };
     this.renderModal = this.renderModal.bind(this);
     this.changeOverflow = this.changeOverflow.bind(this);
-    this.getAdidaProducts = this.getAdidaProducts.bind(this);
     this.getOne = this.getOne.bind(this);
     this.changeProductColor = this.changeProductColor.bind(this);
     this.revertBack = this.revertBack.bind(this);
   }
 
   componentDidMount() {
-    // this.getAdidaProducts();
     this.getOne();
-  }
-  // function getRandomIntInclusive(min, max) {
-  //   min = Math.ceil(min);
-  //   max = Math.floor(max);
-  //   return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive
-  // }
-  getAdidaProducts() {
-    // axios
-    //   .get('/api/products')
-    //   .then(data =>
-    //     this.setState({
-    //       products: data.data,
-    //       product: data.data[0],
-    //       images: data.data[0].imageUrl,
-    //       productID: data.data[0].productID,
-    //       miniImages: data.data[0].miniImages,
-    //       defaultColor: data.data[0].defaultColor,
-    //       otherColor: data.data[0].otherColor
-    //     })
-    //   )
-    //   .catch(err => console.error(err));
   }
 
   getOne() {

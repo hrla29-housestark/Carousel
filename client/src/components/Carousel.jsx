@@ -5,7 +5,7 @@ import LeftArrow from '../components/CarouselComponents/LeftArrow.jsx';
 import SlideImage from '../components/CarouselComponents/SlideImage.jsx';
 import axios from 'axios';
 import NavThumbnail from '../components/CarouselComponents/NavThumbnail.jsx';
-import CarouselModal from '../components/CarouselComponents/CarouselModal.jsx';
+// import CarouselModal from '../components/CarouselComponents/CarouselModal.jsx';
 import ZoomModal from '../components/CarouselComponents/ZoomModal.jsx';
 import Skylight from 'react-skylight';
 
