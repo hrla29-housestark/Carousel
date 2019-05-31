@@ -147,9 +147,6 @@ class Checkout extends React.Component {
       render: !this.state.render,
       changeColor: !this.state.changeColor
     });
-
-    //get request to grab images?
-    // this.props.getProduct(3);
     this.props.changeProductColor();
   }
 

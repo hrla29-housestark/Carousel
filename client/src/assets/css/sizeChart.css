@@ -70,7 +70,7 @@
   height: 34px;
   justify-content: center;
   position: absolute;
-  right: 316px;
+  right: 530px;
   top: 17px;
   transform: translate(50%, -50%);
   transition: transform 0.1s cubic-bezier(0.3, 0, 0.45, 1);
@@ -128,6 +128,9 @@
   border: 1px solid #ebedee;
 }
 
+.trHeight {
+  height: 59px
+}
 .tdBorder {
   color: black;
   border-color: #767677;
@@ -145,6 +148,8 @@
   flex-direction: row;
   margin-bottom: 10px;
   position: relative;
+  width: 307px;
+  height: 374px
 }
 
 .tableColumns {
@@ -162,6 +167,7 @@
   padding: 0 10px;
   text-align: center;
   font-family: 'AdineueuDIN';
+  height
 }
 
 .scrollColumns {

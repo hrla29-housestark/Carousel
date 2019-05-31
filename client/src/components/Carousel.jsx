@@ -174,16 +174,9 @@ class Carousel extends React.Component {
     );
   }
 
-  // resetState() {
-  //   this.setState({
-  //     counter: 0
-  //   });
-  // }
-
   handleSlideRight(e) {
     e.preventDefault();
     let target = 'li' + (this.state.currentIdx + 1);
-    console.log(target);
     this.setState({
       currentIdx: this.state.currentIdx + 1,
       li0: [false, 0],
@@ -276,8 +269,6 @@ class Carousel extends React.Component {
             y={this.state.y}
             color={this.props.diffImages}
             changeSlideBar={this.changeSlideBar}
-            // counter={this.state.count}
-            // resetState={this.resetState}
             li0={this.state.li0}
             li1={this.state.li1}
             li2={this.state.li2}
@@ -325,20 +316,3 @@ class Carousel extends React.Component {
 }
 
 export default Carousel;
-
-// li0={this.state.li0}
-// li1={this.state.li1}
-// li2={this.state.li2}
-// li3={this.state.li3}
-// li4={this.state.li4}
-// li5={this.state.li5}
-// li6={this.state.li6}
-// li7={this.state.li7}
-
-// li0: true,
-// li1: false,
-// li2: false,
-// li3: false,
-// li4: false,
-// li5: false,
-// li6: false
