@@ -8,7 +8,10 @@ const LeftArrow = props => (
       viewBox="0 0 24 24"
       width="50%"
       height="50%"
-      onClick={props.left}
+      onClick={e => {
+        props.left();
+        props.changeSlideBar(e);
+      }}
     >
       <path
         d="M17.59 7l5 5-5 5M0 12h22"

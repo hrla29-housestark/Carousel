@@ -113,7 +113,7 @@
   font-style: normal;
   text-align: start;
   font-variant: normal;
-  font-family: 'adihausDINRegular';
+  font-family: 'AdihausDIN';
 }
 
 .td {
@@ -191,11 +191,11 @@
 
 /* CSS FOR TEXT*/
 .sizeChartText {
-  font-family: 'adineuePRO-Bold';
+  font-family: 'Adineuebold';
 }
 
 .smallPrint {
-  font-family: 'adihausDINRegular';
+  font-family: 'AdihausDIN';
   font-size: 13px;
   text-decoration: underline;
   padding-bottom: 5px;
@@ -203,12 +203,12 @@
 }
 
 .scrollHorizontalText {
-  font-family: 'adihausDINRegular';
+  font-family: 'AdihausDIN';
   font-size: 13px;
 }
 
 .columnText {
-  font-family: 'adihausDINRegular';
+  font-family: 'AdihausDIN';
 }
 
 .smallPrintHover:hover {
@@ -217,7 +217,7 @@
 }
 
 .detailPrint {
-  font-family: 'adihausDINRegular';
+  font-family: 'AdihausDIN';
   font-size: 13px;
   margin-bottom: 40px;
   margin-top: 35px;
@@ -239,7 +239,7 @@
 
 /* CSS for HOW TO MEASURE SECTION */
 .text {
-  font-family: 'adineuePRO-Bold';
+  font-family: 'Adineuebold';
 }
 
 .divSlider {
@@ -337,13 +337,13 @@ ul {
   text-transform: uppercase;
   color: white;
   font-size: 14px;
-  font-family: 'adihausDINRegular';
+  font-family: 'AdihausDIN';
 }
 
 .numberStyle {
   white-space: nowrap;
   color: white;
-  font-family: 'adihausDINRegular';
+  font-family: 'AdihausDIN';
 }
 
 .img1 {
@@ -360,13 +360,13 @@ ul {
   flex-grow: 1;
   display: flex;
   align-items: center;
-  font-family: 'adihausDINRegular';
+  font-family: 'AdihausDIN';
 }
 
 .fitSection {
   margin-bottom: 40px;
   text-decoration: uppercase;
-  font-family: 'adineuePRO-Bold';
+  font-family: 'Adineuebold';
   margin-block-start: 1.67em;
   margin-block-end: 1.67em;
   margin-inline-start: 0px;
@@ -380,7 +380,7 @@ ul {
 }
 
 .font {
-  font-family: 'adihausDINRegular';
+  font-family: 'AdihausDIN';
   font-size: 13px;
 }
 @media (max-width: 991px) {
@@ -390,7 +390,7 @@ ul {
   }
 }
 @font-face {
-  font-family: 'adihausDINRegular';
+  font-family: 'AdihausDIN';
   src: url('../Fonts/AdihausDIN-Regular.woff2') format('truetype');
   font-style: normal;
   font-weight: normal;
@@ -404,7 +404,7 @@ ul {
 }
 
 @font-face {
-  font-family: 'adihausDINBold';
+  font-family: 'Adihausbold';
   src: url('../Fonts/AdihausDIN-Bold.woff2') format('truetype');
   font-style: normal;
   font-weight: normal;
@@ -418,7 +418,7 @@ ul {
 }
 
 @font-face {
-  font-family: 'adineuePRO-Bold';
+  font-family: 'Adineuebold';
   src: url('../Fonts/adineuePRO-Bold.woff2') format('truetype');
   font-style: normal;
   font-weight: normal;

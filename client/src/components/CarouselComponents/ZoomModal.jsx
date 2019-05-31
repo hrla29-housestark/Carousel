@@ -30,86 +30,80 @@ const ZoomModal = props => {
 
       <div className={styles.slideBar}>
         <ul className={styles.bar}>
-          <li
-            id="li0"
-            className={styles.listBar}
-            onClick={e => props.changeSlideBar(e)}
-            // className={
-            //   props.li0[0] === true
-            //     ? styles.listBarDotDefault
-            //     : styles.listBarDotSelected
-            // }
-          >
+          <li className={styles.listBar}>
             <span
-              // id="li0"
-              onClick={e => props.changeSlideBar(e)}
+              id="li0"
+              onClick={props.changeSlideBar}
               className={
-                props.li0[0] === true
+                props.counter === 0
                   ? styles.listBarDotDefault
                   : styles.listBarDotSelected
               }
             />
           </li>
-          <li className={styles.listBar} onClick={e => props.changeSlideBar(e)}>
+          <li className={styles.listBar}>
             <span
-              className={
-                props.li1[0] === true
-                  ? styles.listBarDotDefault
-                  : styles.listBarDotSelected
-              }
               id="li1"
-            />
-          </li>
-          <li className={styles.listBar} onClick={e => props.changeSlideBar(e)}>
-            <span
+              onClick={props.changeSlideBar}
               className={
-                props.li2[0] === true
+                props.counter === 1
                   ? styles.listBarDotDefault
                   : styles.listBarDotSelected
               }
+            />
+          </li>
+          <li className={styles.listBar}>
+            <span
               id="li2"
-            />
-          </li>
-          <li className={styles.listBar} onClick={e => props.changeSlideBar(e)}>
-            <span
               className={
-                props.li3[0] === true
+                props.counter === 2
                   ? styles.listBarDotDefault
                   : styles.listBarDotSelected
               }
+              onClick={props.changeSlideBar}
+            />
+          </li>
+          {/* <li className={styles.listBar}>
+            <span
               id="li3"
-            />
-          </li>
-          <li className={styles.listBar} onClick={e => props.changeSlideBar(e)}>
-            <span
               className={
-                props.li4[0] === true
+                props.counter === 3
                   ? styles.listBarDotDefault
                   : styles.listBarDotSelected
               }
-              id="li4"
+              onClick={props.changeSlideBar}
             />
           </li>
-          <li className={styles.listBar} onClick={e => props.changeSlideBar(e)}>
+          <li className={styles.listBar}>
             <span
               className={
-                props.li5[0] === true
+                props.counter === 4
                   ? styles.listBarDotDefault
                   : styles.listBarDotSelected
               }
-              id="li5"
+              onClick={props.changeSlideBar}
             />
           </li>
-          <li className={styles.listBar} onClick={e => props.changeSlideBar(e)}>
+          <li className={styles.listBar}>
             <span
               className={
-                props.li6[0] === true
+                props.counter === 5
                   ? styles.listBarDotDefault
                   : styles.listBarDotSelected
               }
-              id="li6"
+              onClick={props.changeSlideBar}
             />
           </li>
+          <li className={styles.listBar}>
+            <span
+              className={
+                props.counter === 6
+                  ? styles.listBarDotDefault
+                  : styles.listBarDotSelected
+              }
+              onClick={props.changeSlideBar}
+            />
+          </li> */}
         </ul>
       </div>
     </div>

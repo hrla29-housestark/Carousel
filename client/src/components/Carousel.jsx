@@ -24,13 +24,7 @@ class Carousel extends React.Component {
       enableZoom: false,
       x: null,
       y: null,
-      li0: true,
-      li1: false,
-      li2: false,
-      li3: false,
-      li4: false,
-      li5: false,
-      li6: false
+      count: 0
     };
     this.prevSlide = this.prevSlide.bind(this);
     this.nextSlide = this.nextSlide.bind(this);
@@ -160,21 +154,28 @@ class Carousel extends React.Component {
     this.modal.show();
   }
 
-  changeSlideBar(e) {
+  changeSlideBar() {
     // console.log('clicked');
-    let { id } = e.target;
-    let num = id[2];
-    console.log(e.target.id, 'hiiii');
-    this.setState({
-      li0: false,
-      li1: false,
-      li2: false,
-      li3: false,
-      li4: false,
-      li5: false,
-      li6: false,
-      [id]: [true, num]
-    });
+    // let id = e.target.id;
+    // let num = id[2];
+    // console.log(e.target.id, 'hiiii');
+    // this.setState({
+    //   li0: false,
+    //   li1: false,
+    //   li2: false,
+    //   li3: false,
+    //   li4: false,
+    //   li5: false,
+    //   li6: false,
+    //   [id]: [true, num]
+    // });
+    let counter = this.state.count + 1;
+    this.setState(
+      {
+        count: counter
+      },
+      () => console.log(this.state.count)
+    );
   }
 
   render() {
@@ -222,7 +223,10 @@ class Carousel extends React.Component {
           dialogStyles={zoomModalStyle}
           closeButtonStyle={closeButtonStyle}
         >
-          <LeftArrow left={this.prevSlide} />
+          <LeftArrow
+            left={this.prevSlide}
+            changeSlideBar={this.changeSlideBar}
+          />
 
           <ZoomModal
             images={this.props.images}
@@ -237,17 +241,13 @@ class Carousel extends React.Component {
             y={this.state.y}
             color={this.props.diffImages}
             changeSlideBar={this.changeSlideBar}
-            li0={this.state.li0}
-            li1={this.state.li1}
-            li2={this.state.li2}
-            li3={this.state.li3}
-            li4={this.state.li4}
-            li5={this.state.li5}
-            li6={this.state.li6}
-            li7={this.state.li7}
+            counter={this.state.count}
           />
 
-          <RightArrow right={this.nextSlide} />
+          <RightArrow
+            right={this.nextSlide}
+            changeSlideBar={this.changeSlideBar}
+          />
         </Skylight>
         <div
           className={styles.thumbnailContainer}
@@ -287,3 +287,20 @@ class Carousel extends React.Component {
 }
 
 export default Carousel;
+
+// li0={this.state.li0}
+// li1={this.state.li1}
+// li2={this.state.li2}
+// li3={this.state.li3}
+// li4={this.state.li4}
+// li5={this.state.li5}
+// li6={this.state.li6}
+// li7={this.state.li7}
+
+// li0: true,
+// li1: false,
+// li2: false,
+// li3: false,
+// li4: false,
+// li5: false,
+// li6: false
