@@ -8,7 +8,6 @@ import NavThumbnail from '../components/CarouselComponents/NavThumbnail.jsx';
 import CarouselModal from '../components/CarouselComponents/CarouselModal.jsx';
 import ZoomModal from '../components/CarouselComponents/ZoomModal.jsx';
 import Skylight from 'react-skylight';
-import { timingSafeEqual } from 'crypto';
 
 class Carousel extends React.Component {
   constructor(props) {
@@ -24,7 +23,12 @@ class Carousel extends React.Component {
       enableZoom: false,
       x: null,
       y: null,
-      count: 0
+      count: 0,
+      li0: true,
+      li1: false,
+      li2: false,
+      li3: false,
+      currentIdx: 0
     };
     this.prevSlide = this.prevSlide.bind(this);
     this.nextSlide = this.nextSlide.bind(this);
@@ -38,6 +42,9 @@ class Carousel extends React.Component {
     this.zoomOut = this.zoomOut.bind(this);
     this.toggleZoom = this.toggleZoom.bind(this);
     this.changeSlideBar = this.changeSlideBar.bind(this);
+    // this.resetState = this.resetState.bind(this);
+    this.handleSlideRight = this.handleSlideRight.bind(this);
+    this.handleSlideLeft = this.handleSlideLeft.bind(this);
   }
 
   // componentDidMount() {
@@ -178,6 +185,38 @@ class Carousel extends React.Component {
     );
   }
 
+  // resetState() {
+  //   this.setState({
+  //     counter: 0
+  //   });
+  // }
+
+  handleSlideRight(e) {
+    e.preventDefault();
+    let target = 'li' + (this.state.currentIdx + 1);
+    console.log(target);
+    this.setState({
+      currentIdx: this.state.currentIdx + 1,
+      li0: [false, 0],
+      li1: [false, 1],
+      li2: [false, 2],
+      li3: [false, 3],
+      [target]: [true, this.state.currentIdx + 1]
+    });
+  }
+
+  handleSlideLeft(e) {
+    e.preventDefault();
+    let target = 'li' + (this.state.currentIdx - 1);
+    this.setState({
+      currentIdx: this.state.currentIdx - 1,
+      li0: [false, 0],
+      li1: [false, 1],
+      li2: [false, 2],
+      li3: [false, 3],
+      [target]: [true, this.state.currentIdx - 1]
+    });
+  }
   render() {
     const zoomModalStyle = {
       backgroundColor: '#ebedee',
@@ -226,6 +265,7 @@ class Carousel extends React.Component {
           <LeftArrow
             left={this.prevSlide}
             changeSlideBar={this.changeSlideBar}
+            leftSlideBar={this.handleSlideLeft}
           />
 
           <ZoomModal
@@ -241,12 +281,18 @@ class Carousel extends React.Component {
             y={this.state.y}
             color={this.props.diffImages}
             changeSlideBar={this.changeSlideBar}
-            counter={this.state.count}
+            // counter={this.state.count}
+            // resetState={this.resetState}
+            li0={this.state.li0}
+            li1={this.state.li1}
+            li2={this.state.li2}
+            li3={this.state.li3}
           />
 
           <RightArrow
             right={this.nextSlide}
             changeSlideBar={this.changeSlideBar}
+            rightSlideBar={this.handleSlideRight}
           />
         </Skylight>
         <div
@@ -269,17 +315,11 @@ class Carousel extends React.Component {
           />
         </div>
         <div>
-          <LeftArrow
-            left={this.prevSlide}
-            // changeSlideBar={this.changeSlideBar}
-          />
+          <LeftArrow left={this.prevSlide} />
         </div>
 
         <div>
-          <RightArrow
-            right={this.nextSlide}
-            // changeSlideBar={this.changeSlideBar}
-          />
+          <RightArrow right={this.nextSlide} />
         </div>
       </div>
     );

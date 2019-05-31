@@ -10,7 +10,7 @@ const LeftArrow = props => (
       height="50%"
       onClick={e => {
         props.left();
-        props.changeSlideBar(e);
+        props.leftSlideBar(e);
       }}
     >
       <path
