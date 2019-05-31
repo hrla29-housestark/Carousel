@@ -28,6 +28,9 @@ class Carousel extends React.Component {
       li1: false,
       li2: false,
       li3: false,
+      li4: false,
+      li5: false,
+      li6: false,
       currentIdx: 0
     };
     this.prevSlide = this.prevSlide.bind(this);
@@ -162,20 +165,6 @@ class Carousel extends React.Component {
   }
 
   changeSlideBar() {
-    // console.log('clicked');
-    // let id = e.target.id;
-    // let num = id[2];
-    // console.log(e.target.id, 'hiiii');
-    // this.setState({
-    //   li0: false,
-    //   li1: false,
-    //   li2: false,
-    //   li3: false,
-    //   li4: false,
-    //   li5: false,
-    //   li6: false,
-    //   [id]: [true, num]
-    // });
     let counter = this.state.count + 1;
     this.setState(
       {
@@ -201,6 +190,9 @@ class Carousel extends React.Component {
       li1: [false, 1],
       li2: [false, 2],
       li3: [false, 3],
+      li4: [false, 3],
+      li5: [false, 3],
+      li6: [false, 3],
       [target]: [true, this.state.currentIdx + 1]
     });
   }
@@ -214,6 +206,9 @@ class Carousel extends React.Component {
       li1: [false, 1],
       li2: [false, 2],
       li3: [false, 3],
+      li4: [false, 3],
+      li5: [false, 3],
+      li6: [false, 3],
       [target]: [true, this.state.currentIdx - 1]
     });
   }
@@ -287,6 +282,9 @@ class Carousel extends React.Component {
             li1={this.state.li1}
             li2={this.state.li2}
             li3={this.state.li3}
+            li4={this.state.li4}
+            li5={this.state.li5}
+            li6={this.state.li6}
           />
 
           <RightArrow
