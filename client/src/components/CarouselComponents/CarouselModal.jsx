@@ -22,38 +22,6 @@ class CarouselModal extends React.Component {
         <div className={styles.rightArrow}>
           <RightArrow right={this.props.right} />
         </div>
-        {/* <div className={styles.slideBar}>
-          <ul className={styles.bar}>
-            <li className={styles.listBar}>
-              {' '}
-              <span className={styles.listBarDot}> </span>
-            </li>
-            <li className={styles.listBar}>
-              {' '}
-              <span className={styles.listBarDot}> </span>
-            </li>
-            <li className={styles.listBar}>
-              {' '}
-              <span className={styles.listBarDot}> </span>
-            </li>
-            <li className={styles.listBar}>
-              {' '}
-              <span className={styles.listBarDot}> </span>
-            </li>
-            <li className={styles.listBar}>
-              {' '}
-              <span className={styles.listBarDot}> </span>
-            </li>
-            <li className={styles.listBar}>
-              {' '}
-              <span className={styles.listBarDot}> </span>
-            </li>
-            <li className={styles.listBar}>
-              {' '}
-              <span className={styles.listBarDot}> </span>
-            </li>
-          </ul>
-        </div> */}
       </div>
     );
   }

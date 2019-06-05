@@ -35,50 +35,17 @@ class Carousel extends React.Component {
     };
     this.prevSlide = this.prevSlide.bind(this);
     this.nextSlide = this.nextSlide.bind(this);
-    // this.getAdidas = this.getAdidas.bind(this);
     this.changeImage = this.changeImage.bind(this);
     this.openModal = this.openModal.bind(this);
     this.openSkylight = this.openSkylight.bind(this);
-    // this.getOne = this.getOne.bind(this);
     this.updatePosition = this.updatePosition.bind(this);
     this.zoomFeature = this.zoomFeature.bind(this);
     this.zoomOut = this.zoomOut.bind(this);
     this.toggleZoom = this.toggleZoom.bind(this);
     this.changeSlideBar = this.changeSlideBar.bind(this);
-    // this.resetState = this.resetState.bind(this);
     this.handleSlideRight = this.handleSlideRight.bind(this);
     this.handleSlideLeft = this.handleSlideLeft.bind(this);
   }
-
-  // componentDidMount() {
-  //   this.getAdidas();
-  // }
-
-  getAdidas() {
-    // axios
-    //   .get('/api/products')
-    //   .then(data =>
-    //     this.setState({
-    //       products: data.data,
-    //       product: data.data[0],
-    //       images: data.data[0].imageUrl,
-    //       productID: data.data[0].productID
-    //     })
-    //   )
-    //   .catch(err => console.log('failed to retrieve data'));
-  }
-  // getOne() {
-  //   axios
-  //     .get(`/api/products/${this.state.productID}`)
-  //     .then(data => {
-  //       this.setState({
-  //         product: data.data,
-  //         productID: data.data.productID,
-  //         images: data.data.imageUrl
-  //       });
-  //     })
-  //     .catch(err => console.error(err));
-  // }
 
   closeModal() {
     this.setState({

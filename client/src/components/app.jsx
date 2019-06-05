@@ -17,7 +17,6 @@ class App extends React.Component {
       isOpen: false,
       overflow: false,
       isModalOpen: false,
-      products: [],
       product: '',
       productID: '',
       images: [],

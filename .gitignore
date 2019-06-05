@@ -1,6 +1,3 @@
 node_modules
 .DS_Store
-
-client/src/assets/Fonts
-client/dist/fonts
-client/src/assets/images/
+.env
