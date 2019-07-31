@@ -1,11 +1,7 @@
 # Carousel
 
-HRLA29-Carousel-Wendy
 
-Start this project
+Emulated the Adidas Main Product Description 
 
-Npm install react-skylight --save
-Npm install
-Npm start
-Npm run build (To Run Webpack)
-Npm run seed (To Seed Database)
+Technologies used:
+React, React Skylight, CSS Modules, Node.js, Express, MongoDB, Mongoose
