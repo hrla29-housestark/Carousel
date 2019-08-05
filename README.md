@@ -21,4 +21,4 @@ Emulated the Adidas Main Product Description Page
 ![Size Chart](gif/SizeChartModal.gif)
 
 # Tech Stack
-React, React Skylight, CSS Modules, Node.js, Express, MongoDB, Mongoose
+React, CSS Modules, Node.js, Express, MongoDB, Mongoose
